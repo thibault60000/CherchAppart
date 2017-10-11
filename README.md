@@ -1,8 +1,6 @@
 ## Bienvenue sur notre Projet Secret
 
-You can use the [editor on GitHub](https://github.com/thibault60000/OurSecretProject/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+En Construction
 
 ### Langage Markdown (pour le Readme)
 
@@ -11,19 +9,19 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ```markdown
 On a différent niveaux de titres et listes :
 
-# Header 1
-## Header 2
-### Header 3
+# Titre 1
+## Titre 2
+### Titre 3
 
-- Bulleted
-- List
+- Liste
+- Normale
 
-1. Numbered
-2. List
+1. Liste
+2. Ordonnée
 
-**Bold** and _Italic_ and `Code` text
+**Gras** et  _Italic_ et `Code` 
 
-[Link](url) and ![Image](src)
+[Lien](url) et ![Image](src)
 ```
 
 Pour plus d'infos sur ce langage : [Doc de Markdown](https://guides.github.com/features/mastering-markdown/).

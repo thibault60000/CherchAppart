@@ -1,0 +1,3 @@
+cherch_appart_homepage:
+    path:     /
+    defaults: { _controller: CherchAppartBundle:Default:index }

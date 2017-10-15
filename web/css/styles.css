@@ -1,0 +1,184 @@
+/*  RESET   */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  font: 1em "robotoregular", Helvetica, Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+hr{
+	display:none;
+}
+
+nav{ 
+    display:block;
+    color:white;
+    background-color: #575cd0;
+    height:3.7rem;
+}
+    nav a{
+        color: white;
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+        width: calc(100% - 4rem);
+        cursor:pointer;
+    }
+    nav h1{
+        font: 1.4rem "robotobold";
+        display: inline-block;
+        line-height: 3.7rem;
+    }
+    nav h1:hover{
+        color:#c1d6ff;
+    }
+    nav ul{
+        width: 40%;
+        background-color: #eaeaea;
+        padding: 2.8rem 0.8rem 0.8rem 0.8rem;
+        box-shadow: 8px 17px 20px -16px rgba(121, 121, 121, 0.75);
+        position: absolute;
+        left: -50%;
+        transition: left .6s ease-in-out;
+    }
+    nav ul li{
+        margin-bottom: 1rem;        
+    }
+    nav ul li a{
+        background: initial;
+        border-radius: 2rem;
+        padding: 0.7rem;
+        background-color: #6272d6;
+        color: white;
+        cursor:pointer;
+        outline:none;
+    }
+    nav ul li a:hover{
+        opacity:0.9;
+    }
+    nav ul.open{
+        position: relative;
+        left:0;
+    }
+    nav button.btn-burger{ 
+        background: url(../img/burger.svg) center no-repeat;
+        width: 2.7rem;
+        height: 2.8rem;
+        margin-left: 1rem;
+        margin-top: 0.4rem;
+        cursor:pointer;
+        transition: transform .8s cubic-bezier(0, 1.42, 0.58, 1);
+        outline:none;
+    }
+    nav button:hover.btn-burger{
+        background: url(../img/burger-hover.svg) center no-repeat;
+    }
+    nav button.btn-burger.open{ 
+        transform: rotate(90deg);
+    }
+
+    /* modal connect */
+    .modaleConnect.open{
+        /*height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: linear-gradient(to right, #4844c1, #6d1313);*/
+    }
+    .contentModaleConnect{
+        background-color: green;
+        z-index: 999;
+        position: absolute;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 3rem; transform: scale(0);
+        transition: transform .6s ease-in-out;
+    }
+    .modaleConnect.open .contentModaleConnect{
+       transform: scale(1);
+    }
+
+
+
+    /* tablette  */
+    @media screen and (min-width: 1024px) {
+        nav button.btn-burger{
+            display:none;
+        } 
+        nav a{
+            width:auto;
+            text-align: left;
+            margin-left:1.5rem;
+        }
+        nav ul{
+            display:inline-block;
+            transition:none;
+            position:relative;
+            left:0;
+            width:calc(100% - 10.5rem);
+            background-color:initial;
+            box-shadow: none;
+            padding:0;
+        }
+        nav ul li{
+            margin-bottom: 0;
+            float: right;
+            margin-right: 1.4rem;
+            margin-top: 0.5rem;
+        }
+    
+    }

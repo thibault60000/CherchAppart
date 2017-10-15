@@ -1,11 +1,21 @@
-{% if app.user== null %}
-    <a href="{{ path('login') }}">Se connecter</a>
-    {% else %}
-        <a href="{{ path('cherch_appart_homepage_logged') }}">Accueil</a>
-{% endif %}
-{% if app.user != null %}
-     | <a href="{{ path('logout') }}">Déconnecter {{ app.user.username }}</a> |
-{% endif %}
-{% if is_granted('ROLE_ADMINISTRATEUR') %}
- coucou tu es admin
-{% endif %}
+<header>
+    <nav>
+        <button class="btn-burger"></button>
+        <a><h1>Cherch'Appart</h1></a>
+
+        <ul class="menu-nav">
+            {% if app.user== null %}
+                <li><a href="{{ path('login') }}" class="btn-connect">Se connecter</a></li>
+                <li><a>S'inscrire</a></li>
+            {% else %}
+                <li><a href="{{ path('cherch_appart_homepage_logged') }}">Mon Compte</a></li>
+                <li><a href="{{ path('logout') }}">Déconnecter {{ app.user.username }}</a></li>
+
+            {% endif %}
+
+
+        </ul>
+
+    </nav>
+
+</header>

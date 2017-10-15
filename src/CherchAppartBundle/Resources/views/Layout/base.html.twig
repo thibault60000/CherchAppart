@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <meta charset="UTF-8" />
+        <!--Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Notre CSS -->
+        {%  block stylesheets %}
+
+
+
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/styles.css') }}"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset ('fonts/fonts.css" media="screen,projection') }}"/>
+        {% endblock %}
+        <!-- Site optimisé mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8" />
+
             <title>{% block title %}Cherch'Appart!{% endblock %}</title>
     </head>
+
+
+
     <body>
+
+
     {% include '@CherchAppart/Layout/menu.html.twig' %}
         {% block body %}{% endblock %}
+
+
+        <!--Javascript-->
+        {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('js/jquery3.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

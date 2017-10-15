@@ -1,0 +1,11 @@
+{% if app.user== null %}
+    <a href="{{ path('login') }}">Se connecter</a>
+    {% else %}
+        <a href="{{ path('cherch_appart_homepage_logged') }}">Accueil</a>
+{% endif %}
+{% if app.user != null %}
+     | <a href="{{ path('logout') }}">Déconnecter {{ app.user.username }}</a> |
+{% endif %}
+{% if is_granted('ROLE_ADMINISTRATEUR') %}
+ coucou tu es admin
+{% endif %}

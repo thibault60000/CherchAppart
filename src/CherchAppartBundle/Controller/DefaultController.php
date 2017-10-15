@@ -8,6 +8,8 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('CherchAppartBundle:Default:index.html.twig');
+        $mesRoles = '';
+        return $this->render('CherchAppartBundle:Default:index.html.twig', array('roles' => $mesRoles));
     }
+
 }

@@ -1,0 +1,52 @@
+CherchAppartBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: CherchAppartBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: '20'
+            unique: true
+        password:
+            type: string
+            length: '15'
+        mail:
+            type: string
+            length: '30'
+        name:
+            type: string
+            length: 255
+        lastname:
+            type: string
+            length: 255
+        bornDate:
+            type: date
+        adress:
+            type: string
+            length: 255
+        postalCode:
+            type: integer
+            column: postal_code
+        city:
+            type: string
+            length: 255
+        sexe:
+            type: string
+            length: 255
+        phone:
+            type: integer
+        mobilePhone:
+            type: integer
+            nullable: true
+            column: mobile_phone
+    manyToMany:
+        roles:
+            targetEntity: CherchAppartBundle\Entity\Role
+            inversedBy: users
+    lifecycleCallbacks: {  }

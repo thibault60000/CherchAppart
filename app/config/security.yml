@@ -4,8 +4,17 @@ security:
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory: ~
+        my_users:
+            entity:
+                class: CherchAppartBundle:User
+                property: username
+
+    encoders:
+        CherchAppartBundle\Entity\User: plaintext
+        #Symfony\Component\Security\Core\Blog\Blog: plaintext
+
+       # role_hierarchy:
+       #     ROLE_ADMIN: ROLE_UTILISATEUR
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -13,8 +22,23 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        main:
+        cherchAppart:
+            pattern: ^/(home|login_check|logout)
+            form_login:
+                login_path: /login
+                check_path: /login_check
+                default_target_path: /home
+            logout:
+                path: /logout
+                target: /login
+        accueil:
+            pattern: ^/
             anonymous: ~
+    access_control:
+        #- { path: ^/()/, roles: ROLE_ADMIN}
+    acl:
+        connection: default
+
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate

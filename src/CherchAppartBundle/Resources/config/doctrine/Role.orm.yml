@@ -1,0 +1,20 @@
+CherchAppartBundle\Entity\Role:
+    type: entity
+    table: null
+    repositoryClass: CherchAppartBundle\Repository\RoleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        role:
+            type: string
+            length: '20'
+            unique: true
+    manyToMany:
+        users:
+            targetEntity: CherchAppartBundle\Entity\User
+            mappedBy: roles
+    lifecycleCallbacks: {  }

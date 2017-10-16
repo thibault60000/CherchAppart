@@ -1,12 +1,12 @@
 <div class="modaleConnect">
-    <button class="btn-close" >fermé</button>
+    <!--<button class="btn-close" >fermé</button>
     <div class="oneModaleConnect">
 
 
     </div>
 
-    <div class=""twoModaleConnect">
-        <form action="{{ path('login_check') }}" method="POST">
+    <div class="twoModaleConnect">
+         <form action="{{ path('login_check') }}" method="POST">
             <button class="btn-close" >fermé</button>
             <label for="username">Identifiant :</label>
             <input type="text" id="username" name="_username" value="{{ last_username }}" />
@@ -14,8 +14,33 @@
             <input type="text" id="password" name="_password" />
             <button class="btn-submit"  type="submit">Se connecter</button>
             <a class="btn-signup"  >S'inscrire</a>
+        </form> -->
+
+        <form action="#" id="login-form">
+            <div class="heading">Formulaire de connexion</div>
+
+            <div class="left">
+                <label for="email">Identifiant</label>
+                <input type="email" name="email" id="email" />
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="pass" />
+                <input type="submit" value="Se connecter" />
+            </div>
+
+            <div class="right">
+                <div class="connect">Se connecter avec</div>
+                <a href="" class="facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="" class="twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="" class="google-plus">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </div>
         </form>
-    </div>
+</div>
 
 
 

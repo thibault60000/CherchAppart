@@ -3387,6 +3387,7 @@
 				display: inline-block;
 				vertical-align: middle;
 				text-align: center;
+
 			}
 
 				#banner .content header h2 {
@@ -3405,7 +3406,7 @@
 				height: 18em;
 				margin-left: 3em;
 				vertical-align: middle;
-				width: 18em;
+				width: 13em;
 			}
 
 				#banner .content .image img {
@@ -3421,63 +3422,230 @@
 	/* MODAL CONNECT */
 	body .modaleConnect{
 		position: fixed;
-		top: 18rem;
+		top: 12rem;
 		left: 10%;
 		width: 80%;
 		z-index: 999;
-		background: linear-gradient(to bottom, #4e80ef 0%, #7286b3 30%, #6a769e 66%, #557fdc 100%);
+		background-color:white;
 		box-shadow: 10px 10px 26px -10px rgb(0, 0, 0);
 		transform: scale(0);
+		overflow: hidden;
 		transition: transform .6s ease-in-out;
 	}
 	body .modaleConnect.open{
 		transform: scale(1);
 	}
-	body .modaleConnect .btn-close{
-		display:none;
+
+		.modaleConnect div.heading {
+			background: #5878BF;
+			color: #fff;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 1.5em;
+		}
+
+.modaleConnect div.left {
+	width: 50%;
+	float: left;
+	padding: 1.7em 1.5em 2.5em 1.5em;
+}
+
+.modaleConnect div.right {
+	width: 50%;
+	float: right;
+	padding: 1.7em 1.5em 2.5em 1.5em;
+	text-align:center;
+}
+
+.modaleConnect div.right:before {
+	content: 'ou';
+	color: gray;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	height: 0.5em;
+	width: 0.7em;
+	left: -1.2em;
+	top: 2.8em;
+	z-index: 900;
+ }
+
+.modaleConnect div.right:after {
+	content: '';
+	position: absolute;
+	background: gray;
+	opacity: 0.3;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	height: 8.45em;
+	width: 0.1em;
+	left: -0.85em;
+	top: -6.8em;
+	box-shadow: 0 11em 0 0 grey;
+}
+
+.modaleConnect div.left label {
+	display: inline-block;
+	color: gray;
+	font-size: 1.1em;
+	margin-top: 0.6em;
+	margin-bottom: 0.2rem;
+}
+
+.modaleConnect input[type="email"], .modaleConnect input[type="password"] {
+	border: 0.1em solid #abaaaa;
+	border-radius: 0.2em;
+	transition: 0.15s all;
+	padding: 1em;
+	width: 85%;
+	margin: 0.6em 0;
+	color: gray;
+	font-size: 1.3rem;
+
+}
+
+.modaleConnect [type="email"]:focus, .modaleConnect input[type="password"]:focus {
+	 outline: none;
+	 border: 0.15em solid #5878bf;
+ }
+
+.modaleConnect input[type="submit"] {
+	background: #5878bf;
+	color: white;
+	outline: none;
+	text-transform: uppercase;
+	padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+	overflow: hidden;
+	border: none;
+	letter-spacing: 0.1em;
+	margin: 1.9rem 0 0 0;
+	font-weight: bold;
+	border-radius: 0.4rem;
+	transition: 0.15s all;
+	display: block;
+	line-height: 0.9rem;
+	font-size: 1.1rem;
+}
+
+.modaleConnect input[type="submit"]:hover {
+	 background-color: #80A6DD;
+	 opacity:0.8;
+}
+
+.modaleConnect div.right div.connect {
+	color: gray;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+.modaleConnect a {
+	display: inline-block;
+	font-size: 1.5em;
+	text-decoration: none;
+	color: white;
+	width: 12em;
+	padding: 0.55em 0.3em;
+	clear: both;
+	text-align: center;
+	margin: 0.5em 0.1em;
+	border-radius: 0.3rem;
+}
+
+.modaleConnect a.facebook {
+	background: #3a589a;
+	margin-top: 0.8em;
+	transition: 0.15s all;
+}
+
+.modaleConnect a.facebook:hover {
+	 background-color : #3a589a;
+	 opacity: 0.8;
+ }
+
+.modaleConnect a.twitter {
+	background: #4099ff;
+	transition: 0.15s all;
+}
+
+.modaleConnect a.twitter:hover {
+	background-color: #4099FF;
+	opacity:0.8;
+}
+
+.modaleConnect a.google-plus {
+	background: #e9544f;
+	transition: 0.15s all;
+}
+
+.modaleConnect a.google-plus:hover {
+	background-color: #e9544f;
+	opacity: 0.8;
+	transition: 0.15s all;
+}
+@media screen and (max-width: 736px) {
+
+	body .modaleConnect{
+		top: 6rem;
 	}
-	body .modaleConnect {
-		padding:1.5rem;
+	form {
+		margin: 0 0 2em 0;
 	}
-	body .modaleConnect form label{
-		font-size:1.1rem;
-		margin-bottom:0.2rem;
-	} 
-	body .modaleConnect form input{
-		margin-bottom:0.4rem;
+	.modaleConnect div.left{
+		width:100%;
+		float:none;
+		display:block;
+		padding: 1.7em 1.5em 2.5em 1.5em;
 	}
-	body .modaleConnect form .btn-submit{
-		background-color: #eaeaea;
-		padding: 0.7rem;
-		margin-top: 0.6rem;
-		color: #3576ab;
-		border-radius: 0.4rem;
-		display: inline-block;
-		cursor: pointer;
-		border: none;
-		font-size: 1rem;
-		font-weight: bold;
+	.modaleConnect div.right{
+		width:100%;
+		float:none;
+		display:block;
+		padding: 0em 1.5em 0em 1.5em;
+		text-align: center;
 	}
 
-	body .modaleConnect form .btn-signup{
-		background-color: #2caae6;
-		padding: 0.3rem;
-		margin-top: 0.6rem;
-		color: #ffffff;
-		border-radius: 0.4rem;
-		display: inline-block;
-		cursor: pointer;
-		font-size: 1rem;
-		float: right;
+	.modaleConnect div.right:after {
+		display:none;
+	}
+
+	.modaleConnect div.right:before {
+		content:"Ou";
+		color: gray;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		display: block;
+		margin: auto;
+		height: 0.5em;
+		width: 0.7em;
+		left: -11.1em;
+		top: 20.95em;
+		z-index: 900;
 		font-weight: bold;
-		font-family: Arial;
-		border: 2px solid;
-		text-align: center;
-		width: 8.4rem;
 	}
-	body .modaleConnect form .btn-submit:hover{
-		background-color: #80a6dd;
+	.modaleConnect a{
+		width: 3em;
 	}
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Footer */
 
@@ -3791,6 +3959,10 @@
 						height: 9em;
 						width: 9em;
 					}
+
+
+
+
 
 		/* Off-Canvas Navigation */
 

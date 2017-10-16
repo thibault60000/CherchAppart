@@ -53,7 +53,7 @@ class UserController extends Controller
         if($this->getUser()!=$user)
             Return new Response("<html><body>Vous n'êtes pas le propiétaire du compte</body></html>");
 
-        $editForm = $this->createForm('CherchAppartBundle\Form\UserType', $user);
+        $editForm = $this->createForm('CherchAppartBundle\Form\UserEditType', $user);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -65,7 +65,7 @@ class UserController extends Controller
             return $this->redirectToRoute('home');
         }
 
-        return $this->render('@CherchAppart/Account/account.html.twig', array(
+        return $this->render('@CherchAppart/Account/myAccount.html.twig', array(
             'user' => $user,
             'edit_form' => $editForm->createView(),
         ));

@@ -3,18 +3,30 @@
     <h1>Créer un compte</h1>
 
     {{ form_start(form) }}
-    {{ form_row(form.username) }}
-    {{ form_row(form.password) }}
-    {{ form_row(form.mail) }}
-    {{ form_row(form.name) }}
-    {{ form_row(form.lastname) }}
-    {{ form_row(form.bornDate) }}
-    {{ form_row(form.adress) }}
-    {{ form_row(form.postalCode) }}
-    {{ form_row(form.city) }}
-    {{ form_row(form.sexe) }}
-    {{ form_row(form.phone) }}
-    {{ form_row(form.mobilePhone) }}
+    {{ form_label(form.username, "Nom d'utilisateur") }}
+    {{ form_widget(form.username) }}
+    {{ form_label(form.password, "Mot de passe") }}
+    {{ form_widget(form.password) }}
+    {{ form_label(form.mail, "Adresse mail") }}
+    {{ form_widget(form.mail) }}
+    {{ form_label(form.name, "Prénom") }}
+    {{ form_widget(form.name) }}
+    {{ form_label(form.lastname, "Nom") }}
+    {{ form_widget(form.lastname) }}
+    {{ form_label(form.bornDate, "Date de naissance") }}
+    {{ form_widget(form.bornDate) }}
+    {{ form_label(form.adress, "Adresse Postale") }}
+    {{ form_widget(form.adress) }}
+    {{ form_label(form.postalCode, "Code Postal") }}
+    {{ form_widget(form.postalCode) }}
+    {{ form_label(form.city, "Ville") }}
+    {{ form_widget(form.city) }}
+    {{ form_label(form.sexe, "Sexe") }}
+    {{ form_widget(form.sexe) }}
+    {{ form_label(form.phone, "Téléphone mobile") }}
+    {{ form_widget(form.phone) }}
+    {{ form_label(form.mobilePhone, "Téléphone Fixe") }}
+    {{ form_widget(form.mobilePhone) }}
     <input type="submit" value="Créer" />
     {{ form_end(form) }}
 {% endblock %}

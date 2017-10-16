@@ -1,18 +1,42 @@
-<header>
-    <nav>
-        <button class="btn-burger"></button>
-        <a><h1>Cherch'Appart</h1></a>
 
-        <ul class="menu-nav">
-            {% if app.user== null %}
-                <li><a href="{{ path('home') }}" class="btn-connect">Se connecter</a></li>
-                <li><a>S'inscrire</a></li>
-            {% else %}
-                <li><a href="{{ path('home') }}">Mon Compte</a></li>
-                <li><a href="{{ path('logout') }}">Déconnecter {{ app.user.username }}</a></li>
-            {% endif %}
-        </ul>
+<div id="page-wrapper">
 
-    </nav>
+    <!-- HEADER (menu du site)-->
+    <header id="header">
+        <h1 id="logo"><a href="#">Cherch'Appart</a></h1>
+        <nav id="nav">
+            <ul>
+                {% if app.user!= null %}
+                <li><a href="#">Accueil</a></li>
+                <li>
+                    <a href="#">Rechercher</a>
+                    <ul>
+                        <li>
+                            <a href="#">Chambre</a>
+                            <ul>
+                                <li><a href="#">Chambre étudiant</a></li>
+                                <li><a href="#">Chambre chez l'habitant</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Studio</a></li>
+                        <li><a href="#">T1</a></li>
+                        <li><a href="#">T2</a></li>
+                        <li><a href="#">T3</a></li>
 
-</header>
+                    </ul>
+                </li>
+                <li><a href="#">Proposer</a></li>
+                {% endif %}
+
+                <li><a href="#">Contact</a></li>
+                {% if app.user== null %}
+                    <li><a href="#" id="btn-connect" class="button special">Se connecter</a></li>
+                    <li><a class="button special" >S'inscrire</a></li>
+                {% else %}
+                    <li><a class="button special"href="{{ path('home') }}">Mon Compte</a></li>
+                    <li><a class="button special" href="{{ path('logout') }}">Déconnecter {{ app.user.username }}</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </header>

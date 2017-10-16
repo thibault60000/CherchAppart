@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#5878BF;}
+	.st1{fill:#80A6DD;}
+	.st2{fill:#FDFDE4;}
+	.st3{fill:#D8D8BA;}
+	.st4{fill:#405DAD;}
+</style>
+<g>
+	<circle id="Cercle" class="st0" cx="959.5" cy="542.4" r="166.5"/>
+	<path id="Ombre_maison" class="st1" d="M1050.6,495.8l74.3,66.3c-14.9,97.6-84,131.9-126.4,142.3c-20.2,4.9-33.4,4.5-33.4,4.5
+		l-85-78.5L1050.6,495.8L880,630.3"/>
+	<path id="Maison" class="st2" d="M883,630.2h154.2c0,0,7.7-1.5,7.8-8.3c0.2-6.8,0-89.5,0-89.5l-84.2-72.7l-86,72.3v91.7
+		C874.8,623.7,877.5,630.2,883,630.2z"/>
+	<path id="Porte" class="st3" d="M990,630.2h-61c-1.1,0-2-0.9-2-2v-81c0-1.1,0.9-2,2-2h61c1.1,0,2,0.9,2,2v81
+		C992,629.3,991.1,630.2,990,630.2z"/>
+	<polygon id="Ombre_toit" class="st3" points="874.9,531.8 874.9,541.3 965.7,464.7 960,459.7 	"/>
+	<path id="Toit" class="st4" d="M874.9,531.8l-13.8,10.4c0,0-26.5,3.8-19.5-23.1l108.9-94c0,0,7.8-7.4,19,0l108.8,92.9
+		c0,0,11.3,30.3-25.5,22l-92.6-79.8L874.9,531.8z"/>
+</g>
+</svg>

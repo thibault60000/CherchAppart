@@ -31,9 +31,9 @@
                 <li><a href="#">Contact</a></li>
                 {% if app.user== null %}
                     <li><a href="#" id="btn-connect" class="button special">Se connecter</a></li>
-                    <li><a class="button special" href="{{ path('account_new') }}">S'inscrire</a></li>
+                    <li><a class="button special" href="{{ path('new_account') }}">S'inscrire</a></li>
                 {% else %}
-                    <li><a class="button special" href="{{ path('home') }}">Mon Compte</a></li>
+                    <li><a class="button special" href="{{ path('account_edit',  {'id': app.user.id }) }}">Mon Compte</a></li>
                     <li><a class="button special" href="{{ path('logout') }}">Déconnecter {{ app.user.username }}</a></li>
                 {% endif %}
 

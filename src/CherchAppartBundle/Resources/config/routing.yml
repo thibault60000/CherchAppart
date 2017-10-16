@@ -1,6 +1,11 @@
 account:
     resource: "@CherchAppartBundle/Resources/config/routing/user.yml"
-    prefix:   /account
+    prefix:   /myAccount
+
+new_account:
+    path:     /newAccount
+    defaults: { _controller: "CherchAppartBundle:User:new" }
+    methods:  [GET, POST]
 
 home:
     path:    /home

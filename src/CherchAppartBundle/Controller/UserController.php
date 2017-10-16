@@ -2,11 +2,11 @@
 
 namespace CherchAppartBundle\Controller;
 
-use CherchAppartBundle\CherchAppartBundle;
 use CherchAppartBundle\Entity\User;
 use CherchAppartBundle\Entity\Role;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * User controller.
@@ -50,20 +50,24 @@ class UserController extends Controller
      */
     public function editAction(Request $request, User $user)
     {
-        $deleteForm = $this->createDeleteForm($user);
+        if($this->getUser()!=$user)
+            Return new Response("<html><body>Vous n'êtes pas le propiétaire du compte</body></html>");
+
         $editForm = $this->createForm('CherchAppartBundle\Form\UserType', $user);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('user_edit', array('id' => $user->getId()));
+            $this->get('session')->getFlashBag()
+                ->add('Info', 'Profil modifié avec succès');
+
+            return $this->redirectToRoute('home');
         }
 
-        return $this->render('user/edit.html.twig', array(
+        return $this->render('@CherchAppart/Account/account.html.twig', array(
             'user' => $user,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 }

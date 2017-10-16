@@ -1,9 +1,4 @@
-account_new:
-    path:     /new
-    defaults: { _controller: "CherchAppartBundle:User:new" }
-    methods:  [GET, POST]
-
 account_edit:
-    path:     /{id}/edit
+    path:     /{id}
     defaults: { _controller: "CherchAppartBundle:User:edit" }
     methods:  [GET, POST]

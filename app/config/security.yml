@@ -24,7 +24,7 @@ security:
             pattern: ^/($)
             anonymous: true
         main:
-            pattern: ^/(home|logout|login_check)
+            pattern: ^/(home|myAccount|logout|login_check)
             anonymous: false
             form_login:
                 login_path: /

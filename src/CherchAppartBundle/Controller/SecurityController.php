@@ -13,9 +13,9 @@ class SecurityController extends Controller
 {
     public function loginAction()
     {
-
-        if ($this->container->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')){
-            $this->redirectToRoute('cherch_appart_homepage_logged');
+        if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMINISTRATEUR'))
+        {
+            $this->redirectToRoute('home');
         }
 
         $auth= $this->get('security.authentication_utils');

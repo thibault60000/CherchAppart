@@ -1,13 +1,6 @@
-cherch_appart_homepage:
-    path:     /
-    defaults: { _controller: CherchAppartBundle:Default:index }
-#Homepaage sans sans authentification
-
-cherch_appart_homepage_logged:
-    path:     /home
+home:
+    path:    /home
     defaults: { _controller: CherchAppartBundle:cherchAppart:index }
-#Homepaage sans sans authentification
-
 login:
     path:    /login
     defaults: { _controller: CherchAppartBundle:Security:login }

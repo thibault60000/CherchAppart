@@ -5,10 +5,10 @@
 
         <ul class="menu-nav">
             {% if app.user== null %}
-                <li><a href="{{ path('login') }}" class="btn-connect">Se connecter</a></li>
+                <li><a href="{{ path('home') }}" class="btn-connect">Se connecter</a></li>
                 <li><a>S'inscrire</a></li>
             {% else %}
-                <li><a href="{{ path('cherch_appart_homepage_logged') }}">Mon Compte</a></li>
+                <li><a href="{{ path('home') }}">Mon Compte</a></li>
                 <li><a href="{{ path('logout') }}">Déconnecter {{ app.user.username }}</a></li>
             {% endif %}
         </ul>

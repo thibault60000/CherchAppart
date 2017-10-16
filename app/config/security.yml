@@ -21,20 +21,20 @@ security:
             security: false
         #Specific firewall for login       
         main_login:
-            pattern: ^/(login$)
+            pattern: ^/($)
             anonymous: true
         main:
             pattern: ^/(home|logout|login_check)
             anonymous: false
             form_login:
-                login_path: /login
+                login_path: /
                 check_path: /login_check
                 always_use_default_target_path: true
                 default_target_path: /home
             logout:
                 invalidate_session: false
                 path: /logout
-                target: /login
+                target: /
     access_control:
 
     acl:

@@ -6,7 +6,7 @@ home:
     path:    /home
     defaults: { _controller: CherchAppartBundle:cherchAppart:index }
 login:
-    path:    /login
+    path:    /
     defaults: { _controller: CherchAppartBundle:Security:login }
 #Page d'accès d'authentification
 

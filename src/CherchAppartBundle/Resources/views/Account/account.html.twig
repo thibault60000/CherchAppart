@@ -2,7 +2,18 @@
 {% block body %}
     <h1>Modifier un compte</h1>
 
-    {{ form_start(edit_form) }}
+    {{ form_row(edit_form.username) }}
+    {{ form_row(edit_form.password) }}
+    {{ form_row(edit_form.mail) }}
+    {{ form_row(edit_form.name) }}
+    {{ form_row(edit_form.lastname) }}
+    {{ form_row(edit_form.bornDate) }}
+    {{ form_row(edit_form.adress) }}
+    {{ form_row(edit_form.postalCode) }}
+    {{ form_row(edit_form.city) }}
+    {{ form_row(edit_form.sexe) }}
+    {{ form_row(edit_form.phone) }}
+    {{ form_row(edit_form.mobilePhone) }}
     {{ form_widget(edit_form) }}
     <input type="submit" value="Modifier" />
     {{ form_end(edit_form) }}

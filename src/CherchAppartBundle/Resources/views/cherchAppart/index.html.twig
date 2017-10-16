@@ -1,6 +1,9 @@
 {% extends '@CherchAppart/Layout/base.html.twig' %}
 {% block body %}
-
+    {%  for message in app.session.flashbag.get('Info') %}
+        <li><b>{{ message }}</b></li>
+    {% endfor %}
+    
     Bienvenue {{ app.user.lastname }}
 
 {% endblock %}

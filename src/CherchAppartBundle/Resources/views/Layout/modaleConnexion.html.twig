@@ -1,29 +1,12 @@
 <div class="modaleConnect">
-    <!--<button class="btn-close" >fermé</button>
-    <div class="oneModaleConnect">
-
-
-    </div>
-
-    <div class="twoModaleConnect">
-         <form action="{{ path('login_check') }}" method="POST">
-            <button class="btn-close" >fermé</button>
-            <label for="username">Identifiant :</label>
-            <input type="text" id="username" name="_username" value="{{ last_username }}" />
-            <label for="password">Mot de passe :</label>
-            <input type="text" id="password" name="_password" />
-            <button class="btn-submit"  type="submit">Se connecter</button>
-            <a class="btn-signup"  >S'inscrire</a>
-        </form> -->
-
-        <form action="#" id="login-form">
+        <form id="login-form" action="{{ path('login_check') }}" method="POST">
             <div class="heading">Formulaire de connexion</div>
 
             <div class="left">
-                <label for="email">Identifiant</label>
-                <input type="email" name="email" id="email" />
+                <label for="username">Identifiant</label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}" />
                 <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="pass" />
+                <input type="password" id="password" name="_password" />
                 <input type="submit" value="Se connecter" />
             </div>
 

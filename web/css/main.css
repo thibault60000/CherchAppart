@@ -3499,7 +3499,7 @@
 	margin-bottom: 0.2rem;
 }
 
-.modaleConnect input[type="email"], .modaleConnect input[type="password"] {
+.modaleConnect input[type="text"], .modaleConnect input[type="password"] {
 	border: 0.1em solid #abaaaa;
 	border-radius: 0.2em;
 	transition: 0.15s all;
@@ -3511,7 +3511,7 @@
 
 }
 
-.modaleConnect [type="email"]:focus, .modaleConnect input[type="password"]:focus {
+.modaleConnect [type="text"]:focus, .modaleConnect input[type="password"]:focus {
 	 outline: none;
 	 border: 0.15em solid #5878bf;
  }

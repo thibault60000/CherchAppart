@@ -1,9 +1,18 @@
+
+/* CherchAppart JS utils file 
+	Thibault JP / Stanislas A */
+
 (function($) {
 
+	
+
+
+
 	/**
-	 * Generate an indented list of links from a nav. Meant for use with panel().
+	 * Génère une liste de lien dans la nav sur mobile
 	 * @return {jQuery} jQuery object.
 	 */
+
 	$.fn.navList = function() {
 
 		var	$this = $(this);
@@ -16,23 +25,26 @@
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
 				target = $this.attr('target');
+				funct = "openBurgerMobile()";
 
 			b.push(
 				'<a ' +
 					'class="link depth-' + indent + '"' +
 					( (typeof target !== 'undefined' && target != '') ? ' target="' + target + '"' : '') +
-					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
+					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') + 'onclick="' + funct + '"' +
 				'>' +
 					'<span class="indent-' + indent + '"></span>' +
 					$this.text() +
 				'</a>'
 			);
-
+			
 		});
 
 		return b.join('');
 
 	};
+
+
 
 	/**
 	 * Panel-ify an element.
@@ -588,3 +600,16 @@
 
 
 
+function openBurgerMobile(){
+	
+		$("body").removeClass("navPanel-visible");
+		if($(".modaleConnect").hasClass("open")){
+			$(".modaleConnect").removeClass("open");
+			$("#page-wrapper").removeClass("modaleOpen");
+		}
+		else{
+			$(".modaleConnect").addClass("open");
+			$("#page-wrapper").addClass("modaleOpen");
+	
+		}
+	}

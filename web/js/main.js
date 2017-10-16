@@ -1,5 +1,6 @@
 
-
+/* CherchAppart JS mail file 
+	Thibault JP / Stanislas A */
 
 
 (function($) {

@@ -3425,7 +3425,7 @@
 		left: 10%;
 		width: 80%;
 		z-index: 999;
-		background-color: #608acc;
+		background: linear-gradient(to bottom, #4e80ef 0%, #7286b3 30%, #6a769e 66%, #557fdc 100%);
 		box-shadow: 10px 10px 26px -10px rgb(0, 0, 0);
 		transform: scale(0);
 		transition: transform .6s ease-in-out;
@@ -3447,12 +3447,33 @@
 		margin-bottom:0.4rem;
 	}
 	body .modaleConnect form .btn-submit{
-		border: 1.2px solid #9ab6e0;
-		background-color: #6492d2;
+		background-color: #eaeaea;
 		padding: 0.7rem;
-		margin-top: 1.4rem;
-		color: white;
-		cursor:pointer;
+		margin-top: 0.6rem;
+		color: #3576ab;
+		border-radius: 0.4rem;
+		display: inline-block;
+		cursor: pointer;
+		border: none;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	body .modaleConnect form .btn-signup{
+		background-color: #2caae6;
+		padding: 0.3rem;
+		margin-top: 0.6rem;
+		color: #ffffff;
+		border-radius: 0.4rem;
+		display: inline-block;
+		cursor: pointer;
+		font-size: 1rem;
+		float: right;
+		font-weight: bold;
+		font-family: Arial;
+		border: 2px solid;
+		text-align: center;
+		width: 8.4rem;
 	}
 	body .modaleConnect form .btn-submit:hover{
 		background-color: #80a6dd;

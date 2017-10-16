@@ -1,0 +1,9 @@
+{% extends '@CherchAppart/Layout/base.html.twig' %}
+{% block body %}
+    <h1>Créer un compte</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Créer" />
+    {{ form_end(form) }}
+{% endblock %}

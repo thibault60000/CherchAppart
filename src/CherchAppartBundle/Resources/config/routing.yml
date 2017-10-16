@@ -1,3 +1,7 @@
+account:
+    resource: "@CherchAppartBundle/Resources/config/routing/user.yml"
+    prefix:   /account
+
 home:
     path:    /home
     defaults: { _controller: CherchAppartBundle:cherchAppart:index }

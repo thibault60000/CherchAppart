@@ -49,4 +49,5 @@ CherchAppartBundle\Entity\User:
         roles:
             targetEntity: CherchAppartBundle\Entity\Role
             inversedBy: users
+            cascade: [ persist ]
     lifecycleCallbacks: {  }

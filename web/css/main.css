@@ -3654,21 +3654,7 @@ input[type="checkbox"]:checked + label.rememberMe:before{
 	}
 
 	.modaleConnect div.right:before {
-		content:"Ou";
-		color: gray;
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		display: block;
-		margin: auto;
-		height: 0.5em;
-		width: 0.7em;
-		left: -11.1em;
-		top: 20.95em;
-		z-index: 900;
-		font-weight: bold;
+		content:"";
 	}
 	.modaleConnect a{
 		width: 3em;

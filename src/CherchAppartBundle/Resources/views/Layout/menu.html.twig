@@ -3,7 +3,7 @@
 
     <!-- HEADER (menu du site)-->
     <header id="header">
-        <h1 id="logo"><a href="{{ path('new_account') }}">Cherch'Appart</a></h1>
+        <h1 id="logo"><a href="{{ path('fos_user_registration_register') }}">Cherch'Appart</a></h1>
         <nav id="nav">
             <ul>
                 {% if app.user!= null %}
@@ -31,10 +31,10 @@
                 <li><a href="#">Contact</a></li>
                 {% if app.user== null %}
                     <li><a href="#" id="btn-connect" class="button special">Se connecter</a></li>
-                    <li><a class="button special" href="{{ path('new_account') }}">S'inscrire</a></li>
+                    <li><a class="button special" href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
                 {% else %}
-                    <li><a class="button special" href="{{ path('account_edit',  {'id': app.user.id }) }}">Mon Compte</a></li>
-                    <li><a class="button special" href="{{ path('logout') }}">Déconnecter {{ app.user.username }}</a></li>
+                    <li><a class="button special" href="{{ path('fos_user_profile_show') }}">Mon Compte</a></li>
+                    <li><a class="button special" href="{{ path('fos_user_security_logout') }}">Déconnecter {{ app.user.username }}</a></li>
                 {% endif %}
 
             </ul>

@@ -13,26 +13,6 @@
 		xsmall: '(max-width: 480px)'
 	});
 
-	$("#btn-connect").click(function(){
-		if($(".modaleConnect").hasClass("open")){
-			$(".modaleConnect").removeClass("open");
-			$("#page-wrapper").removeClass("modaleOpen");
-		}
-		else{
-			$(".modaleConnect").addClass("open");
-			$("#page-wrapper").addClass("modaleOpen");
-
-		}
-	})
-
-	$("#page-wrapper").click(function(){
-		if($(".modaleConnect").hasClass("open")){
-			$(".modaleConnect").removeClass("open");
-			$("#page-wrapper").removeClass("modaleOpen");
-		}
-	})
-
-
 
 	$(function() {
 
@@ -43,9 +23,7 @@
 			$body.addClass('is-loading');
 
 			$window.on('load', function() {
-				window.setTimeout(function() {
 					$body.removeClass('is-loading');
-				}, 0);
 			});
 
 		// Touch mode.

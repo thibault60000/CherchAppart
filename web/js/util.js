@@ -597,19 +597,3 @@
 	};
 
 })(jQuery);
-
-
-
-function openBurgerMobile(){
-	
-		$("body").removeClass("navPanel-visible");
-		if($(".modaleConnect").hasClass("open")){
-			$(".modaleConnect").removeClass("open");
-			$("#page-wrapper").removeClass("modaleOpen");
-		}
-		else{
-			$(".modaleConnect").addClass("open");
-			$("#page-wrapper").addClass("modaleOpen");
-	
-		}
-	}

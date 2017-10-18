@@ -17,9 +17,24 @@ CherchAppartBundle\Entity\User:
             type: string
             length: '30'
             column: Lastname
-
         sexe:
              type: string
              length: '10'
              column: Sexe
+        adress:
+             type: string
+             length: '30'
+             column: Adress
+        postal_code:
+             type: string
+             length: '30'
+             column: Postal_Code
+        city:
+             type: string
+             length: '30'
+             column: City
+        phone_number:
+             type: string
+             length: '30'
+             column: Phone_Number
     lifecycleCallbacks: {  }

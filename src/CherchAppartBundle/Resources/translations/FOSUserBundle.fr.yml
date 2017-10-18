@@ -69,14 +69,16 @@ resetting:
 
             Cordialement,
             L'équipe
-
-layout:
-    logout: Déconnexion
-    login: Connexion
-    register: Inscription
-    logged_in_as: 'Connecté en tant que %username%'
 form:
     group_name: 'Nom du groupe'
+    name: 'Nom'
+    lastname: 'Prénom'
+    birthday: 'Date de naissance'
+    sexe: 'Sexe'
+    adress: 'Adresse'
+    postal_code: 'Code postal'
+    city: 'Ville'
+    phone_number: 'Numéro de téléphone'
     username: 'Nom d''utilisateur'
     email: 'Adresse e-mail'
     current_password: 'Mot de passe actuel'

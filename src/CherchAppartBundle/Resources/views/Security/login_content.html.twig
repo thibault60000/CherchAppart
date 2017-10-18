@@ -1,5 +1,6 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+{% if app.user == null %}
 <!-- MODALE DE CONNEXION -->
 <div class="modaleConnect">
     <!-- Début du formulaire de connexion -->
@@ -35,3 +36,4 @@
         </div>
     </form>
 </div>
+{% endif %}

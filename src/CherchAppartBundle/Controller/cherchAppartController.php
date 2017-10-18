@@ -9,7 +9,7 @@ class cherchAppartController extends Controller
 {
     public function indexAction()
     {
-
+        return $this->render('@CherchAppart/cherchAppart/index.html.twig');
     }
 
 }

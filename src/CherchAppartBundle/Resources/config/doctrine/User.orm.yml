@@ -9,5 +9,16 @@ CherchAppartBundle\Entity\User:
             generator:
                 strategy: AUTO
     fields:
-
+        name:
+            type: string
+            length: '30'
+            column: Name
+        lastname:
+            type: string
+            length: '30'
+            column: Lastname
+        sexe:
+             type: string
+             length: '10'
+             column: Sexe
     lifecycleCallbacks: {  }

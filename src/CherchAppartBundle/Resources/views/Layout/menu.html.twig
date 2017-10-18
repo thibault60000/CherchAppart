@@ -30,7 +30,7 @@
 
                 <li><a href="#">Contact</a></li>
                 {% if app.user== null %}
-                    <li><a href="#" id="btn-connect" class="button special">Se connecter</a></li>
+                    <li><a class="button special" href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
                     <li><a class="button special" href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
                 {% else %}
                     <li><a class="button special" href="{{ path('fos_user_profile_edit') }}">Mon Compte</a></li>

@@ -1,7 +1,4 @@
 home:
     path:    /
-    defaults: { _controller: FOSUserBundle:Security:login }
-test:
-    path:    /test
-    defaults: { _controller: CherchAppartBundle:cherchAppart:index }
+    defaults: { _controller: CherchAppartBundle:home:index }
 

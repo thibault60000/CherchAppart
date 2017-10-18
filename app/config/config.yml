@@ -80,6 +80,9 @@ fos_user:
         sender_name: "%mailer_user%"
     service:
         mailer: fos_user.mailer.twig_swift
+    profile:
+        form:
+            type: CherchAppartBundle\Form\ProfileType
     registration:
         form:
             type: CherchAppartBundle\Form\RegistrationType
@@ -89,3 +92,4 @@ fos_user:
             from_email:
                 address:        andujarstan@gmail.com
                 sender_name:    Stan
+

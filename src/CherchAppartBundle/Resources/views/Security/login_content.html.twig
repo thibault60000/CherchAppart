@@ -2,9 +2,16 @@
 
 {% if app.user == null %}
 <!-- MODALE DE CONNEXION -->
-<div class="modaleConnect">
+<div>
     <!-- Début du formulaire de connexion -->
     <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
+
+        {% if error %}
+            <div class="errorConnect">
+                <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Identifiants incorrects</div>
+            </div>
+        {% endif %}
+
         {% if csrf_token %}
             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
         {% endif %}

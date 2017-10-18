@@ -3369,12 +3369,6 @@
 					#header nav ul li > ul {
 						display: none;
 					}
-
-	body.landing #page-wrapper {
-		padding-top: 0;
-	}
-
-
 /* Banner */
 
 	#banner {
@@ -3384,7 +3378,7 @@
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
-		max-height: 100vh;
+		max-height: 95vh;
 		position: relative;
 		text-align: center;
 		z-index: 21;

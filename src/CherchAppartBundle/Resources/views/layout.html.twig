@@ -20,24 +20,24 @@
 
     <!-- BODY -->
     <body class="landing">
+        <div id="page-wrapper">
+            {% include '@CherchAppart/Layout/menu.html.twig' %}
 
-    {% include '@CherchAppart/Layout/menu.html.twig' %}
+            {% block body %}{% endblock %}
 
-    {% block body %}{% endblock %}
+            {% include '@CherchAppart/Layout/footer.html.twig' %}
 
-    {% include '@CherchAppart/Layout/footer.html.twig' %}
-
-    <!--Javascript-->
-    {% block javascripts %}
-        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/jquery.dropotron.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/skel.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/util.js') }}"></script>
-        <!--[if lte IE 8]><script type="text/javascript" src="{{ asset('js/ie/respond.min.js') }}"></script><![endif]-->
-        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-    {% endblock %}
-
+            <!--Javascript-->
+            {% block javascripts %}
+                <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('js/jquery.dropotron.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('js/skel.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('js/util.js') }}"></script>
+                <!--[if lte IE 8]><script type="text/javascript" src="{{ asset('js/ie/respond.min.js') }}"></script><![endif]-->
+                <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+            {% endblock %}
+        </div>
     </body>
 </html>

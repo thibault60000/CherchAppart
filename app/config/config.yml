@@ -84,7 +84,7 @@ fos_user:
         form:
             type: CherchAppartBundle\Form\RegistrationType
         confirmation:
-            enabled: true
+            enabled: false
             template:   '@FOSUser/Registration/email.txt.twig'
             from_email:
                 address:        andujarstan@gmail.com

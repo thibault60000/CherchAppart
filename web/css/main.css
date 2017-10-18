@@ -3302,7 +3302,10 @@
 			top: 0;
 			font-size: 2.5rem;
 		}
-
+		#header h1 a img{
+			height: 4.3rem;
+			width: 16rem;
+		}
 		#header nav {
 			position: absolute;
 			right: 1em;

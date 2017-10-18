@@ -1,7 +1,20 @@
 {% extends '@CherchAppart/Layout/base.html.twig' %}
 {% block body %}
     <!-- Banner -->
+
+
+    <!-- BANNER  -->
     <section id="banner">
+
+        <!-- MESSAGE D'ERREUR CONNEXION -->
+        {% if error %}
+            <div class="errorConnect">
+                <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Identifiants incorrects</div>
+            </div>
+        {% endif %}
+
+
+        <!-- PREMIER BLOCK DE LA PAGE (IMAGE + TEXTE ACCROCHE -->
         <div class="content">
             <header>
                 <h2>Tu cherches ou loues un appartement ?</h2>
@@ -11,11 +24,16 @@
             <span class="image"></span>
         </div>
         <a href="#one" class="goto-next scrolly">Suivant</a>
+
+
     </section>
 
     <!-- One -->
+
+    <!-- SECTION NUMERO 1 DE LA PAGE D'ACCUEIL -->
     <section id="one" class="spotlight style1 bottom">
         <span class="image fit main"><img src="images/secondPhoto.jpeg" alt="" /></span>
+        <span class="image fit main"><img src="images/secondPhoto.jpeg" alt="Photo homme bricolant" /></span>
         <div class="content">
             <div class="container">
                 <div class="row">
@@ -47,8 +65,12 @@
     </section>
 
     <!-- Two -->
+
+
+    <!-- SECTION NUMERO 2 DE LA PAGE D'ACCUEIL -->
     <section id="two" class="spotlight style2 right">
         <span class="image fit main"><img src="images/thridPhoto.jpeg" alt="" /></span>
+        <span class="image fit main"><img src="images/thridPhoto.jpeg" alt="Photo d'une carte de france" /></span>
         <div class="content">
             <header>
                 <h2>Toute la France</h2>
@@ -63,8 +85,14 @@
     </section>
 
     <!-- Three -->
+
+
+
+
+    <!-- SECTION NUMERO 3 DE LA PAGE D'ACCUEIL -->
     <section id="three" class="spotlight style3 left">
         <span class="image fit main bottom"><img src="images/fourPhoto.jpeg" alt="" /></span>
+        <span class="image fit main bottom"><img src="images/fourPhoto.jpeg" alt="Photo de bougies pour faire référence aux flammes" /></span>
         <div class="content">
             <header>
                 <h2>Les meilleurs offres sont mises en avant</h2>
@@ -79,6 +107,10 @@
     </section>
 
     <!-- Four -->
+
+
+
+    <!-- SECTION NUMERO 4 DE LA PAGE D'ACCUEIL-->
     <section id="four" class="wrapper style1 special fade-up">
         <div class="container">
             <header class="major">
@@ -128,6 +160,9 @@
     </section>
 
     <!-- Five -->
+
+
+    <!-- SECTION NUMERO 5 DE LA PAGE D'ACCUEIL (newsletter) -->
     <section id="five" class="wrapper style2 special fade">
         <div class="container">
             <header>
@@ -142,16 +177,32 @@
             </form>
         </div>
     </section>
+<<<<<<< HEAD
 </div>
+=======
+
+
+</div>
+<!-- Fin du Wrapper -->
+
+
+
+    <!-- MODALE DE CONNEXION -->
+>>>>>>> c410c202fa42439ba92d49a9318da9846cb7ecd1
     <div class="modaleConnect">
         <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
             {% if error %}
                 <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
 
+        <!-- Début du formulaire de connexion -->
+        <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
             {% if csrf_token %}
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
             {% endif %}
+            <div class="heading">Formulaire de connexion</div>
+
+            <!-- Partie formulaire normal -->
             <div class="left">
                 <label for="username">{{ 'Nom d\'utilisateur'|trans }}</label>
                 <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
@@ -161,10 +212,12 @@
 
                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
                 <label for="remember_me">{{ 'Se souvenir de moi'|trans }}</label>
+                <label class="rememberMe" for="remember_me">{{ 'Se souvenir de moi'|trans }}</label>
 
                 <input type="submit" id="_submit" name="_submit" value="{{ 'Se connecter'|trans }}" />
             </div>
 
+            <!-- Partie connexion avec réseaux sociaux -->
             <div class="right">
                 <div class="connect">Se connecter avec</div>
                 <a href="" class="facebook">
@@ -179,4 +232,5 @@
             </div>
         </form>
     </div>
+
 {% endblock %}

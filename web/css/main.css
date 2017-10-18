@@ -2,7 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
 
-/* Reset */
+
+/* ***************************************************************
+*************************** RESET CSS ****************************
+******************************************************************
+ */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -2463,6 +2467,24 @@
 			z-index: 1;
 		}
 
+		#banner .errorConnect{
+			position: absolute;
+			top: 1.9rem;
+			color: white;
+			font-weight: bold;
+			font-size: 1.6rem;
+			left: calc(50% - 14rem);
+			background: rgba(41, 44, 56, 0.43);
+			padding: 1.2rem;
+			z-index: 50;
+			width: 28rem;
+			height: 4.3rem;
+			border-radius: 5px;
+		}
+		#banner .errorConnect i{
+			margin-right: 1.1rem;
+		}
+
 		.image img {
 			border-radius: 4px;
 			display: block;
@@ -3501,6 +3523,20 @@
 	margin-bottom: 0.2rem;
 }
 
+
+input[type="checkbox"] + label.rememberMe:before {
+	border: solid 1px rgba(52, 53, 65, 0.54);
+}
+
+
+
+input[type="checkbox"]:checked + label.rememberMe:before{
+	background: initial;
+	color: black;
+	content: '\f00c';
+	border: solid 2px rgba(0, 0, 0, 0.65);
+}
+
 .modaleConnect input[type="text"], .modaleConnect input[type="password"] {
 	border: 0.1em solid #abaaaa;
 	border-radius: 0.5em;
@@ -3618,21 +3654,7 @@
 	}
 
 	.modaleConnect div.right:before {
-		content:"Ou";
-		color: gray;
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		display: block;
-		margin: auto;
-		height: 0.5em;
-		width: 0.7em;
-		left: -11.1em;
-		top: 20.95em;
-		z-index: 900;
-		font-weight: bold;
+		content:"";
 	}
 	.modaleConnect a{
 		width: 3em;
@@ -3757,6 +3779,7 @@
 				padding: 4.5em;
 			}
 
+
 		/* Footer */
 
 			#footer {
@@ -3837,6 +3860,8 @@
 					#banner .content .image {
 						margin: 0;
 					}
+
+
 
 		/* Footer */
 

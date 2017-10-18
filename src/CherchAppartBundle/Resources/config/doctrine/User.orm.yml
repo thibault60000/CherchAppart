@@ -17,6 +17,7 @@ CherchAppartBundle\Entity\User:
             type: string
             length: '30'
             column: Lastname
+
         sexe:
              type: string
              length: '10'

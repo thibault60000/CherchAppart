@@ -25,39 +25,9 @@ class User extends BaseUser
     private $lastname;
 
     /**
-     * @var \DateTime
-     */
-    private $bornDate;
-
-    /**
-     * @var string
-     */
-    private $adress;
-
-    /**
-     * @var int
-     */
-    private $postalCode;
-
-    /**
-     * @var string
-     */
-    private $city;
-
-    /**
      * @var string
      */
     private $sexe;
-
-    /**
-     * @var int
-     */
-    private $phone;
-
-    /**
-     * @var int
-     */
-    private $mobilePhone;
 
 
     /**
@@ -119,102 +89,6 @@ class User extends BaseUser
     }
 
     /**
-     * Set bornDate
-     *
-     * @param \DateTime $bornDate
-     *
-     * @return User
-     */
-    public function setBornDate($bornDate)
-    {
-        $this->bornDate = $bornDate;
-
-        return $this;
-    }
-
-    /**
-     * Get bornDate
-     *
-     * @return \DateTime
-     */
-    public function getBornDate()
-    {
-        return $this->bornDate;
-    }
-
-    /**
-     * Set adress
-     *
-     * @param string $adress
-     *
-     * @return User
-     */
-    public function setAdress($adress)
-    {
-        $this->adress = $adress;
-
-        return $this;
-    }
-
-    /**
-     * Get adress
-     *
-     * @return string
-     */
-    public function getAdress()
-    {
-        return $this->adress;
-    }
-
-    /**
-     * Set postalCode
-     *
-     * @param integer $postalCode
-     *
-     * @return User
-     */
-    public function setPostalCode($postalCode)
-    {
-        $this->postalCode = $postalCode;
-
-        return $this;
-    }
-
-    /**
-     * Get postalCode
-     *
-     * @return int
-     */
-    public function getPostalCode()
-    {
-        return $this->postalCode;
-    }
-
-    /**
-     * Set city
-     *
-     * @param string $city
-     *
-     * @return User
-     */
-    public function setCity($city)
-    {
-        $this->city = $city;
-
-        return $this;
-    }
-
-    /**
-     * Get city
-     *
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->city;
-    }
-
-    /**
      * Set sexe
      *
      * @param string $sexe
@@ -236,82 +110,5 @@ class User extends BaseUser
     public function getSexe()
     {
         return $this->sexe;
-    }
-
-    /**
-     * Set phone
-     *
-     * @param integer $phone
-     *
-     * @return User
-     */
-    public function setPhone($phone)
-    {
-        $this->phone = $phone;
-
-        return $this;
-    }
-
-    /**
-     * Get phone
-     *
-     * @return int
-     */
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-    /**
-     * Set mobilePhone
-     *
-     * @param integer $mobilePhone
-     *
-     * @return User
-     */
-    public function setMobilePhone($mobilePhone)
-    {
-        $this->mobilePhone = $mobilePhone;
-
-        return $this;
-    }
-
-    /**
-     * Get mobilePhone
-     *
-     * @return int
-     */
-    public function getMobilePhone()
-    {
-        return $this->mobilePhone;
-    }
-    /**
-     * @var \DateTime
-     */
-    private $birthday;
-
-
-    /**
-     * Set birthday
-     *
-     * @param \DateTime $birthday
-     *
-     * @return User
-     */
-    public function setBirthday($birthday)
-    {
-        $this->birthday = $birthday;
-
-        return $this;
-    }
-
-    /**
-     * Get birthday
-     *
-     * @return \DateTime
-     */
-    public function getBirthday()
-    {
-        return $this->birthday;
     }
 }

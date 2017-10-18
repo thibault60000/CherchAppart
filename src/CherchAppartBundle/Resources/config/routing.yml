@@ -1,4 +1,4 @@
 home:
     path:    /
-    defaults: { _controller: CherchAppartBundle:home:index }
+    defaults: { _controller: CherchAppartBundle:Contents\Home:index }
 

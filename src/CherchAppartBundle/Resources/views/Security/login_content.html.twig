@@ -1,42 +1,82 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<!-- MODALE DE CONNEXION -->
-    <!-- Début du formulaire de connexion -->
-    <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
 
-        {% if error %}
-            <div class="errorConnect">
-                <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Identifiants incorrects</div>
-            </div>
-        {% endif %}
 
-        {% if csrf_token %}
-            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-        {% endif %}
 
-        <div class="heading">Formulaire de connexion</div>
+<!-- BANNER  -->
+<section id="banner" class="signIn">
 
-        <!-- Partie formulaire normal -->
-        <div class="left">
-            <label for="username">{{ 'security.login.username'|trans }}</label>
-            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
-            <label for="password">{{ 'security.login.password'|trans }}</label>
-            <input type="password" id="password" name="_password" required="required" />
-            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-            <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-            <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+    <div class="content">
+        <header>
+            <h2>CONNEXION</h2>
+            <p>Descendez pour vous connecter</p>
+        </header>
+    </div>
+    <a href="#one" class="goto-next scrolly">Suivant</a>
+</section>
+
+
+
+<!-- SECTION FORMULAIRE DE CONNEXION -->
+<section id="one" class="signIn">
+    <div class="content">
+        <div class="container">
+
+            <!-- Début du formulaire -->
+            <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
+
+                {% if error %}
+                    <div class="errorConnect">
+                        <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Identifiants incorrects</div>
+                    </div>
+                {% endif %}
+
+                {% if csrf_token %}
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                {% endif %}
+
+                <h3 class="heading">Formulaire de connexion</h3>
+
+                <!-- Partie formulaire normal -->
+                <div class="left">
+                    <label for="username">{{ 'security.login.username'|trans }}</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+                    <label for="password">{{ 'security.login.password'|trans }}</label>
+                    <input type="password" id="password" name="_password" required="required" />
+                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                    <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+                </div>
+                <!-- Partie connexion avec réseaux sociaux -->
+                <div class="right">
+                    <div class="connect">Se connecter avec</div>
+                    <ul>
+                        <li><button class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></button></li>
+                        <li><button class="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></button></li>
+                        <li><button class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></button></li>
+                    </ul>
+                </div>
+            </form>
+
         </div>
-        <!-- Partie connexion avec réseaux sociaux -->
-        <div class="right">
-            <div class="connect">Se connecter avec</div>
-            <a href="" class="facebook">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="" class="twitter">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="" class="google-plus">
-                <i class="fa fa-google-plus" aria-hidden="true"></i>
-            </a>
-        </div>
-    </form>
+    </div>
+</section>
+
+<!-- SECTION NUMERO 3 DE LA PAGE D'ACCUEIL -->
+<section id="two" class="spotlight style3 left">
+    <span class="image fit main bottom"><img src="{{ asset('images/thridPhoto.jpeg') }}" alt="Carte de la France" /></span>
+    <div class="content">
+        <header>
+            <h2>Connecte toi maintenant ! </h2>
+            <p>Pour faire ta première recherche ou poster ta première annonce !</p>
+        </header>
+        <p>Pour éviter tout spam sur les commentaires des annonces, il est nécessaire d'être
+            authentifier pour accéder à celles-ci. La création d'un compte est gratuit et
+            toute donnée personnelle restera confidentielle et sécurisée </p>
+        <ul class="actions">
+            <li><a href="#" class="button">S'inscrire</a></li>
+        </ul>
+    </div>
+    <a href="#four" class="goto-next scrolly">Suivant</a>
+</section>
+

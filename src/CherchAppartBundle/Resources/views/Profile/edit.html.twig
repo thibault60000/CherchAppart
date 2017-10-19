@@ -3,6 +3,6 @@
 {% block body %}
     {% block fos_user_content %}
     {% include "@FOSUser/Profile/edit_content.html.twig" %}
-    {% include "@CherchAppart/ChangePassword/change_password.html.twig" %}
+        <a href="{{ path('fos_user_change_password') }}">Changer de mot de passe</a>
     {% endblock fos_user_content %}
 {% endblock %}

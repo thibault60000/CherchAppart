@@ -227,4 +227,121 @@ class User extends BaseUser
     {
         return $this->phone_number;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $announce;
+
+
+    /**
+     * Add announce
+     *
+     * @param \CherchAppartBundle\Entity\Announce $announce
+     *
+     * @return User
+     */
+    public function addAnnounce(\CherchAppartBundle\Entity\Announce $announce)
+    {
+        $this->announce[] = $announce;
+
+        return $this;
+    }
+
+    /**
+     * Remove announce
+     *
+     * @param \CherchAppartBundle\Entity\Announce $announce
+     */
+    public function removeAnnounce(\CherchAppartBundle\Entity\Announce $announce)
+    {
+        $this->announce->removeElement($announce);
+    }
+
+    /**
+     * Get announce
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAnnounce()
+    {
+        return $this->announce;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $announce_comments;
+
+
+    /**
+     * Add announceComment
+     *
+     * @param \CherchAppartBundle\Entity\Announce_Comments $announceComment
+     *
+     * @return User
+     */
+    public function addAnnounceComment(\CherchAppartBundle\Entity\Announce_Comments $announceComment)
+    {
+        $this->announce_comments[] = $announceComment;
+
+        return $this;
+    }
+
+    /**
+     * Remove announceComment
+     *
+     * @param \CherchAppartBundle\Entity\Announce_Comments $announceComment
+     */
+    public function removeAnnounceComment(\CherchAppartBundle\Entity\Announce_Comments $announceComment)
+    {
+        $this->announce_comments->removeElement($announceComment);
+    }
+
+    /**
+     * Get announceComments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAnnounceComments()
+    {
+        return $this->announce_comments;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $comments_like;
+
+
+    /**
+     * Add commentsLike
+     *
+     * @param \CherchAppartBundle\Entity\Comments_like $commentsLike
+     *
+     * @return User
+     */
+    public function addCommentsLike(\CherchAppartBundle\Entity\Comments_like $commentsLike)
+    {
+        $this->comments_like[] = $commentsLike;
+
+        return $this;
+    }
+
+    /**
+     * Remove commentsLike
+     *
+     * @param \CherchAppartBundle\Entity\Comments_like $commentsLike
+     */
+    public function removeCommentsLike(\CherchAppartBundle\Entity\Comments_like $commentsLike)
+    {
+        $this->comments_like->removeElement($commentsLike);
+    }
+
+    /**
+     * Get commentsLike
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCommentsLike()
+    {
+        return $this->comments_like;
+    }
 }

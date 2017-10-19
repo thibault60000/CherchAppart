@@ -1,0 +1,22 @@
+CherchAppartBundle\Entity\Comments_like:
+    type: entity
+    table: null
+    repositoryClass: CherchAppartBundle\Repository\Comments_likeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        user:
+            targetEntity: CherchAppartBundle\Entity\User
+            inversedBy: comments_like
+            cascade: [ persist ]
+
+        announce_comments:
+            targetEntity: CherchAppartBundle\Entity\Announce_Comments
+            inversedBy: comments_like
+            cascade: [ persist ]
+
+    lifecycleCallbacks: {  }

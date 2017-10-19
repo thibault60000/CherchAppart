@@ -37,4 +37,18 @@ CherchAppartBundle\Entity\User:
              type: string
              length: '30'
              column: Phone_Number
+
+    oneToMany:
+        announce:
+            targetEntity: CherchAppartBundle\Entity\Announce
+            mappedBy: user
+
+        announce_comments:
+            targetEntity: CherchAppartBundle\Entity\Announce_Comments
+            mappedBy: user
+
+        comments_like:
+            targetEntity: CherchAppartBundle\Entity\Comments_like
+            mappedBy: user
+
     lifecycleCallbacks: {  }

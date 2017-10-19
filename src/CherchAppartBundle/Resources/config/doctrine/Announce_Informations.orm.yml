@@ -1,0 +1,87 @@
+CherchAppartBundle\Entity\Announce_Informations:
+    type: entity
+    table: null
+    repositoryClass: CherchAppartBundle\Repository\Announce_InformationsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        habitatType:
+            type: string
+            length: 255
+            column: Habitat_type
+        isFurnished:
+            type: boolean
+            column: Is_Furnished
+        area:
+            type: integer
+            column: Area
+        nbRooms:
+            type: integer
+            column: nb_Rooms
+        isConnected:
+            type: boolean
+            column: Is_connected
+        parking:
+            type: boolean
+            column: Parking
+        energyClass:
+            type: string
+            length: '3'
+            column: Energy_class
+        heatingType:
+            type: string
+            length: 255
+            column: Heating_type
+        gazTax:
+            type: boolean
+            column: Gaz_tax
+        eDFTaxe:
+            type: boolean
+            column: EDF_taxe
+        waterTax:
+            type: boolean
+            column: Water_tax
+        householdWasteTax:
+            type: boolean
+            column: Household_waste_tax
+        housingTax:
+            type: boolean
+            column: Housing_tax
+        isSmokable:
+            type: boolean
+            column: Is_smokable
+        petsAllowed:
+            type: boolean
+            column: Pets_allowed
+        doubleGlazing:
+            type: boolean
+            column: Double_glazing
+        proximity:
+            type: string
+            length: 255
+            nullable: true
+            column: Proximity
+        floor:
+            type: integer
+            column: Floor
+        cP:
+            type: integer
+            column: CP
+        city:
+            type: string
+            length: 255
+            column: City
+        priceTTC:
+            type: float
+            column: Price_TTC
+
+    oneToOne:
+        announce:
+            targetEntity: CherchAppartBundle\Entity\Announce
+            mappedBy: announce_informations
+
+    lifecycleCallbacks: {  }

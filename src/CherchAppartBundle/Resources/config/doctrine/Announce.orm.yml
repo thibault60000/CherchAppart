@@ -1,0 +1,42 @@
+CherchAppartBundle\Entity\Announce:
+    type: entity
+    table: null
+    repositoryClass: CherchAppartBundle\Repository\AnnounceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            column: Title
+        dateOfPosting:
+            type: date
+            column: Date_of_posting
+        isPremium:
+            type: boolean
+            column: Is_premium
+        endOfPublication:
+            type: date
+            column: End_of_publication
+    oneToOne:
+        announce_informations:
+            targetEntity: CherchAppartBundle\Entity\Announce_Informations
+            inversedBy: announce
+            cascade: [ persist ]
+
+    manyToOne:
+        user:
+            targetEntity: CherchAppartBundle\Entity\User
+            inversedBy: announce
+            cascade: [ persist ]
+
+    oneToMany:
+        announce_comments:
+            targetEntity: CherchAppartBundle\Entity\Announce_Comments
+            mappedBy: announce
+
+    lifecycleCallbacks: {  }

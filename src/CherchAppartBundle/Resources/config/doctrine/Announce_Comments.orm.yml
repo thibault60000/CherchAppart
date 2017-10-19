@@ -27,7 +27,7 @@ CherchAppartBundle\Entity\Announce_Comments:
 
     oneToMany:
         comments_like:
-            targetEntity: CherchAppartBundle\Entity\Comments_like
+            targetEntity: CherchAppartBundle\Entity\Comments_Like
             mappedBy: announce_comments
 
     lifecycleCallbacks: {  }

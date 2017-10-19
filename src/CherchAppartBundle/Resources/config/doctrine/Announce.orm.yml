@@ -39,4 +39,8 @@ CherchAppartBundle\Entity\Announce:
             targetEntity: CherchAppartBundle\Entity\Announce_Comments
             mappedBy: announce
 
+        announce_fire:
+            targetEntity: CherchAppartBundle\Entity\Announce_Fire
+            mappedBy: announce
+
     lifecycleCallbacks: {  }

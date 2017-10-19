@@ -1,7 +1,7 @@
-CherchAppartBundle\Entity\Comments_like:
+CherchAppartBundle\Entity\Comments_Like:
     type: entity
     table: null
-    repositoryClass: CherchAppartBundle\Repository\Comments_likeRepository
+    repositoryClass: CherchAppartBundle\Repository\Comments_LikeRepository
     id:
         id:
             type: integer

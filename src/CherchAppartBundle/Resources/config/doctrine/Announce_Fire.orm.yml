@@ -1,0 +1,27 @@
+CherchAppartBundle\Entity\Announce_Fire:
+    type: entity
+    table: null
+    repositoryClass: CherchAppartBundle\Repository\Announce_FireRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        value:
+            type: integer
+            column: Value
+
+    manyToOne:
+        announce:
+            targetEntity: CherchAppartBundle\Entity\Announce
+            inversedBy: announce_fire
+            cascade: [ persist ]
+
+        user:
+            targetEntity: CherchAppartBundle\Entity\User
+            inversedBy: announce_fire
+            cascade: [ persist ]
+
+    lifecycleCallbacks: {  }

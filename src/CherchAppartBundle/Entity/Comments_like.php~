@@ -5,7 +5,7 @@ namespace CherchAppartBundle\Entity;
 /**
  * Comments_like
  */
-class Comments_like
+class Comments_Like
 {
     /**
      * @var int

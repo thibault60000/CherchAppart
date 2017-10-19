@@ -1,0 +1,55 @@
+<?php
+
+namespace CherchAppartBundle\Entity;
+
+/**
+ * Announce_Fire
+ */
+class Announce_Fire
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @var int
+     */
+    private $value;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set value
+     *
+     * @param integer $value
+     *
+     * @return Announce_Fire
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+
+    /**
+     * Get value
+     *
+     * @return int
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+}
+

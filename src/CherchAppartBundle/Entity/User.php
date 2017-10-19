@@ -318,7 +318,7 @@ class User extends BaseUser
      *
      * @return User
      */
-    public function addCommentsLike(\CherchAppartBundle\Entity\Comments_like $commentsLike)
+    public function addCommentsLike(\CherchAppartBundle\Entity\Comments_Like $commentsLike)
     {
         $this->comments_like[] = $commentsLike;
 
@@ -330,7 +330,7 @@ class User extends BaseUser
      *
      * @param \CherchAppartBundle\Entity\Comments_like $commentsLike
      */
-    public function removeCommentsLike(\CherchAppartBundle\Entity\Comments_like $commentsLike)
+    public function removeCommentsLike(\CherchAppartBundle\Entity\Comments_Like $commentsLike)
     {
         $this->comments_like->removeElement($commentsLike);
     }
@@ -343,5 +343,44 @@ class User extends BaseUser
     public function getCommentsLike()
     {
         return $this->comments_like;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $announce_fire;
+
+
+    /**
+     * Add announceFire
+     *
+     * @param \CherchAppartBundle\Entity\Announce_Fire $announceFire
+     *
+     * @return User
+     */
+    public function addAnnounceFire(\CherchAppartBundle\Entity\Announce_Fire $announceFire)
+    {
+        $this->announce_fire[] = $announceFire;
+
+        return $this;
+    }
+
+    /**
+     * Remove announceFire
+     *
+     * @param \CherchAppartBundle\Entity\Announce_Fire $announceFire
+     */
+    public function removeAnnounceFire(\CherchAppartBundle\Entity\Announce_Fire $announceFire)
+    {
+        $this->announce_fire->removeElement($announceFire);
+    }
+
+    /**
+     * Get announceFire
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAnnounceFire()
+    {
+        return $this->announce_fire;
     }
 }

@@ -129,7 +129,7 @@ class Announce_Comments
      *
      * @return Announce_Comments
      */
-    public function addCommentsLike(\CherchAppartBundle\Entity\Comments_like $commentsLike)
+    public function addCommentsLike(\CherchAppartBundle\Entity\Comments_Like $commentsLike)
     {
         $this->comments_like[] = $commentsLike;
 
@@ -141,7 +141,7 @@ class Announce_Comments
      *
      * @param \CherchAppartBundle\Entity\Comments_like $commentsLike
      */
-    public function removeCommentsLike(\CherchAppartBundle\Entity\Comments_like $commentsLike)
+    public function removeCommentsLike(\CherchAppartBundle\Entity\Comments_Like $commentsLike)
     {
         $this->comments_like->removeElement($commentsLike);
     }

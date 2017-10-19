@@ -43,12 +43,16 @@ CherchAppartBundle\Entity\User:
             targetEntity: CherchAppartBundle\Entity\Announce
             mappedBy: user
 
+        announce_fire:
+            targetEntity: CherchAppartBundle\Entity\Announce_Fire
+            mappedBy: user
+
         announce_comments:
             targetEntity: CherchAppartBundle\Entity\Announce_Comments
             mappedBy: user
 
         comments_like:
-            targetEntity: CherchAppartBundle\Entity\Comments_like
+            targetEntity: CherchAppartBundle\Entity\Comments_Like
             mappedBy: user
 
     lifecycleCallbacks: {  }

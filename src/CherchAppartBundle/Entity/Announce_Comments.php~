@@ -109,4 +109,50 @@ class Announce_Comments
     {
         return $this->user;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $comments_like;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->comments_like = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add commentsLike
+     *
+     * @param \CherchAppartBundle\Entity\Comments_like $commentsLike
+     *
+     * @return Announce_Comments
+     */
+    public function addCommentsLike(\CherchAppartBundle\Entity\Comments_Like $commentsLike)
+    {
+        $this->comments_like[] = $commentsLike;
+
+        return $this;
+    }
+
+    /**
+     * Remove commentsLike
+     *
+     * @param \CherchAppartBundle\Entity\Comments_like $commentsLike
+     */
+    public function removeCommentsLike(\CherchAppartBundle\Entity\Comments_Like $commentsLike)
+    {
+        $this->comments_like->removeElement($commentsLike);
+    }
+
+    /**
+     * Get commentsLike
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCommentsLike()
+    {
+        return $this->comments_like;
+    }
 }

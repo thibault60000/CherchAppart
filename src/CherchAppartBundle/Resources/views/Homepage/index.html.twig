@@ -7,12 +7,17 @@
         <section id="banner">
             <!-- PREMIER BLOCK DE LA PAGE (IMAGE + TEXTE ACCROCHE -->
             <div class="content">
-                <header>
-                    <h2>Tu cherches ou loues un appartement ?</h2>
-                    <p>Cherch'Appart est le site parfait pour toi<br />
-                        De la chambre d'étudiant au T3</p>
-                </header>
-                <span class="image"></span>
+                 <header>
+                    {% if app.user == null %}
+                        <h2>Tu cherches ou loues un appartement ?</h2>
+                        <p>Cherch'Appart est le site parfait pour toi<br />
+                            De la chambre d'étudiant au T3</p>
+                    {% else %}
+                            <h2>Bonjour {{  app.user.username }} !</h2>
+                            <p>Tu peux maintenant proposer une annonce </br>
+                            ou en chercher une </p>
+                     {% endif %}
+                 </header>
             </div>
             <a href="#one" class="goto-next scrolly">Suivant</a>
         </section>

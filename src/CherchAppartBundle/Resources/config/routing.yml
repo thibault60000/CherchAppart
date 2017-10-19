@@ -2,3 +2,6 @@ home:
     path:    /
     defaults: { _controller: CherchAppartBundle:Contents\Home:index }
 
+profil:
+    resource: "@CherchAppartBundle/Resources/config/routing/profil.yml"
+    prefix:   /

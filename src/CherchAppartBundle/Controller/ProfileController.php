@@ -88,6 +88,8 @@ class ProfileController extends BaseController
             $userManager->updateUser($user);
 
             if (null === $response = $event->getResponse()) {
+                $this->get('session')->getFlashBag()
+                    ->add('Message', 'Modification de votre profil effectué avec succès');
                 $url = $this->generateUrl('home');
                 $response = new RedirectResponse($url);
             }

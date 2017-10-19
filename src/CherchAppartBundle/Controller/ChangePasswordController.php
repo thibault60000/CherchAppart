@@ -77,6 +77,8 @@ class ChangePasswordController extends BaseController
 
             if (null === $response = $event->getResponse()) {
                 $url = $this->generateUrl('home');
+                $this->get('session')->getFlashBag()
+                    ->add('Message', 'Modification du mot de passe effectué avec succès');
                 $response = new RedirectResponse($url);
             }
 

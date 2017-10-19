@@ -44,6 +44,7 @@
                     <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
                     <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
                     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+                    <a href="{{ path("fos_user_resetting_request") }}">Mot de passe oublié</a>
                 </div>
                 <!-- Partie connexion avec réseaux sociaux -->
                 <div class="right">

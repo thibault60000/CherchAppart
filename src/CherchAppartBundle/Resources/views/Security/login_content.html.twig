@@ -5,7 +5,11 @@
 
 <!-- BANNER  -->
 <section id="banner" class="signIn">
-
+    {% if error %}
+        <div class="errorConnect">
+            <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Identifiants incorrects</div>
+        </div>
+    {% endif %}
     <div class="content">
         <header>
             <h2>CONNEXION</h2>
@@ -24,12 +28,6 @@
 
             <!-- Début du formulaire -->
             <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
-
-                {% if error %}
-                    <div class="errorConnect">
-                        <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Identifiants incorrects</div>
-                    </div>
-                {% endif %}
 
                 {% if csrf_token %}
                     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
@@ -51,9 +49,9 @@
                 <div class="right">
                     <div class="connect">Se connecter avec</div>
                     <ul>
-                        <li><button class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></button></li>
-                        <li><button class="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></button></li>
-                        <li><button class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></button></li>
+                        <li><button class="facebook" type="button"><i class="fa fa-facebook" aria-hidden="true"></i></button></li>
+                        <li><button class="googleplus" type="button"><i class="fa fa-google-plus" aria-hidden="true"></i></button></li>
+                        <li><button class="twitter" type="button"><i class="fa fa-twitter" aria-hidden="true"></i></button></li>
                     </ul>
                 </div>
             </form>

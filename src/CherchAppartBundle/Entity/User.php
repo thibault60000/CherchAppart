@@ -2,11 +2,13 @@
 
 namespace CherchAppartBundle\Entity;
 
+use Symfony\Component\HttpFoundation\File\File;
 use FOS\UserBundle\Model\User as BaseUser;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * User
- */
+* @Vich\Uploadable
+*/
 class User extends BaseUser
 {
     /**
@@ -29,6 +31,21 @@ class User extends BaseUser
      */
     private $sexe;
 
+    /**
+     * @var string
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="profil_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
+     * @var \DateTime
+     */
+    private $updateAt;
 
     /**
      * Get id
@@ -382,5 +399,82 @@ class User extends BaseUser
     public function getAnnounceFire()
     {
         return $this->announce_fire;
+    }
+
+    public function  setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        if($image) {
+            $this->updateAt = new \DateTime('now');
+        }
+    }
+
+    public function  getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public  function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Set updateAt
+     *
+     * @param \DateTime $updateAt
+     *
+     * @return User
+     */
+    public function setUpdateAt($updateAt)
+    {
+        $this->updateAt = $updateAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updateAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdateAt()
+    {
+        return $this->updateAt;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $birthday;
+
+
+    /**
+     * Set birthday
+     *
+     * @param \DateTime $birthday
+     *
+     * @return User
+     */
+    public function setBirthday($birthday)
+    {
+        $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    /**
+     * Get birthday
+     *
+     * @return \DateTime
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
     }
 }

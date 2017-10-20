@@ -8,6 +8,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    app.path.profil_images: /uploads/images/profils
 
 framework:
     #esi: ~
@@ -91,3 +92,30 @@ fos_user:
                 address:        andujarstan@gmail.com
                 sender_name:    Stan
 
+easy_admin:
+    entities:
+        Announce:
+            class: CherchAppartBundle\Entity\Announce
+        Announce_Informations:
+            class: CherchAppartBundle\Entity\Announce_Informations
+        Announce_Comments:
+            class: CherchAppartBundle\Entity\Announce_Comments
+        Announce_Fire:
+            class: CherchAppartBundle\Entity\Announce_Fire
+        Comments_Like:
+            class: CherchAppartBundle\Entity\Comments_Like
+        User:
+            class: CherchAppartBundle\Entity\User
+            list:
+                fields: ['id',{ property: 'image', type: 'image', base_path: '%app.path.profil_images%'  }, 'name', 'lastname', 'sexe' ,'username', 'email', 'adress', 'postal_code', 'city', 'phone_number', 'enabled', 'lastLogin', 'confirmationToken', 'roles']
+            show:
+                fields: ['id',{ property: 'image', type: 'image', base_path: '%app.path.profil_images%'  }, 'Name', 'LastName', 'Sexe' ,'username', 'email', 'adress', 'Postal_Code', 'City', 'phone_number', 'enabled', 'lastLogin', 'confirmationToken', 'roles']
+            form:
+                fields: [{ property: 'imageFile', type: 'file' }, 'name', 'lastname', 'birthday', 'sexe' ,'username', 'password', 'email', 'adress', 'postal_code', 'city', 'phone_number', 'enabled', 'lastLogin', 'confirmationToken', 'roles']
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        profil_images:
+            uri_prefix:         '%app.path.profil_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/profils'

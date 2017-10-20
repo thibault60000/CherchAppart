@@ -281,4 +281,43 @@ class Announce
     {
         return $this->announce_comments;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $announce_fire;
+
+
+    /**
+     * Add announceFire
+     *
+     * @param \CherchAppartBundle\Entity\Announce_Fire $announceFire
+     *
+     * @return Announce
+     */
+    public function addAnnounceFire(\CherchAppartBundle\Entity\Announce_Fire $announceFire)
+    {
+        $this->announce_fire[] = $announceFire;
+
+        return $this;
+    }
+
+    /**
+     * Remove announceFire
+     *
+     * @param \CherchAppartBundle\Entity\Announce_Fire $announceFire
+     */
+    public function removeAnnounceFire(\CherchAppartBundle\Entity\Announce_Fire $announceFire)
+    {
+        $this->announce_fire->removeElement($announceFire);
+    }
+
+    /**
+     * Get announceFire
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAnnounceFire()
+    {
+        return $this->announce_fire;
+    }
 }

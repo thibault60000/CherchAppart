@@ -37,14 +37,14 @@
 
                 <!-- Partie formulaire normal -->
                 <div class="left">
-                    <label for="username">{{ 'security.login.username'|trans }}</label>
+                    <label for="username">{{ 'security.login.username'|trans }} ou adresse mail</label>
                     <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
                     <label for="password">{{ 'security.login.password'|trans }}</label>
                     <input type="password" id="password" name="_password" required="required" />
                     <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
                     <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
                     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-                    <a href="{{ path("fos_user_resetting_request") }}">Mot de passe oublié</a>
+                    <a class="passwordForget" href="{{ path("fos_user_resetting_request") }}">Mot de passe oublié</a>
                 </div>
                 <!-- Partie connexion avec réseaux sociaux -->
                 <div class="right">

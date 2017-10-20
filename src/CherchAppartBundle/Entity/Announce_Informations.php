@@ -660,4 +660,9 @@ class Announce_Informations
     {
         return $this->announce;
     }
+
+    public function __toString()
+    {
+        return strval($this->getId());
+    }
 }

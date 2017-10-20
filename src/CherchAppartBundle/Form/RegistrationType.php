@@ -2,6 +2,7 @@
 namespace CherchAppartBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class RegistrationType extends AbstractType
@@ -9,6 +10,7 @@ class RegistrationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('imageFile', FileType::class)
             ->add('name', null,  array('label' => 'form.name', 'translation_domain' => 'FOSUserBundle'))
             ->add('lastname', null, array('label' => 'form.lastname', 'translation_domain' => 'FOSUserBundle'))
             ->add('sexe', null, array('label' => 'form.sexe', 'translation_domain' => 'FOSUserBundle'))

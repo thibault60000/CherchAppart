@@ -3475,6 +3475,37 @@
 					width: 100%;
 				}
 
+
+
+				/* REGISTER FORM */
+				.registerForm h3{
+					font-size: 2.3rem;
+				}
+				.registerForm fieldset{
+					border: 2px solid #b9b0b0;
+					padding: 2.1rem 3rem 3rem 3rem;
+					border-radius: 4px;
+					margin-bottom:3rem;
+				}
+
+				.registerForm fieldset legend{
+					text-transform: uppercase;
+					padding: 0 1.3rem;
+				}
+				.registerForm label{
+					margin-bottom: 0.3rem;
+				}
+				.registerForm input{
+					height: 2.6rem;
+					margin-bottom: 1.1rem;
+				}
+				.registerForm input[type="submit"]{
+					height:auto;
+					margin-bottom:0;
+				}
+
+
+
 	body.is-touch #banner {
 		background-attachment: scroll;
 	}

@@ -1,7 +1,7 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 
-<!-- Main -->
+<!-- MAIN -->
 <div id="main" class="wrapper style1">
     <div class="container">
         <header class="major">
@@ -11,8 +11,10 @@
         <div class="row 150%">
             <div class="4u 12u$(medium)">
 
-                <!-- Sidebar -->
+                <!-- SIDEBAR-->
                 <section id="sidebar">
+
+                    <!-- EXISTING ACCOUNT ? -->
                     <section>
                         <h3>Vous possèdez deja un compte?</h3>
                         <p>Si vous possèdez deja un compte, connectez vous avec celui-ci, il n'est pas possible de créer un compte avec un nom d'utilisateur ou un mot de passe deja utiliser</p>
@@ -23,6 +25,8 @@
                         </footer>
                     </section>
                     <hr />
+
+                    <!-- CONFIDENTIALITY -->
                     <section>
                         <a href="#" class="image fit"><img src="{{ asset('images/security.jpeg') }}" alt="" /></a>
                         <h3>Politique de confidentialité</h3>
@@ -34,6 +38,8 @@
                         </footer>
                     </section>
                     <hr />
+
+                    <!-- REGISTER PROBLEM? -->
                     <section>
                         <h3>Un problème lors de votre inscription ?</h3>
                         <p>En cas de problème avec la saisie de vos informations personnelles ou en cas de question / doute lors de votre inscription, vous pouvez contacter nous contacter, nous vous répondrons dans les plus brefs délais</p>
@@ -44,6 +50,8 @@
                         </footer>
                     </section>
                     <hr />
+
+                    <!-- WHAT IS CHERCHAPPART? -->
                     <section>
                         <a href="#" class="image fit"><img src="{{ asset('images/firstPhoto.jpeg') }}" alt="" /></a>
                         <h3>Qu'est ce que Cherch'Appart ?</h3>
@@ -58,15 +66,18 @@
                 </section>
 
             </div>
+
+            <!-- MAIN CONTENT SIGN UP -->
             <div class="8u$ 12u$(medium) important(medium)">
 
-                <!-- Content -->
+                <!-- SECTION REGISTER FORM -->
                 <section class="registerForm" id="content">
                     <a href="#" class="image fit"><img src="{{ asset('images/register.jpeg') }}" alt="" /></a>
                     <h3>Formulaire d'inscription</h3>
 
                     {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
+                    <!-- IDENTIFIANTS -->
                     <fieldset>
                         <legend> Identifiants </legend>
                         {{ form_label((form.email)) }}
@@ -79,13 +90,14 @@
 
                     </fieldset>
 
+                    <!-- PASSWORD -->
                     <fieldset>
                         <legend> Mots de passes</legend>
                         {{ form_widget(form.plainPassword) }}
                         {{ form_errors(form.plainPassword) }}
                     </fieldset>
 
-
+                    <!-- IDENTITY -->
                     <fieldset>
                         <legend> Identité </legend>
                         {{ form_label((form.sexe)) }}
@@ -106,7 +118,7 @@
                     </fieldset>
 
 
-
+                    <!-- LOCALISATION -->
                     <fieldset>
                         <legend>Localisation</legend>
                         {{ form_label((form.adress)) }}

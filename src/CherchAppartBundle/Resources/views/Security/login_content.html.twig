@@ -21,12 +21,12 @@
 
 
 
-<!-- SECTION FORMULAIRE DE CONNEXION -->
+<!-- SIGN IN FORM -->
 <section id="one" class="signIn">
     <div class="content">
         <div class="container">
 
-            <!-- Début du formulaire -->
+            <!-- START SIGN IN FORM -->
             <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
 
                 {% if csrf_token %}
@@ -35,7 +35,7 @@
 
                 <h3 class="heading">Formulaire de connexion</h3>
 
-                <!-- Partie formulaire normal -->
+                <!-- NORMAL SIGN IN FORM -->
                 <div class="left">
                     <label for="username">{{ 'security.login.username'|trans }} ou adresse mail</label>
                     <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
@@ -46,7 +46,7 @@
                     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
                     <a class="passwordForget" href="{{ path("fos_user_resetting_request") }}">Mot de passe oublié</a>
                 </div>
-                <!-- Partie connexion avec réseaux sociaux -->
+                <!-- BUTTONS SIGN IN | SOCIAL NETWORKS -->
                 <div class="right">
                     <div class="connect">Se connecter avec</div>
                     <ul>
@@ -61,7 +61,8 @@
     </div>
 </section>
 
-<!-- SECTION NUMERO 3 DE LA PAGE D'ACCUEIL -->
+
+<!-- SECTION | CONNECT  -->
 <section id="two" class="spotlight style3 left">
     <span class="image fit main bottom"><img src="{{ asset('images/thridPhoto.jpeg') }}" alt="Carte de la France" /></span>
     <div class="content">

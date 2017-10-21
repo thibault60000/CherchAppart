@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+
+<!-- Cherch'Appart© 2017 || Thibault J. || Stanislas A. -->
 <html>
 
     <!-- HEAD -->
     <head>
-
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>{% block title %}CherchAppart | Logement | Location{% endblock %}</title>
+        <!-- META -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -20,6 +22,8 @@
 
     <!-- BODY -->
     <body class="landing">
+
+        <!-- PAGE WRAPPER -->
         <div id="page-wrapper">
             {% include '@CherchAppart/Layout/menu.html.twig' %}
 
@@ -27,7 +31,7 @@
 
             {% include '@CherchAppart/Layout/footer.html.twig' %}
 
-            <!--Javascript-->
+            <!-- JAVASCRIPT -->
             {% block javascripts %}
                 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('js/jquery.scrolly.min.js') }}"></script>

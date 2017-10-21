@@ -2,7 +2,12 @@
 
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
 
-    <img src="{{ asset('uploads/images/profils/fond-ecran-space-58.jpg') }}"/>
+    {% set image =  app.user.image %}
+    <img src="{{ asset('uploads/images/profils/'~image) }}"/>
+
+    {{ form_label(form.imageFile) }}
+    {{ form_errors(form.imageFile) }}
+    {{ form_widget(form.imageFile) }}
 
     {{ form_label(form.imageFile) }}
     {{ form_errors(form.imageFile) }}

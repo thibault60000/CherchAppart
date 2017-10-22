@@ -1,151 +1,156 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-
-<!-- MAIN -->
-<div id="main" class="wrapper style1">
-    <div class="container">
-        <header class="major">
-            <h2>Inscription</h2>
-            <p>Bienvenue sur Cherch'Appart ! Pour vous connectez, merci de créer un compte</p>
+<!-- BANNER  -->
+<section id="banner" class="signUp">
+    <div class="content">
+        <header>
+            <h2>INSCRIPTION</h2>
+            <p>Descendez pour vous inscrire</p>
         </header>
-        <div class="row 150%">
-            <div class="4u 12u$(medium)">
+    </div>
+    <a href="#one" class="goto-next scrolly">Suivant</a>
+</section>
 
-                <!-- SIDEBAR-->
-                <section id="sidebar">
 
-                    <!-- EXISTING ACCOUNT ? -->
-                    <section>
-                        <h3>Vous possèdez deja un compte?</h3>
-                        <p>Si vous possèdez deja un compte, connectez vous avec celui-ci, il n'est pas possible de créer un compte avec un nom d'utilisateur ou un mot de passe deja utiliser</p>
-                        <footer>
-                            <ul class="actions">
-                                <li><a href="#" class="button">Se connecter</a></li>
-                            </ul>
-                        </footer>
+
+<section id="one" class="signUp">
+    <div id="main" class="wrapper style1">
+        <div class="container">
+            <div class="row 150%">
+                <div class="4u 12u$(medium)">
+
+                    <!-- SIDEBAR-->
+                    <section id="sidebar">
+
+                        <!-- EXISTING ACCOUNT ? -->
+                        <section>
+                            <h3>Vous possèdez deja un compte?</h3>
+                            <p>Si vous possèdez deja un compte, connectez vous avec celui-ci, il n'est pas possible de créer un compte avec un nom d'utilisateur ou un mot de passe deja utiliser</p>
+                            <footer>
+                                <ul class="actions">
+                                    <li><a href="#" class="button">Se connecter</a></li>
+                                </ul>
+                            </footer>
+                        </section>
+                        <hr />
+
+                        <!-- CONFIDENTIALITY -->
+                        <section>
+                            <a href="#" class="image fit"><img src="{{ asset('images/security.jpeg') }}" alt="" /></a>
+                            <h3>Politique de confidentialité</h3>
+                            <p>Les informations entrées dans le formulaire ci-dessous ne sont ni transmises ni divulguées. Les identifiants et mot de passes sont cryptées en base de données. Contactez les administrateurs pour supprimer vos données personnelles</p>
+                            <footer>
+                                <ul class="actions">
+                                    <li><a href="#" class="button">En savoir plus</a></li>
+                                </ul>
+                            </footer>
+                        </section>
+                        <hr />
+
+                        <!-- REGISTER PROBLEM? -->
+                        <section>
+                            <h3>Un problème lors de votre inscription ?</h3>
+                            <p>En cas de problème avec la saisie de vos informations personnelles ou en cas de question / doute lors de votre inscription, vous pouvez contacter nous contacter, nous vous répondrons dans les plus brefs délais</p>
+                            <footer>
+                                <ul class="actions">
+                                    <li><a href="#" class="button">Contacez-nous</a></li>
+                                </ul>
+                            </footer>
+                        </section>
+                        <hr />
+
+                        <!-- WHAT IS CHERCHAPPART? -->
+                        <section>
+                            <a href="#" class="image fit"><img src="{{ asset('images/firstPhoto.jpeg') }}" alt="" /></a>
+                            <h3>Qu'est ce que Cherch'Appart ?</h3>
+                            <p>Vous êtes venus sur cette page trop rapidement? Retournez à l'accueil pour en apprendre plus sur notre site, vous pourrez toujours créer un compte à partir de la page d'accueil</p>
+                            <footer>
+                                <ul class="actions">
+                                    <li><a href="#" class="button">Retour à l'accueil</a></li>
+                                </ul>
+                            </footer>
+                        </section>
+
                     </section>
-                    <hr />
 
-                    <!-- CONFIDENTIALITY -->
-                    <section>
-                        <a href="#" class="image fit"><img src="{{ asset('images/security.jpeg') }}" alt="" /></a>
-                        <h3>Politique de confidentialité</h3>
-                        <p>Les informations entrées dans le formulaire ci-dessous ne sont ni transmises ni divulguées. Les identifiants et mot de passes sont cryptées en base de données. Contactez les administrateurs pour supprimer vos données personnelles</p>
-                        <footer>
-                            <ul class="actions">
-                                <li><a href="#" class="button">En savoir plus</a></li>
-                            </ul>
-                        </footer>
+                </div>
+
+                <!-- MAIN CONTENT SIGN UP -->
+                <div class="8u$ 12u$(medium) important(medium)">
+
+                    <!-- SECTION REGISTER FORM -->
+                    <section class="registerForm" id="content">
+                        <a href="#" class="image fit"><img src="{{ asset('images/register.jpeg') }}" alt="" /></a>
+                        <h3>Formulaire d'inscription</h3>
+
+                        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+                        <!-- IDENTIFIANTS -->
+                        <fieldset>
+                            <legend> Identifiants </legend>
+                            {{ form_label((form.email)) }}
+                            {{ form_errors(form.email) }}
+                            {{ form_widget(form.email) }}
+
+                            {{ form_label((form.username)) }}
+                            {{ form_errors(form.username) }}
+                            {{ form_widget(form.username) }}
+
+                        </fieldset>
+
+                        <!-- PASSWORD -->
+                        <fieldset>
+                            <legend> Mots de passes</legend>
+                            {{ form_widget(form.plainPassword) }}
+                            {{ form_errors(form.plainPassword) }}
+                        </fieldset>
+
+                        <!-- IDENTITY -->
+                        <fieldset>
+                            <legend> Identité </legend>
+                            {{ form_label((form.sexe)) }}
+                            {{ form_errors(form.sexe) }}
+                            {{ form_widget(form.sexe) }}
+
+                            {{ form_label((form.lastname)) }}
+                            {{ form_errors(form.lastname) }}
+                            {{ form_widget(form.lastname) }}
+
+                            {{ form_label((form.name)) }}
+                            {{ form_errors(form.name) }}
+                            {{ form_widget(form.name) }}
+
+                            {{ form_label((form.phone_number)) }}
+                            {{ form_errors(form.phone_number) }}
+                            {{ form_widget(form.phone_number) }}
+                        </fieldset>
+
+
+                        <!-- LOCALISATION -->
+                        <fieldset>
+                            <legend>Localisation</legend>
+                            {{ form_label((form.adress)) }}
+                            {{ form_errors(form.adress) }}
+                            {{ form_widget(form.adress) }}
+
+                            {{ form_label((form.postal_code)) }}
+                            {{ form_errors(form.postal_code) }}
+                            {{ form_widget(form.postal_code) }}
+
+                            {{ form_label((form.city)) }}
+                            {{ form_errors(form.city) }}
+                            {{ form_widget(form.city) }}
+                        </fieldset>
+
+                        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+                        {{ form_end(form) }}
+
                     </section>
-                    <hr />
-
-                    <!-- REGISTER PROBLEM? -->
-                    <section>
-                        <h3>Un problème lors de votre inscription ?</h3>
-                        <p>En cas de problème avec la saisie de vos informations personnelles ou en cas de question / doute lors de votre inscription, vous pouvez contacter nous contacter, nous vous répondrons dans les plus brefs délais</p>
-                        <footer>
-                            <ul class="actions">
-                                <li><a href="#" class="button">Contacez-nous</a></li>
-                            </ul>
-                        </footer>
-                    </section>
-                    <hr />
-
-                    <!-- WHAT IS CHERCHAPPART? -->
-                    <section>
-                        <a href="#" class="image fit"><img src="{{ asset('images/firstPhoto.jpeg') }}" alt="" /></a>
-                        <h3>Qu'est ce que Cherch'Appart ?</h3>
-                        <p>Vous êtes venus sur cette page trop rapidement? Retournez à l'accueil pour en apprendre plus sur notre site, vous pourrez toujours créer un compte à partir de la page d'accueil</p>
-                        <footer>
-                            <ul class="actions">
-                                <li><a href="#" class="button">Retour à l'accueil</a></li>
-                            </ul>
-                        </footer>
-                    </section>
-
-                </section>
-
-            </div>
-
-            <!-- MAIN CONTENT SIGN UP -->
-            <div class="8u$ 12u$(medium) important(medium)">
-
-                <!-- SECTION REGISTER FORM -->
-                <section class="registerForm" id="content">
-                    <a href="#" class="image fit"><img src="{{ asset('images/register.jpeg') }}" alt="" /></a>
-                    <h3>Formulaire d'inscription</h3>
-
-                    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-
-                    <!-- IDENTIFIANTS -->
-                    <fieldset>
-                        <legend> Identifiants </legend>
-                        {{ form_label((form.email)) }}
-                        {{ form_errors(form.email) }}
-                        {{ form_widget(form.email) }}
-
-                        {{ form_label((form.username)) }}
-                        {{ form_errors(form.username) }}
-                        {{ form_widget(form.username) }}
-
-                    </fieldset>
-
-                    <!-- PASSWORD -->
-                    <fieldset>
-                        <legend> Mots de passes</legend>
-                        {{ form_widget(form.plainPassword) }}
-                        {{ form_errors(form.plainPassword) }}
-                    </fieldset>
-
-                    <!-- IDENTITY -->
-                    <fieldset>
-                        <legend> Identité </legend>
-                        {{ form_label((form.sexe)) }}
-                        {{ form_errors(form.sexe) }}
-                        {{ form_widget(form.sexe) }}
-
-                        {{ form_label((form.lastname)) }}
-                        {{ form_errors(form.lastname) }}
-                        {{ form_widget(form.lastname) }}
-
-                        {{ form_label((form.name)) }}
-                        {{ form_errors(form.name) }}
-                        {{ form_widget(form.name) }}
-
-                        {{ form_label((form.phone_number)) }}
-                        {{ form_errors(form.phone_number) }}
-                        {{ form_widget(form.phone_number) }}
-                    </fieldset>
-
-
-                    <!-- LOCALISATION -->
-                    <fieldset>
-                        <legend>Localisation</legend>
-                        {{ form_label((form.adress)) }}
-                        {{ form_errors(form.adress) }}
-                        {{ form_widget(form.adress) }}
-
-                        {{ form_label((form.postal_code)) }}
-                        {{ form_errors(form.postal_code) }}
-                        {{ form_widget(form.postal_code) }}
-
-                        {{ form_label((form.city)) }}
-                        {{ form_errors(form.city) }}
-                        {{ form_widget(form.city) }}
-                    </fieldset>
-
-                    <input type="submit" value="{{ 'registration.submit'|trans }}" />
-                    {{ form_end(form) }}
-
-
-
-                </section>
-
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+</section>
 
 
 

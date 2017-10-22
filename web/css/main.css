@@ -3504,7 +3504,16 @@
 					margin-bottom:0;
 				}
 
-
+				#fos_user_registration_form_plainPassword ul{
+					list-style: none;
+					color: #ca2727;
+					text-transform: uppercase;
+					font-weight: bold;
+					font-size: 1.1rem;
+					margin-left: 4.9%;
+					position: absolute;
+					margin-top: -2.5rem;
+				}
 
 	body.is-touch #banner {
 		background-attachment: scroll;
@@ -3512,7 +3521,7 @@
 
 #one.signIn h3{
 	font-size: 2.1rem;
-	margin-bottom: 2.1rem;
+	margin-bottom: 1rem;
 }
 
 #one.signIn .left{

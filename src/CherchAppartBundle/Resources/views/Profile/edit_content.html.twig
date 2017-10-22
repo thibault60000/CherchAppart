@@ -3,7 +3,18 @@
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
 
     {% set image =  app.user.image %}
-    <img src="{{ asset('uploads/images/profils/'~image) }}"/>
+    <div style="height: 11rem;
+         width: 11rem;
+         display: block;
+         margin-left:4rem;
+         margin-top: 10rem;
+         border-radius: 50%;
+         overflow: hidden;
+         border: 2px solid;
+         max-height: 100%;;">
+        <img src="{{ asset('uploads/images/profils/'~image) }}" style="max-height: 100%;"/>
+    </div>
+
 
     {{ form_label(form.imageFile) }}
     {{ form_errors(form.imageFile) }}

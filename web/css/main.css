@@ -108,9 +108,12 @@
 		.container {
 			width: 70em;
 		}
-		#one.signIn .container{
+		#one.signIn .container {
 			width: 90%;
 		}
+		#one.signµUp .container{
+		width: 90%;
+}
 
 	}
 
@@ -139,6 +142,9 @@
 		}
 
 		#one.signIn .container{
+			width: 90%;
+		}
+		#one.signUp .container{
 			width: 90%;
 		}
 
@@ -170,6 +176,9 @@
 		#one.signIn .container{
 			width: 90%;
 		}
+		#one.signUp .container{
+			width: 90%;
+		}
 	}
 
 	@media screen and (max-width: 736px) {
@@ -196,6 +205,9 @@
 			width: 100%;
 		}
 		#one.signIn .container{
+			width: 90%;
+		}
+		#one.signUp .container{
 			width: 90%;
 		}
 
@@ -225,6 +237,9 @@
 			width: 100%;
 		}
 		#one.signIn .container{
+			width: 90%;
+		}
+		#one.signUp .container{
 			width: 90%;
 		}
 
@@ -3402,7 +3417,14 @@
 	#banner.signIn{
 		max-height:41vh;
 	}
+	#banner.signUp{
+		max-height:41vh;
+	}
+
 	#one.signIn{
+		padding-top:5rem;
+	}
+	#one.signUp{
 		padding-top:5rem;
 	}
 
@@ -3415,6 +3437,9 @@
 		}
 
 		#banner.signIn:before{
+			height:39.4vh;
+		}
+		#banner.signUp:before{
 			height:39.4vh;
 		}
 		#banner:after {
@@ -3523,6 +3548,7 @@
 	font-size: 2.1rem;
 	margin-bottom: 1rem;
 }
+
 
 #one.signIn .left{
 	display: inline-block;

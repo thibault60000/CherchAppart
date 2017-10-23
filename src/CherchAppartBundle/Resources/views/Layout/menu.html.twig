@@ -27,7 +27,7 @@
                 <li><a href="#">Proposer</a></li>
                 {% endif %}
 
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
                 {% if app.user== null %}
                     <li><a class="button special" href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
                     <li><a class="button special" href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>

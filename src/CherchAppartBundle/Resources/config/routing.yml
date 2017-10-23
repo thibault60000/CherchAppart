@@ -5,3 +5,8 @@ home:
 profil:
     resource: "@CherchAppartBundle/Resources/config/routing/profil.yml"
     prefix:   /
+
+contact:
+    path:  /contact
+    defaults: { _controller: CherchAppartBundle:Contents\Contact:index }
+    methods:  [GET, POST]

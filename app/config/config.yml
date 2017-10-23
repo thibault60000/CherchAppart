@@ -89,8 +89,8 @@ fos_user:
             enabled: false
             template:   '@FOSUser/Registration/email.txt.twig'
             from_email:
-                address:        andujarstan@gmail.com
-                sender_name:    Stan
+                address:        cherchappartnoreply@gmail.com
+                sender_name:    cherchappartnoreply@gmail.com
 
 easy_admin:
     entities:

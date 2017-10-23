@@ -1,0 +1,26 @@
+{% extends '@CherchAppart/layout.html.twig' %}
+
+{% block title %}Contact{% endblock%}
+
+{% block body %}
+    <h1>Contact</h1>
+<p>Vous voulez contacter Cherch'Appart ?</p>
+
+    <form action="{{ path('contact') }}" method="post">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.name) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.subject) }}
+        {{ form_row(form.body) }}
+
+        {{ form_rest(form) }}
+
+        <input type="submit" value="Submit" />
+    </form>
+
+    {%  for message in app.session.flashbag.get('Contact-Message') %}
+        <li><b>{{ message }}</b></li>
+    {% endfor %}
+
+{% endblock %}

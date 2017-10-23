@@ -84,6 +84,10 @@
 
                         {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
+                        {{ form_label(form.imageFile) }}
+                        {{ form_errors(form.imageFile) }}
+                        {{ form_widget(form.imageFile) }}
+
                         <!-- IDENTIFIANTS -->
                         <fieldset>
                             <legend> Identifiants </legend>

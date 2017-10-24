@@ -70,6 +70,7 @@ swiftmailer:
     password:  "%mailer_password%"
     spool: { type: memory }
 
+# FosUser Configuration
 fos_user:
     db_driver: orm
     firewall_name: main
@@ -92,7 +93,9 @@ fos_user:
                 address:        cherchappartnoreply@gmail.com
                 sender_name:    cherchappartnoreply@gmail.com
 
+# EasyAdmin Configuration
 easy_admin:
+   # title: 'Cherch''Appart Admin'
     entities:
         Announce:
             class: CherchAppartBundle\Entity\Announce
@@ -113,6 +116,7 @@ easy_admin:
             form:
                 fields: [{ property: 'imageFile', type: 'file' }, 'name', 'lastname', 'birthday', 'sexe' ,'username', 'password', 'email', 'adress', 'postal_code', 'city', 'phone_number', 'enabled', 'lastLogin', 'confirmationToken', 'roles']
 
+#VichUploader Configuration
 vich_uploader:
     db_driver: orm
     mappings:

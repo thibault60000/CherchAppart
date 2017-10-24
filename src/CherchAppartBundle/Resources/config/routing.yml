@@ -6,6 +6,10 @@ profil:
     resource: "@CherchAppartBundle/Resources/config/routing/profil.yml"
     prefix:   /
 
+announce:
+    resource: "@CherchAppartBundle/Resources/config/routing/announce.yml"
+    prefix:   /announce
+
 contact:
     path:  /contact
     defaults: { _controller: CherchAppartBundle:Contents\Contact:index }

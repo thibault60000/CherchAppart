@@ -79,6 +79,7 @@ resetting:
             L'équipe
 form:
     group_name: 'Nom du groupe'
+    imageFileRegister: 'Selectionnez votre image'
     imageFile: 'Photo'
     subject: 'Sujet'
     body: 'Corps'

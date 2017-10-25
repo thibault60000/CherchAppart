@@ -3539,6 +3539,49 @@
 					position: absolute;
 					margin-top: -2.5rem;
 				}
+				.registerForm .imageFileRegister{
+					display: inline-block;
+					width: 49%;
+					padding-top: 4.3rem;
+					height: 11rem;
+					vertical-align: bottom;
+				}
+				.registerForm label[for="fos_user_registration_form_imageFile"]{
+					margin-top: 0rem;
+					display: block;
+					vertical-align: top;
+					padding: 0.5rem 1rem 0.5rem 1rem;
+					border: 1px solid gray;
+					text-align: center;
+					width: 80%;
+					border-radius: 4px;
+					cursor:pointer;
+					position:relative;
+				}
+				.registerForm label[for="fos_user_registration_form_imageFile"]::before {
+					content: "(Privilégiez une photo carré)";
+					width: 100%;
+					height: 1rem;
+					display: block;
+					position: absolute;
+					top: 3.1rem;
+					left: -23%;
+					font-size: 0.9rem;
+					font-style: italic;
+					color: #a7a5a5;
+				}
+
+				#fos_user_registration_form_imageFile{
+					opacity: 0;
+					position: absolute;
+					z-index: -1;
+				}
+				.registerForm label[for="fos_user_registration_form_imageFile"]:hover {
+					color: #5c81c6;
+					border: 1px solid #5c81c6;
+
+				}
+
 
 	body.is-touch #banner {
 		background-attachment: scroll;

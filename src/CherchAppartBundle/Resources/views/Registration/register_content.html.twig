@@ -82,21 +82,26 @@
 
                         <fieldset>
                             <legend>Photo de profil</legend>
-                            {{ form_label(form.imageFile) }}
-                            {{ form_errors(form.imageFile) }}
-                            {{ form_widget(form.imageFile) }}
-
-                            <div style="height: 11rem;
+                            <div style="display:inline-block;
+                                height: 11rem;
                                  width: 11rem;
-                                 display: block;
-                                 margin-left:4rem;
-                                 margin-top: 10rem;
-                                 border-radius: 50%;
-                                 overflow: hidden;
-                                 border: 2px solid;
-                                 max-height: 100%;;">
-                                <img alt="your image" id="blah" src="{{ asset('uploads/images/profils/'~image) }}" style="max-height: 100%;"/>
+                                 width: 50%;">
+                                    <div style="border: 2px solid;
+                                            min-height: 11rem;
+                                            width: 11rem;
+                                            height: 11rem;
+                                             border-radius: 50%; margin: 0 auto; text-align: center; overflow: hidden;">
+                                        <img alt="" id="blah"  style="max-height: 100%;"/>
+                                    </div>
+
                             </div>
+                            <div class="imageFileRegister">
+
+                                {{ form_label(form.imageFile) }}
+                                {{ form_errors(form.imageFile) }}
+                                {{ form_widget(form.imageFile) }}
+                            </div>
+
                         </fieldset>
 
 

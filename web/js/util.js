@@ -615,3 +615,8 @@ function readURL(input) {
 $("#fos_user_profile_form_imageFile").change(function() {
     readURL(this);
 });
+
+$("#fos_user_registration_form_imageFile").change(function() {
+    readURL(this);
+});
+

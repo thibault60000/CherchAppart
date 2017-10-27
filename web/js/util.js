@@ -622,12 +622,15 @@ $("#fos_user_registration_form_imageFile").change(function() {
 
 
 $(".editIdBtn" ).click(function() {
+
 	if( $("#fos_user_profile_form_username").hasClass("enable") &&  $("#fos_user_profile_form_email").hasClass("enable")){
         $("#fos_user_profile_form_username").removeClass("enable");
         $("#fos_user_profile_form_username").prop("disabled",true);
 			$("#fos_user_profile_form_email").removeClass("enable");
         	$("#fos_user_profile_form_email").prop("disabled",true);
 				$(".imageFileRegister label").removeClass("enable");
+       				 $(".imageFileRegister label").removeClass("enable");
+       				 $(".photoProfileEditContent img").removeClass("enable");
         $(".editIdBtn i").addClass("fa-pencil-square").removeClass("fa-times")
 
 	}
@@ -637,8 +640,44 @@ $(".editIdBtn" ).click(function() {
 			$("#fos_user_profile_form_email").addClass("enable");
         	$("#fos_user_profile_form_email").prop("disabled",false);
 				$(".imageFileRegister label").addClass("enable");
+					$(".imageFileRegister label").addClass("enable");
+        				$(".photoProfileEditContent img").addClass("enable");
 		$(".editIdBtn i").addClass("fa-times").removeClass("fa-pencil-square");
 
 	}
 });
 
+
+
+$(".editCoordsBtn" ).click(function() {
+
+    if( ($("#fos_user_profile_form_adress").hasClass("enable"))
+        &&  ($("#fos_user_profile_form_phone_number").hasClass("enable"))
+        &&  ($("#fos_user_profile_form_postal_code").hasClass("enable"))
+	    &&  ($("#fos_user_profile_form_city").hasClass("enable"))){
+
+        $("#fos_user_profile_form_adress").removeClass("enable");
+        $("#fos_user_profile_form_adress").prop("disabled",true);
+        $("#fos_user_profile_form_phone_number").removeClass("enable");
+        $("#fos_user_profile_form_phone_number").prop("disabled",true);
+        $("#fos_user_profile_form_postal_code").removeClass("enable");
+        $("#fos_user_profile_form_postal_code").prop("disabled",true);
+        $("#fos_user_profile_form_city").removeClass("enable");
+        $("#fos_user_profile_form_city").prop("disabled",true);
+
+        $(".editCoordsBtn i").addClass("fa-pencil-square").removeClass("fa-times")
+
+    }
+    else{
+        $("#fos_user_profile_form_adress").addClass("enable");
+        $("#fos_user_profile_form_adress").prop("disabled",false);
+        $("#fos_user_profile_form_phone_number").addClass("enable");
+        $("#fos_user_profile_form_phone_number").prop("disabled",false);
+        $("#fos_user_profile_form_postal_code").addClass("enable");
+        $("#fos_user_profile_form_postal_code").prop("disabled",false);
+        $("#fos_user_profile_form_city").addClass("enable");
+        $("#fos_user_profile_form_city").prop("disabled",false);
+        $(".editCoordsBtn i").addClass("fa-times").removeClass("fa-pencil-square");
+
+    }
+});

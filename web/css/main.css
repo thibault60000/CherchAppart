@@ -3534,7 +3534,10 @@
 									border: solid 0.5px rgba(255, 255, 255, 0.25);
 								}
 								.editAccountForm input.enable{
-									border: solid 0.5px rgb(255, 255, 255)
+									border: solid 0.5px rgb(255, 255, 255);
+								}
+								.editAccountForm input.enable:hover{
+									border: solid 0.5px #5c81c6;
 								}
 									.registerForm input[type="submit"] {
 										height:auto;
@@ -3585,17 +3588,17 @@
 							position:relative;
 						}
 
-								.registerForm label[for="fos_user_registration_form_imageFile"]::before{
-									content: "(Privilégiez une photo carré)";
-									width: 100%;
-									height: 1rem;
-									display: block;
-									position: absolute;
-									top: 3.1rem;
-									font-size: 0.9rem;
-									font-style: italic;
-									color: #a7a5a5;
-								}
+							.registerForm label[for="fos_user_registration_form_imageFile"]::before{
+								content: "(Privilégiez une photo carré)";
+								width: 100%;
+								height: 1rem;
+								display: block;
+								position: absolute;
+								top: 3.1rem;
+								font-size: 0.9rem;
+								font-style: italic;
+								color: #a7a5a5;
+							}
 
 
 				#fos_user_registration_form_imageFile,
@@ -3604,11 +3607,15 @@
 					z-index: -1;
 					left: -9999px;
 				}
-					.registerForm label[for="fos_user_registration_form_imageFile"]:hover,
-					.editAccountForm label[for="fos_user_profile_form_imageFile"]:hover{
+					.registerForm label[for="fos_user_registration_form_imageFile"]:hover{
 						color: #5c81c6;
 						border: 1px solid #5c81c6;
 					}
+
+						.editAccountForm label[for="fos_user_profile_form_imageFile"].enable:hover{
+							color: #5c81c6;
+							border: 1px solid #5c81c6;
+						}
 						.registerForm .photoProfilRegisterContainer{
 							display:inline-block;
 							height: 11rem;
@@ -3645,13 +3652,13 @@
 					text-align: center;
 					width: 88%;
 					border-radius: 4px;
-					cursor: pointer;
 					position: relative;
 					height: 100%;
 					margin: 0 auto;
 				}
 				.editAccountForm label[for="fos_user_profile_form_imageFile"].enable{
 					  border: 1px solid rgb(253, 253, 253);
+					  cursor: pointer;
 				  }
 				.editAccountForm label[for="fos_user_profile_form_imageFile"]::before {
 					content: "(Privilégiez une photo carré)";
@@ -3714,7 +3721,11 @@
 							 }
 								 .editAccountForm .photoProfileEditContent img{
 									 max-height: 100%;
+									 opacity: 0.4;
 								 }
+									.editAccountForm .photoProfileEditContent img.enable{
+										opacity:1;
+									}
 									 .editAccountForm .photoProfileEditContent{
 										 border: 5.1px solid rgba(92, 129, 198, 0.82);
 										 min-height: 11rem;

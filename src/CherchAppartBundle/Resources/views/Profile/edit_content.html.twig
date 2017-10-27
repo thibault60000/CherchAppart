@@ -1,53 +1,124 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+
+<!-- BANNER  -->
+<section id="banner" class="editAccountPage">
+    <div class="content">
+        <header>
+            <h2>Mon compte</h2>
+            <p>Descendez pour modifier vos informations personnelles</p>
+        </header>
+    </div>
+    <a href="#one" class="goto-next scrolly">Suivant</a>
+</section>
+
+<section id="one" class="editAccountForm">
+    <div class="container">
+
+
+
+
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
 
     {% set image =  app.user.image %}
-    <div style="height: 11rem;
-         width: 11rem;
-         display: block;
-         margin-left:4rem;
-         margin-top: 10rem;
-         border-radius: 50%;
-         overflow: hidden;
-         border: 2px solid;
-         max-height: 100%;;">
-        <img alt="your image" id="blah" src="{{ asset('uploads/images/profils/'~image) }}" style="max-height: 100%;"/>
+
+        <fieldset>
+            <legend>Identité en ligne</legend>
+
+            <div class="identityEditAccount">
+                {{ form_label((form.username)) }}
+                {{ form_errors(form.username) }}
+                {{ form_widget(form.username) }}
+
+                {{ form_label((form.email)) }}
+                {{ form_errors(form.email) }}
+                {{ form_widget(form.email) }}
+            </div>
+
+
+            <div class="imageFileEditAccount">
+                <div class="photoProfileEditContainer">
+                    <div class="photoProfileEditContent">
+                        <img alt="photo de profil" id="blah" src="{{ asset('uploads/images/profils/'~image) }}" />
+                    </div>
+                </div>
+
+                <div class="imageFileRegister">
+                    {{ form_label(form.imageFile) }}
+                    {{ form_errors(form.imageFile) }}
+                    {{ form_widget(form.imageFile) }}
+                </div>
+            </div>
+
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Coordonnées</legend>
+                <div class="coordsEditAccount">
+                    {{ form_label((form.adress)) }}
+                    {{ form_errors(form.adress) }}
+                    {{ form_widget(form.adress) }}
+
+                    {{ form_label((form.phone_number)) }}
+                    {{ form_errors(form.phone_number) }}
+                    {{ form_widget(form.phone_number) }}
+                </div>
+
+                <div class="cityEditAccount">
+                    {{ form_label((form.postal_code)) }}
+                    {{ form_errors(form.postal_code) }}
+                    {{ form_widget(form.postal_code) }}
+
+                    {{ form_label((form.city)) }}
+                    {{ form_errors(form.city) }}
+                    {{ form_widget(form.city) }}
+                </div>
+
+
+
+         </fieldset>
+
+        <fieldset>
+            <legend>Mot de passe</legend>
+                <div class="passwordEditAccount">
+                    {{ form_label(form.current_password) }}
+                    {{ form_errors(form.current_password) }}
+                    {{ form_widget(form.current_password) }}
+                </div>
+
+                <div class="changePasswordEditAccount">
+                    <a href="{{ path('fos_user_change_password') }}">Changer de mot de passe</a>
+                </div>
+        </fieldset>
+
+
+        <div class="submitEditAccount">
+            <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+        </div>
+        {{ form_end(form) }}
+
+
     </div>
+</section>
 
-    {{ form_label(form.imageFile) }}
-    {{ form_errors(form.imageFile) }}
-    {{ form_widget(form.imageFile) }}
 
-    {{ form_label((form.username)) }}
-    {{ form_errors(form.username) }}
-    {{ form_widget(form.username) }}
-
-    {{ form_label((form.email)) }}
-    {{ form_errors(form.email) }}
-    {{ form_widget(form.email) }}
-
-    {{ form_label(form.current_password) }}
-    {{ form_errors(form.current_password) }}
-    {{ form_widget(form.current_password) }}
-
-    {{ form_label((form.adress)) }}
-    {{ form_errors(form.adress) }}
-    {{ form_widget(form.adress) }}
-
-    {{ form_label((form.postal_code)) }}
-    {{ form_errors(form.postal_code) }}
-    {{ form_widget(form.postal_code) }}
-
-    {{ form_label((form.city)) }}
-    {{ form_errors(form.city) }}
-    {{ form_widget(form.city) }}
-
-    {{ form_label((form.phone_number)) }}
-    {{ form_errors(form.phone_number) }}
-    {{ form_widget(form.phone_number) }}
-
-<div>
-    <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
-</div>
-{{ form_end(form) }}
+<!-- SECTION | TRUE IDENTITY  -->
+<section id="two" class="spotlight style3 left">
+    <span class="image fit main bottom"><img src="{{ asset('images/thridPhoto.jpeg') }}" alt="Carte de la France" /></span>
+    <div class="content">
+        <header>
+            <h2> Vérifiez vos informations ! </h2>
+            <p> Et pensez à les sécuriser !</p>
+        </header>
+        <p> Pour paraître crédible aux yeux des autres utilisateurs, il est nécessaire
+            d'avoir un profil avec de vraies informations d'identité.
+            Il est également nécessaire d'utiliser votre propre adresse mail et un mot de passe sécuriser
+            pour éviter toute faille de sécurité. Vous pouvez changer votre mot de passe ci-dessous</p>
+        <ul class="actions">
+            <li><a href="#" class="button">Changer password</a></li>
+        </ul>
+    </div>
+    <a href="#four" class="goto-next scrolly">Suivant</a>
+</section>

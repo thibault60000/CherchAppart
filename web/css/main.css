@@ -3506,7 +3506,7 @@
 				.registerForm h3{
 					font-size: 2.3rem;
 				}
-				.registerForm fieldset{
+				.registerForm fieldset, .editAccountForm fieldset{
 					background-color: #111127;
 					border: 3px solid #b9b0b0;
 					padding: 2.1rem 3rem 3rem 3rem;
@@ -3514,19 +3514,25 @@
 					margin-bottom:3rem;
 				}
 
-				.registerForm fieldset legend{
+				.registerForm fieldset legend, .editAccountForm fieldset legend{
 					text-transform: uppercase;
 					padding: 0 1.3rem;
 					background-color: #1c1d26;
 				}
-				.registerForm label{
+				.registerForm label, .editAccountForm label{
 					margin-bottom: 0.3rem;
 				}
 				.registerForm input{
 					height: 2.6rem;
 					margin-bottom: 1.1rem;
 				}
-				.registerForm input[type="submit"]{
+				.editAccountForm input{
+					width: 75%;
+					height: 2.6rem;
+					margin-bottom: 1.1rem;
+					border: solid 0.5px rgba(255, 255, 255, 0.13);
+				}
+				.registerForm input[type="submit"], .editAccountForm input[type="submit"]{
 					height:auto;
 					margin-bottom:0;
 				}
@@ -3560,7 +3566,23 @@
 					cursor:pointer;
 					position:relative;
 				}
-				.registerForm label[for="fos_user_registration_form_imageFile"]::before {
+
+
+				.editAccountForm label[for="fos_user_profile_form_imageFile"] {
+					margin-top: 0rem;
+					display: block;
+					vertical-align: top;
+					padding: 0.5rem 1rem 0.5rem 1rem;
+					border: 1px solid #7d7d7d59;
+					text-align: center;
+					width: 88%;
+					border-radius: 4px;
+					cursor: pointer;
+					position: relative;
+					height: 100%;
+				}
+
+				.registerForm label[for="fos_user_registration_form_imageFile"]::before{
 					content: "(Privilégiez une photo carré)";
 					width: 100%;
 					height: 1rem;
@@ -3572,16 +3594,31 @@
 					color: #a7a5a5;
 				}
 
-				#fos_user_registration_form_imageFile{
+				.editAccountForm label[for="fos_user_profile_form_imageFile"]::before {
+					content: "(Privilégiez une photo carré)";
+					width: 100%;
+					height: 1rem;
+					display: block;
+					position: absolute;
+					top: 3.1rem;
+					font-size: 0.9rem;
+					font-style: italic;
+					color: #a7a5a5;
+					left: 0%;
+				}
+
+				#fos_user_registration_form_imageFile,
+				#fos_user_profile_form_imageFile{
 					opacity: 0;
 					position: absolute;
 					z-index: -1;
 				}
-				.registerForm label[for="fos_user_registration_form_imageFile"]:hover {
+				.registerForm label[for="fos_user_registration_form_imageFile"]:hover,
+				.editAccountForm label[for="fos_user_profile_form_imageFile"]:hover{
 					color: #5c81c6;
 					border: 1px solid #5c81c6;
-
 				}
+
 				.registerForm .photoProfilRegisterContainer{
 					display:inline-block;
 					height: 11rem;
@@ -3598,9 +3635,77 @@
 					text-align: center;
 					overflow: hidden
 				}
+
 				.registerForm .photoProfileRegisterContent img{
 					max-height: 100%;
 				}
+
+				.editAccountForm{
+					padding-top: 6.3rem;
+				}
+				.editAccountForm .identityEditAccount,
+				.editAccountForm .coordsEditAccount,
+				.editAccountForm .passwordEditAccount,
+				.editAccountForm .changePasswordEditAccount,
+				.editAccountForm .imageFileEditAccount,
+				.editAccountForm .cityEditAccount,
+				.editAccountForm .submitEditAccount
+				{
+					display:inline-block;
+					width: 49%;
+				}
+				.editAccountForm .changePasswordEditAccount a {
+					appearance: none;
+					transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+					background-color: transparent;
+					border-radius: 4px;
+					border: 0;
+					box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+					cursor: pointer;
+					display: inline-block;
+					font-weight: 300;
+					height: 3em;
+					line-height: 3em;
+					padding: 0 2.25em;
+					text-align: center;
+					text-decoration: none;
+					white-space: nowrap;
+				}
+
+				.editAccountForm .changePasswordEditAccount{
+					text-align: center;
+				}
+				.editAccountForm .changePasswordEditAccount a:hover{
+					box-shadow: inset 0 0 0 1px #5c81c6;
+					color: white;
+				}
+				.editAccountForm .changePasswordEditAccount a:active{
+					background-color: rgba(106, 139, 206, 0.62);
+				}
+				 .editAccountForm .photoProfileEditContainer{
+					 display: inline-block;
+					 height: 11rem;
+					 width: 40%;
+				 }
+				 .editAccountForm .photoProfileEditContent img{
+					 max-height: 100%;
+				 }
+				 .editAccountForm .photoProfileEditContent{
+					 border: 2px solid;
+					 min-height: 11rem;
+					 width: 11rem;
+					 height: 11rem;
+					 border-radius: 50%;
+					 margin: 0 auto;
+					 text-align: center;
+					 overflow: hidden;
+				 }
+				 .editAccountForm  .imageFileRegister{
+					 display: inline-block;
+					 width: 50%;
+					 margin-top: 4.4rem;
+					 vertical-align: top;
+				 }
 				.registerForm #fos_user_registration_form_sexe{
 					height: 2.6rem;
 					margin-bottom: 1.1rem;
@@ -3612,6 +3717,100 @@
 				}
 				.registerForm input:hover{
 					border:1px solid white;
+				}
+
+					@media screen and (max-width: 1280px) {
+						.editAccountForm .identityEditAccount{
+							vertical-align: top;
+							margin-top: 3.2rem;
+						}
+						.editAccountForm .photoProfileEditContainer{
+							display:block;
+							margin: 0 auto;
+						}
+						.editAccountForm .imageFileRegister{
+							display:block;
+							width:40%;
+							margin: 0 auto;
+							margin-top:2rem;
+							vertical-align: initial;
+						}
+						.editAccountForm label[for="fos_user_profile_form_imageFile"] {
+							width:100%;
+						}
+					}
+
+				@media screen and (max-width: 1170px) {
+					.editAccountForm .photoProfileEditContainer{
+						width:100%;
+					}
+					.editAccountForm .imageFileRegister{
+						width:100%;
+					}
+					.editAccountForm label[for="fos_user_profile_form_imageFile"]{
+						width:60%;
+						margin:0 auto;
+					}
+				}
+
+				@media screen and (max-width: 980px) {
+					.editAccountForm fieldset{
+						width:90%;
+						margin: 0 auto;
+						margin-bottom: 3rem;
+					}
+					.editAccountForm .submitEditAccount{
+						width: 90%;
+						display: block;
+						margin: 0 auto;
+						text-align: center;
+					}
+					.editAccountForm input[type="submit"]{
+						width:60%;
+					}
+				}
+
+				@media screen and (max-width: 860px) {
+					.editAccountForm label[for="fos_user_profile_form_imageFile"]{
+						font-size: 0.8rem;
+						width: 70%;
+					}
+				}
+
+				@media screen and (max-width: 725px) {
+					.editAccountForm .identityEditAccount,
+					.editAccountForm .coordsEditAccount,
+					.editAccountForm .cityEditAccount,
+					.editAccountForm .passwordEditAccount,
+					.editAccountForm .changePasswordEditAccount{
+						display:block;
+						width:100%;
+						margin-top:1rem;
+					}
+					.editAccountForm .imageFileEditAccount{
+						display: block;
+						width: 100%;
+						margin-top: 2rem;
+					}
+					.editAccountForm .photoProfileEditContainer{
+						display: inline-block;
+						width: 40%;
+					}
+					.editAccountForm .imageFileRegister{
+						display: inline-block;
+						width: 50%;
+						vertical-align: top;
+						margin-top: 4.2rem;
+					}
+					.editAccountForm input{
+						width:100%;
+					}
+					.editAccountForm label[for="fos_user_profile_form_imageFile"]{
+						width: 90%;
+						font-size: 0.9rem;
+						margin-left: 2.4rem;
+					}
+					
 				}
 
 				@media screen and (max-width: 675px) {
@@ -3633,6 +3832,25 @@
 					}
 				}
 
+
+
+				@media screen and (max-width: 725px) {
+					.editAccountForm label[for="fos_user_profile_form_imageFile"]{
+						width: 80%;
+						margin-left: 3.9rem;
+						margin-top:-0.5rem
+					}
+					.editAccountForm label[for="fos_user_profile_form_imageFile"]::before{
+						top: 4.1rem;
+						font-size: 0.8rem;
+					}
+				}
+
+@media screen and (max-width: 663px) {
+	.editAccountForm label[for="fos_user_profile_form_imageFile"]{
+		height: 4.2rem;
+	}
+}
 				@media screen and (max-width: 465px) {
 					.registerForm label[for="fos_user_registration_form_imageFile"]{
 						font-size: 0.7rem;

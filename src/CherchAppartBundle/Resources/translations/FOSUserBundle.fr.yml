@@ -80,7 +80,7 @@ resetting:
 form:
     group_name: 'Nom du groupe'
     imageFileRegister: 'Selectionnez votre image'
-    imageFile: 'Photo'
+    imageFile: 'Selectionnez votre image'
     subject: 'Sujet'
     body: 'Corps'
     name: 'Nom'

@@ -24,7 +24,9 @@
 
         <fieldset>
             <legend>Identité en ligne</legend>
-
+            <button class="editIdBtn">
+                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+            </button>
             <div class="identityEditAccount">
                 {{ form_label((form.username)) }}
                 {{ form_errors(form.username) }}
@@ -56,6 +58,9 @@
 
         <fieldset>
             <legend>Coordonnées</legend>
+            <button class="editCoordsBtn">
+                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+            </button>
                 <div class="coordsEditAccount">
                     {{ form_label((form.adress)) }}
                     {{ form_errors(form.adress) }}

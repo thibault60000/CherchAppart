@@ -620,3 +620,25 @@ $("#fos_user_registration_form_imageFile").change(function() {
     readURL(this);
 });
 
+
+$(".editIdBtn" ).click(function() {
+	if( $("#fos_user_profile_form_username").hasClass("enable") &&  $("#fos_user_profile_form_email").hasClass("enable")){
+        $("#fos_user_profile_form_username").removeClass("enable");
+        $("#fos_user_profile_form_username").prop("disabled",true);
+			$("#fos_user_profile_form_email").removeClass("enable");
+        	$("#fos_user_profile_form_email").prop("disabled",true);
+				$(".imageFileRegister label").removeClass("enable");
+        $(".editIdBtn i").addClass("fa-pencil-square").removeClass("fa-times")
+
+	}
+	else{
+        $("#fos_user_profile_form_username").addClass("enable");
+        $("#fos_user_profile_form_username").prop("disabled",false);
+			$("#fos_user_profile_form_email").addClass("enable");
+        	$("#fos_user_profile_form_email").prop("disabled",false);
+				$(".imageFileRegister label").addClass("enable");
+		$(".editIdBtn i").addClass("fa-times").removeClass("fa-pencil-square");
+
+	}
+});
+

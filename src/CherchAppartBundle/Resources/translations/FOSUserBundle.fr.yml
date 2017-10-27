@@ -87,6 +87,9 @@ form:
     lastname: 'Prénom'
     birthday: 'Date de naissance'
     sexe: 'Sexe'
+    sexe_choice:
+        man: 'Homme'
+        woman: 'Femme'
     adress: 'Adresse'
     postal_code: 'Code postal'
     city: 'Ville'
@@ -98,3 +101,4 @@ form:
     password_confirmation: 'Répéter le mot de passe'
     new_password: 'Nouveau mot de passe'
     new_password_confirmation: 'Répéter le nouveau mot de passe'
+

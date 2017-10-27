@@ -18,8 +18,8 @@ class RegistrationType extends AbstractType
             ->add('lastname', TextType::class, array('label' => 'form.lastname', 'translation_domain' => 'FOSUserBundle'))
             ->add('sexe', ChoiceType::class, array('label' => 'form.sexe', 'translation_domain' => 'FOSUserBundle',
                 'choices' => array(
-                    'Homme' => 'Man',
-                    'Femme' => 'Woman')
+                    'form.sexe_choice.man' => 'Man',
+                    'form.sexe_choice.woman' => 'Woman')
             ))
             ->add('adress', TextType::class, array('label' => 'form.adress', 'translation_domain' => 'FOSUserBundle'))
             ->add('postal_code', NumberType::class, array('label' => 'form.postal_code', 'translation_domain' => 'FOSUserBundle'))

@@ -629,7 +629,7 @@ $(".editIdBtn" ).click(function() {
 			$("#fos_user_profile_form_email").removeClass("enable");
         	$("#fos_user_profile_form_email").prop("disabled",true);
 				$(".imageFileRegister label").removeClass("enable");
-       				 $(".imageFileRegister label").removeClass("enable");
+       				 $(".imageFileRegister label").prop("disabled",true);
        				 $(".photoProfileEditContent img").removeClass("enable");
         $(".editIdBtn i").addClass("fa-pencil-square").removeClass("fa-times")
 
@@ -640,7 +640,7 @@ $(".editIdBtn" ).click(function() {
 			$("#fos_user_profile_form_email").addClass("enable");
         	$("#fos_user_profile_form_email").prop("disabled",false);
 				$(".imageFileRegister label").addClass("enable");
-					$(".imageFileRegister label").addClass("enable");
+					$(".imageFileRegister label").prop("disabled",false);
         				$(".photoProfileEditContent img").addClass("enable");
 		$(".editIdBtn i").addClass("fa-times").removeClass("fa-pencil-square");
 

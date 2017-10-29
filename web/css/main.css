@@ -3777,6 +3777,160 @@
 																	color:#e2e2e2;
 																}
 
+					/* ************ CONTACTEZ NOUS FOMR ********** */
+
+					section.contactezNous label{
+						margin-bottom: 0.7rem;
+						font-size: 1.6rem;
+					}
+
+					section.contactezNous input{
+						margin-bottom: 2rem;
+						width: 70%;
+					}
+						section.contactezNous input:hover{
+							border-color: #5c81c6;
+						}
+
+					section.contactezNous textarea{
+						margin-bottom: 2rem;
+						width: 70%;
+					}
+						section.contactezNous textarea:hover{
+							border-color: #5c81c6;
+						}
+
+					section.contactezNous input[type="submit"]{
+						margin-top:1rem;
+						width:30%;
+					}
+					@media screen and (max-width: 780px) {
+						section.contactezNous > a{
+							display:none;
+						}
+						section.contactezNous > h3{
+							width:90%;
+							margin:0 auto;
+							margin-bottom:0.4rem;
+						}
+						section.contactezNous > p{
+							width:90%;
+							margin:0 auto;
+							margin-bottom:2rem;
+						}
+						section.contactezNous label{
+							margin:0 auto;
+							width:90%;
+							margin-bottom: 0.7rem;
+							font-size: 1.6rem;
+						}
+
+						section.contactezNous input{
+							margin:0 auto;
+							margin-bottom: 2rem;
+							width: 90%;
+						}
+						section.contactezNous input:hover{
+							border-color: #5c81c6;
+						}
+
+						section.contactezNous textarea{
+							margin:0 auto;
+							margin-bottom: 2rem;
+							width: 90%;
+						}
+						section.contactezNous textarea:hover{
+							border-color: #5c81c6;
+						}
+
+						section.contactezNous input[type="submit"]{
+							margin:0 auto;
+							margin-bottom: 2rem;
+							width: 90%;
+							display:block;
+						}
+					}
+
+/* ************* CHANGER MOT DE PASSE FORM *********** */
+
+section.changerMotDePasse{
+	margin:0 auto;
+	width:60%
+}
+section.changerMotDePasse label{
+	margin-bottom: 0.7rem;
+	font-size: 1.6rem;
+}
+
+section.changerMotDePasse input{
+	margin-bottom: 2rem;
+	width: 100%;
+}
+section.changerMotDePasse input:hover{
+	border-color: #5c81c6;
+}
+
+section.changerMotDePasse textarea{
+	margin-bottom: 2rem;
+	width: 100%;
+}
+section.changerMotDePasse textarea:hover{
+	border-color: #5c81c6;
+}
+
+section.changerMotDePasse input[type="submit"]{
+	margin-top:1rem;
+	width:100%;
+}
+@media screen and (max-width: 780px) {
+	section.contactezNous > a{
+		display:none;
+	}
+	section.changerMotDePasse{
+		width:90%
+	}
+	section.changerMotDePasse > h3{
+		width:90%;
+		margin:0 auto;
+		margin-bottom:0.4rem;
+	}
+	section.changerMotDePasse > p{
+		width:90%;
+		margin:0 auto;
+		margin-bottom:2rem;
+	}
+	section.changerMotDePasse label{
+		margin:0 auto;
+		width:90%;
+		margin-bottom: 0.7rem;
+		font-size: 1.6rem;
+	}
+
+	section.changerMotDePasse input{
+		margin:0 auto;
+		margin-bottom: 2rem;
+		width: 90%;
+	}
+	section.changerMotDePasse input:hover{
+		border-color: #5c81c6;
+	}
+
+	section.changerMotDePasse textarea{
+		margin:0 auto;
+		margin-bottom: 2rem;
+		width: 90%;
+	}
+	section.changerMotDePasse textarea:hover{
+		border-color: #5c81c6;
+	}
+
+	section.changerMotDePasse input[type="submit"]{
+		margin:0 auto;
+		margin-bottom: 2rem;
+		width: 90%;
+		display:block;
+	}
+}
 
 					/* ********** EDIT FORM    MAX 1280px   ********** */
 

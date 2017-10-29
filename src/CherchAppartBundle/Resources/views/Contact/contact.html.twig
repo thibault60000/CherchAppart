@@ -3,24 +3,43 @@
 {% block title %}Contact{% endblock%}
 
 {% block body %}
-    <h1>Contact</h1>
-<p>Vous voulez contacter Cherch'Appart ?</p>
+    <div id="main" class="wrapper style1">
+        <div class="container">
+            <header class="major">
+                <h2>Contactez-nous</h2>
+                <p>Pour la moindre question, le moindre problème </p>
+            </header>
 
-    <form action="{{ path('contact') }}" method="post">
-        {{ form_errors(form) }}
+            <!-- Content -->
+            <section id="content" class="contactezNous">
+                <a href="#" class="image fit"><img src="{{ asset('images/contact.jpeg') }}" alt="" /></a>
+                <h3>Réactivité est le mot d'ordre</h3>
+                <p>Vous recevrez une réponse dans les plus brefs une fois votre demande reçue !</p>
 
-        {{ form_row(form.name) }}
-        {{ form_row(form.email) }}
-        {{ form_row(form.subject) }}
-        {{ form_row(form.body) }}
+                <form action="{{ path('contact') }}" method="post">
+                    {{ form_errors(form) }}
 
-        {{ form_rest(form) }}
+                    {{ form_row(form.name) }}
+                    {{ form_row(form.email) }}
+                    {{ form_row(form.subject) }}
+                    {{ form_row(form.body) }}
 
-        <input type="submit" value="Submit" />
-    </form>
+                    {{ form_rest(form) }}
 
-    {%  for message in app.session.flashbag.get('Contact-Message') %}
-        <li><b>{{ message }}</b></li>
-    {% endfor %}
+                    <input type="submit" value="Envoyer" />
+                </form>
+
+                {%  for message in app.session.flashbag.get('Contact-Message') %}
+                    <li><b>{{ message }}</b></li>
+                {% endfor %}
+
+            </section>
+
+        </div>
+    </div>
+
+
+
+
 
 {% endblock %}

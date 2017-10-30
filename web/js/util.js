@@ -1,10 +1,10 @@
 
-/* CherchAppart JS utils file 
+/* CherchAppart JS utils file
 	Thibault JP / Stanislas A */
 
 (function($) {
 
-	
+
 
 
 
@@ -37,7 +37,7 @@
 					$this.text() +
 				'</a>'
 			);
-			
+
 		});
 
 		return b.join('');
@@ -618,6 +618,8 @@ $("#fos_user_profile_form_imageFile").change(function() {
 
 $("#fos_user_registration_form_imageFile").change(function() {
     readURL(this);
+
+
 });
 
 
@@ -646,6 +648,8 @@ $(".editIdBtn" ).click(function() {
 
 	}
 });
+
+
 
 
 
@@ -681,3 +685,66 @@ $(".editCoordsBtn" ).click(function() {
 
     }
 });
+
+
+
+
+$(document).ready(function(){
+
+
+        var $maps = $('#france-map').vectorMap({
+            map: 'fr_regions_2016_mill',
+            backgroundColor: 'none',
+			zoomStep: '8',
+			zoomOnScroll: false,
+
+			series:{
+					regions:[{
+						values:{
+							'FR-F':  '#1FAB9E',
+							'FR-GF': '#B1D781',
+							'FR-H':  '#FAD02F',
+							'FR-E':  '#F69229',
+							'FR-X1': '#F16950',
+							'FR-MQ': '#1FAB9E',
+							'FR-YT': '#B1D781',
+							'FR-X2': '#B1D781',
+							'FR-X3': '#F16950',
+                            'FR-X4': '#F69229',
+                            'FR-X5': '#1FAB9E',
+							'FR-X6': '#B1D781',
+                            'FR-X7': '#FAD02F',
+							'FR-R':  '#FAD02F',
+							'FR-GP': '#F16950',
+							'FR-U':  '#F16950',
+							'FR-J':  '#FAD02F',
+							'FR-RE': '#F69229'
+						},
+
+					}]
+			},
+            onRegionClick: function(e, code, isSelected, selectedRegions){
+				$('.jvectormap-zoomout').css('background-color', $('#france-map').vectorMap('get','mapObject').series.regions[0].values[code]);
+				$('#france-map').vectorMap('get','mapObject').setFocus({region: code, animate: true});
+                $('#modaleMap').addClass('open');
+				$('.jvectormap-zoomout').addClass("zoomCheck");
+
+
+
+
+
+			}
+
+        });
+
+    		$(".jvectormap-zoomout" ).click(function() {
+                if($('.jvectormap-zoomout').hasClass("zoomCheck")){
+                    $('.jvectormap-zoomout').removeClass("zoomCheck");
+                    $('#modaleMap').removeClass('open');
+                }
+
+            });
+
+
+});
+

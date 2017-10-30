@@ -2,3 +2,7 @@ create:
     path:  /create
     defaults: { _controller: CherchAppartBundle:Contents\Announce:index }
     methods:  [GET, POST]
+
+find:
+    path:  /find
+    defaults: { _controller: CherchAppartBundle:Contents\Announce:finc }

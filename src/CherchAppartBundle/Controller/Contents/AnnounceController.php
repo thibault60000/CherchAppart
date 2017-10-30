@@ -32,4 +32,8 @@ class AnnounceController extends Controller
             'form' => $form->createView()
         ));
     }
+
+    public function fincAction(){
+        return $this->render('@CherchAppart/Announce/find.html.twig');
+    }
 }

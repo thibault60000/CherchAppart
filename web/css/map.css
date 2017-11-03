@@ -1,3 +1,6 @@
+@import url("font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+
 svg {
     touch-action: none;
 
@@ -27,34 +30,62 @@ figure{
     display: none;
     border: solid 1px #CDCDCD;
     border-radius: 3px;
-    background: #292929;
+    background: #4198C6;
     color: white;
-    font-family: sans-serif, Verdana;
-    font-size: smaller;
-    padding: 3px;
+    font-family: "Arial";
+    font-size: 1.5rem;
+    padding: 0.2rem 0.6rem;
 }
 
 .jvectormap-zoomout{
     position: absolute;
-    left: 2%;
     border-radius: 3px;
-    background: #f16951;
+    background: rgb(40, 41, 50);
     color: white;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
     cursor: pointer;
     line-height: 1.5rem;
-    font-size: 1.6rem;
-    box-sizing: content-box;
-    text-align: center;
-    font-weight: bold;
-    padding: 0.7rem 1.6rem;
-    top:1%;
-    opacity:0;
-    transition: all 1.5s;
+    font-size: 1.3rem;
+    width: auto;
+    opacity: 0;
+    top: 6%;
+    right: 5%;
+    padding: 0.6rem 1.7rem;
 }
-
+.jvectormap-zoomout:hover{
+    box-shadow: inset 0 0 0 2px #5c81c6;
+}
+.jvectormap-zoomout:active{
+    background-color: rgba(106, 139, 206, 0.62);
+}
 .jvectormap-zoomout.zoomCheck{
     opacity:1;
 }
+.jvectormap-retour{
+    position: absolute;
+    left: 1%;
+    border-radius: 3px;
+    background: #1c1d26;
+    color: white;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+    padding: 0.5rem 2rem;
+    top: 3%;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.jvectormap-retour i{
+    margin-right: 0.5rem;
+    color: #d6d6d6;
+}
+.jvectormap-retour:hover{
+    box-shadow: inset 0 0 0 1px #5c81c6;
+}
+.jvectormap-retour:active{
+    background-color: rgba(106, 139, 206, 0.62);
+}
+
 .jvectormap-zoomin {
     display: none;
 }
@@ -143,4 +174,12 @@ figure{
     vertical-align: middle;
     line-height: 20px;
     padding-left: 3px;
+}
+
+.jvectormap-marker{
+    display:none;
+}
+
+.jvectormap-marker.appear{
+    display:block;
 }

@@ -789,11 +789,14 @@ jvm.$ = jQuery, Array.prototype.indexOf || (Array.prototype.indexOf = function(s
     },
     bindZoomButtons: function() {
         var map = this;
-        jvm.$("<div/>").addClass("jvectormap-zoomin").text("+").appendTo(this.container), jvm.$("<div/>").addClass("jvectormap-zoomout").html("Zoom 100%").appendTo(this.container), this.container.find(".jvectormap-zoomin").click(function() {
+        jvm.$("<div/>").addClass("jvectormap-zoomin").text("+").appendTo(this.container), jvm.$(" <div/>").addClass("jvectormap-retour").html(" <i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i>Quitter").appendTo($('#modaleMap')),jvm.$("<div/>").addClass("jvectormap-zoomout").html("<i class=\"fa fa-search-minus\" aria-hidden=\"true\"></i> Zoom 100%").appendTo(this.container), this.container.find(".jvectormap-zoomin").click(function() {
             map.setScale(map.scale * map.params.zoomStep, map.width / 2, map.height / 2, !1, map.params.zoomAnimate)
         }), this.container.find(".jvectormap-zoomout").click(function() {
             map.setScale(map.scale / map.params.zoomStep, map.width / 2, map.height / 2, !1, map.params.zoomAnimate)
-        })
+        }),
+            $('#modaleMap').find(".jvectormap-retour").click(function() {
+                map.setScale(map.scale / map.params.zoomStep, map.width / 2, map.height / 2, !1, map.params.zoomAnimate)
+            })
     },
     createTip: function() {
         var map = this;

@@ -31,7 +31,7 @@
 
             {% block body %}{% endblock %}
 
-            {% include '@CherchAppart/Layout/footer.html.twig' %}
+            {% block footer %} {% include '@CherchAppart/Layout/footer.html.twig' %} {% endblock %}
 
             <!-- JAVASCRIPT -->
             {% block javascripts %}

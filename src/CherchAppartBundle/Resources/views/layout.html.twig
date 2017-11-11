@@ -12,11 +12,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {%  block stylesheets %}
-            <!--[if lte IE 8]><script type="text/javascript" src="{{ asset('js/ie/html5shiv.js') }}"></script><![endif]-->
             <link type="text/css" rel="stylesheet" href="{{ asset('css/main.css') }}"  media="screen,projection" />
-            <!--[if lte IE 9]><link type="text/css" rel="stylesheet" href="{{ asset('css/ie9.css') }}"  media="screen,projection" /><![endif]-->
-            <!--[if lte IE 8]><link type="text/css" rel="stylesheet" href="{{ asset('css/ie8.css') }}"  media="screen,projection" /><![endif]-->
+            <link type="text/css" rel="stylesheet" href="{{ asset('fonts/fonts.css') }}"  media="screen,projection" />
             <link type="text/css" rel="stylesheet" href="{{ asset('css/map.css') }}"  media="screen,projection" />
+            <link type="text/css" rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"  media="screen,projection" />
 
         {% endblock %}
     </head>
@@ -36,14 +35,8 @@
             <!-- JAVASCRIPT -->
             {% block javascripts %}
                 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('js/jquery.dropotron.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('js/skel.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('js/util.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('js/map-detail-FR.js') }}"></script>
-                <!--[if lte IE 8]><script type="text/javascript" src="{{ asset('js/ie/respond.min.js') }}"></script><![endif]-->
                 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
             {% endblock %}

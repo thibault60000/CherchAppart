@@ -1,40 +1,23 @@
     <!-- HEADER -->
     <header id="header">
-        <h1 id="logo"><a href="{{ path('home') }}"><img src="{{ asset('images/NotreLogo.svg') }}" alt="Logo cherch'appart"/></a></h1>
+
+            <img src="{{ asset('images/logoOnly.svg') }}" alt="Logo CherchAppart"/>
+            <button class="openMenu" title="ouvrir le menu"></button>
+
+            <div class="logo">
+                <span><img src="{{ asset('images/textOnly.svg') }}" alt="Logo CherchAppart"/></span>
+            </div>
+
 
         <!-- NAVBAR -->
+
         <nav id="nav">
             <ul>
-                {% if app.user != null %}
-                <li><a href="{{ path('home') }}">Accueil</a></li>
-                <li>
-                    <a href="#">Rechercher</a>
-                    <ul>
-                        <li>
-                            <a href="#">Chambre</a>
-                            <ul>
-                                <li><a href="#">Chambre étudiant</a></li>
-                                <li><a href="#">Chambre chez l'habitant</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">T1</a></li>
-                        <li><a href="#">T2</a></li>
-                        <li><a href="#">T3</a></li>
+                <li><a href="{{ path('home') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Accueil</span></a></li>
+                <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Proposer</span></a></li>
+                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i><span>Rechercher</span></a></li>
+                <li><a class="button special" href="{{ path('fos_user_profile_edit') }}"><i class="fa fa-user" aria-hidden="true"></i><span>Mon Compte</span></a></li>
 
-                    </ul>
-                </li>
-                <li><a href="#">Proposer</a></li>
-                {% endif %}
-
-                <li><a href="{{ path('contact') }}">Contact</a></li>
-                {% if app.user== null %}
-                    <li><a class="button special" href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
-                    <li><a class="button special" href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
-                {% else %}
-                    <li><a class="button special" href="{{ path('fos_user_profile_edit') }}">Mon Compte</a></li>
-                    <li><a class="button special" href="{{ path('fos_user_security_logout') }}">Déconnecter {{ app.user.username }}</a></li>
-                {% endif %}
             </ul>
         </nav>
     </header>

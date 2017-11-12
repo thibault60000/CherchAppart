@@ -703,7 +703,6 @@ footer .copyright{
 	  width: 100%;
 	  text-align: center;
 	  margin-bottom: 0.2rem;
-	  padding-left:1rem;
   }
 	footer  .copyright a{
 		color: #4e4646;
@@ -797,288 +796,247 @@ footer .copyright{
 				margin-bottom: 0.2rem;
 				vertical-align: top;
 			}
+}
+/*  MODAL CONNEXION */
 
-
-
-}
-/* *********************************************************
-				******************* FORM ***********************************
-				***********************************************************/
-
-
-/* REGISTER FORM */
-.registerForm h3{
-	font-size: 2.3rem;
-}
-.registerForm fieldset,
-.editAccountForm fieldset{
-	border: 3.6px solid #5c81c6;
-	padding: 2.1rem 3rem 3rem 3rem;
-	border-radius: 4px;
-	margin-bottom: 3rem;
-	position:relative;
-}
-.registerForm fieldset legend, .editAccountForm fieldset legend{
-	text-transform: uppercase;
-	padding: 0 1.3rem;
-	background-color: #5c81c6;
-	color: white;
-	font-weight: bold;
-	border-radius: 4px;
-}
-.registerForm label, .editAccountForm label{
-	margin-bottom: 0.3rem;
-}
-.registerForm input{
-	height: 2.6rem;
-	margin-bottom: 1.1rem;
-}
-.editAccountForm input{
-	width: 75%;
-	height: 2.6rem;
-	margin-bottom: 1.1rem;
-	border: solid 0.5px rgba(255, 255, 255, 0.25);
-}
-.editAccountForm input.enable{
-	border: solid 0.5px rgb(255, 255, 255);
-}
-.editAccountForm input.enable:hover{
-	border: solid 0.5px #5c81c6;
-}
-.registerForm input[type="submit"] {
-	height:auto;
-	margin-bottom:0;
-}
-.registerForm input[type="submit"]:hover{
-	box-shadow: inset 0 0 0 1px #5c81c6;
-	border:0;
+.dialog[aria-hidden="true"] {
+	display: none;
 }
 
-.editAccountForm input[type="submit"]{
-	margin-bottom: 2rem;
-	height: auto;
-	background-color: initial;
-	color: #5c81c6;
-	text-transform: uppercase;
-	border: 0.9px solid #c3c3c3;
-	font-weight: bold;
+.dialog *{
+	outline: none;
+}
+.dialog div[role="document"]{
+	padding: 1rem;
+}
+.dialog-overlay {
+	position: fixed !important;
+	z-index: 150;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	overflow-y: auto;
+	transform :translate3d(0,0,0);
+	background-color: rgba(43, 46, 56, 0.9);
 }
 
-#fos_user_registration_form_plainPassword ul{
-	list-style: none;
-	color: #ca2727;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 1.1rem;
-	margin-left: 4.9%;
+
+.dialog-content {
+	background-color: rgb(255, 255, 255);
+	z-index: 200;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100.3%;
+	height: 100.3%;
+}
+
+@media screen and (min-width: 600px) {
+	.dialog-content {
+		width: 90%;
+		height: 90%;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.dialog-content {
+		width: 35rem;
+		height: 80%;
+		padding: 0 2rem;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.dialog h1 {
+		margin: 0;
+		font-size: 2.15em;
+	}
+}
+
+
+.dialog-close {
 	position: absolute;
-	margin-top: -2.5rem;
-}
-.registerForm .imageFileRegister{
-	display: inline-block;
-	width: 49%;
-	padding-top: 4.3rem;
-	height: 11rem;
-	vertical-align: bottom;
-}
-.registerForm label[for="fos_user_registration_form_imageFile"]{
-	margin-top: 0rem;
-	display: block;
-	vertical-align: top;
-	padding: 0.5rem 1rem 0.5rem 1rem;
-	border: 1px solid #e6e6e6;
-	text-align: center;
-	width: 88%;
-	border-radius: 4px;
-	cursor:pointer;
-	position:relative;
-}
-
-.registerForm label[for="fos_user_registration_form_imageFile"]::before{
-	content: "(Privilégiez une photo carré)";
-	width: 100%;
-	height: 1rem;
-	display: block;
-	position: absolute;
-	top: 3.1rem;
-	font-size: 0.9rem;
-	font-style: italic;
-	color: #a7a5a5;
-}
-
-
-#fos_user_registration_form_imageFile,
-#fos_user_profile_form_imageFile{
-	position: absolute;
-	z-index: -1;
-	left: -9999px;
-}
-.registerForm label[for="fos_user_registration_form_imageFile"]:hover{
-	color: #5c81c6;
-	border: 1px solid #5c81c6;
-}
-
-.editAccountForm label[for="fos_user_profile_form_imageFile"].enable:hover{
-	color: #5c81c6;
-	border: 1px solid #5c81c6;
-}
-.registerForm .photoProfilRegisterContainer{
-	display:inline-block;
-	height: 11rem;
-	width: 11rem;
-	width: 50%;
-}
-.registerForm .photoProfileRegisterContent{
-	border: 2.7px solid #e6e6e6;
-	min-height: 11rem;
-	width: 11rem;
-	height: 11rem;
-	border-radius: 50%;
-	margin: 0 auto;
-	text-align: center;
-	overflow: hidden
-}
-.registerForm .photoProfileRegisterContent img{
-	max-height: 100%;
-}
-
-
-
-/* *************************** EDIT FORM ******************** */
-
-.editAccountForm{
-	padding-top: 6.3rem;
-}
-.editAccountForm label[for="fos_user_profile_form_imageFile"] {
-	margin-top: 0rem;
-	display: block;
-	vertical-align: top;
-	padding: 0.5rem 1rem 0.5rem 1rem;
-	border: 1px solid rgba(125, 125, 125, 0.59);
-	text-align: center;
-	width: 88%;
-	border-radius: 4px;
-	position: relative;
-	height: 100%;
-	margin: 0 auto;
-}
-.editAccountForm label[for="fos_user_profile_form_imageFile"].enable{
-	border: 1px solid rgb(253, 253, 253);
-	cursor: pointer;
-}
-.editAccountForm label[for="fos_user_profile_form_imageFile"]::before {
-	content: "(Privilégiez une photo carré)";
-	width: 100%;
-	height: 1rem;
-	display: block;
-	position: absolute;
-	top: 3.1rem;
-	font-size: 0.9rem;
-	font-style: italic;
-	color: #a7a5a5;
-	left: 0%;
-}
-.editAccountForm .identityEditAccount,
-.editAccountForm .coordsEditAccount,
-.editAccountForm .passwordEditAccount,
-.editAccountForm .changePasswordEditAccount,
-.editAccountForm .imageFileEditAccount,
-.editAccountForm .cityEditAccount,
-.editAccountForm .submitEditAccount {
-	display:inline-block;
-	width: 49%;
-}
-
-.editAccountForm .imageFileEditAccount{
-	vertical-align: bottom;
-}
-.editAccountForm .changePasswordEditAccount a {
-	appearance: none;
-	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-	background-color: transparent;
-	border-radius: 4px;
+	top: 0;
+	right: 0em;
 	border: 0;
-	box-shadow: inset 0 0 0 1px rgba(126, 148, 187, 0.57);
+	padding: 0;
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 1.95em;
+	width: 1.2em;
+	height: 1.2em;
+	text-align: center;
 	cursor: pointer;
-	display: inline-block;
-	font-weight: 300;
-	height: 3em;
-	line-height: 3em;
-	padding: 0 2.25em;
-	text-align: center;
-	text-decoration: none;
-	white-space: nowrap;
+	transition: 0.15s;
+}
+#dialogDescription{
+	font-size: 1.3rem;
+	color: #797979;
 }
 
-.editAccountForm .changePasswordEditAccount{
-	text-align: center;
-}
-.editAccountForm .changePasswordEditAccount a:hover{
-	box-shadow: inset 0 0 0 1px #5c81c6;
-	color: white;
-}
-.editAccountForm .changePasswordEditAccount a:active{
-	background-color: rgba(106, 139, 206, 0.62);
-}
-.editAccountForm .photoProfileEditContainer{
-	display: inline-block;
-	height: 11rem;
-	width: 40%;
-}
-.editAccountForm .photoProfileEditContent img{
-	max-height: 100%;
-	opacity: 0.4;
-}
-.editAccountForm .photoProfileEditContent img.enable{
-	opacity:1;
-}
-.editAccountForm .photoProfileEditContent{
-	border: 5.1px solid rgba(92, 129, 198, 0.82);
-	min-height: 11rem;
-	width: 11rem;
-	height: 11rem;
-	border-radius: 50%;
-	margin: 0 auto;
-	text-align: center;
-	overflow: hidden;
-}
-.editAccountForm  .imageFileRegister{
-	display: inline-block;
-	width: 50%;
-	margin-top: 4.4rem;
-	vertical-align: top;
-}
-.registerForm #fos_user_registration_form_sexe{
-	height: 2.6rem;
-	margin-bottom: 1.1rem;
-	cursor:pointer;
-}
-.registerForm #fos_user_registration_form_sexe:hover{
-	border: 1px solid #5c81c6;
+/* ********* FORM LOGIN ****** */
 
+#login-form{
+	margin-top: 2.5rem;
 }
-.registerForm input:hover{
-	border: 1px solid #5c81c6;
-}
-/* BUTTON VIEW MODE */
-.editAccountForm fieldset button{
-	position: absolute;
-	top: 1.3rem;
-	right: 0.3rem;
-	background-color: #e2e2e2;
-	border-radius: 3px;
-	padding: 0.3rem 0.6rem;
-	border: 3.9px solid #5c81c6;
-	cursor:pointer;
-}
-.editAccountForm fieldset button i{
-	font-size: 2.9rem;
-	color: #5c81c6;
-}
-.editAccountForm fieldset button:hover{
-	background-color: #5c81c6;
-	border: 3.9px solid #e2e2e2;
-}
-.editAccountForm fieldset button:hover i{
-	color:#e2e2e2;
+	#login-form label{
+		font-size: 1.1rem;
+	}
+	#login-form input[type="text"],
+	#login-form input[type="password"]{
+		display: block;
+		width: calc( 100% - 3.2rem);
+		margin-top: 0.3rem;
+		font-size: 1.1rem;
+		height: 2.2rem;
+		border-radius: 3px;
+		border: 1px solid #6f6565;
+		margin-bottom: 1.2rem;
+		padding: 0.2rem 0rem 0rem 2.6rem;
+	}
+	#login-form input[type="checkbox"]{
+		position: absolute;
+		left: -9999px;
+	}
+	.normalLogin input[type="text"]{
+		background: url(../images/email-outline.svg) no-repeat left;
+		background-size: 1.6rem;
+		background-position-x: 0.6rem;
+	}
+	.normalLogin input[type="password"]{
+		background : url(../images/lock-open-outline.svg) no-repeat left;
+		background-size: 1.6rem;
+		background-position-x: 0.6rem;
+	}
+	.normalLogin input[type="submit"]{
+		display: block;
+		margin-top: 1.8rem;
+		width: 100%;
+		height: 2.5rem;
+		border-radius: 3px;
+		border: none;
+		color: white;
+		background-color: #ED1B36;
+		font-size: 1.2rem;
+		cursor:pointer;
+	}
+	.normalLogin input[type="submit"]:hover{
+		opacity:0.9;
+	}
+
+	.rememberMe{
+		padding-left:2rem;
+		position: relative;
+		color: #4e4a4a;
+	}
+	.rememberMe::before{
+		content:"";
+		height:1.4rem;
+		width:1.4rem;
+		position:absolute;
+		display:block;
+		border: 1.3px solid #635c5c;
+
+	}
+	#login-form input[type="checkbox"]:checked + .rememberMe::after{
+		content: "";
+		display: block;
+		position: absolute;
+		height: 1.1rem;
+		width: 0.6rem;
+		border-bottom: 2px solid black;
+		border-right: 2px solid black;
+		transform: rotate(32deg);
+		top: 0rem;
+		left: 0.4rem;
+	}
+	.socianetwork h2{
+		color: #463e3e;
+		font: 1.9rem "robotoblack";
+	}
+	.socianetwork ul{
+		display: block;
+		list-style: none;
+		margin-top: 1rem;
+	}
+	.socianetwork ul li{
+		display: block;
+		width: 100%;
+		height: 2.5rem;
+		margin-bottom: 0.6rem;
+	}
+	.socianetwork .facebook{
+		height: 100%;
+		width: 100%;
+		border-radius: 3px;
+		background-color: #4267b2;
+		color: white;
+	}
+	.socianetwork .button{
+		opacity:0.9;
+	}
+	.socianetwork .googleplus{
+		height: 100%;
+		width: 100%;
+		border-radius: 3px;
+		background-color: white;
+		color: white;
+		background-color: #e25454;
+	}
+	.socianetwork .twitter{
+		 height: 100%;
+		 width: 100%;
+		 border-radius: 3px;
+		 background-color: #00ACEE;
+		 color: white;
+	 }
+	.socianetwork ul i{
+		margin-right: 1rem;
+	}
+
+	.ouTransition{
+		overflow: hidden;
+		text-align: center;
+		margin: 1.6rem 0;
+	}
+	.ouContainer{
+		position: relative ;
+		padding: 16px ;
+	}
+		.ouContainer::before{
+			content: '' ;
+			position: absolute ;
+			border-bottom: 1px solid #e4e4e4 ;
+			top: 50% ;
+			right: 100% ;
+			width: 5000px ;
+		}
+		.ouContainer::after{
+			content: '' ;
+			position: absolute ;
+			border-bottom: 1px solid #e4e4e4 ;
+			top: 50% ;
+			left: 100% ;
+			width: 5000px ;
+		}
+	.ouContent{
+		font-weight: normal ;
+		margin: 0px ;
+		word-wrap: break-word ;
+		font-size: 15px ;
+		line-height: 18px ;
+		letter-spacing: 0.2px ;
+		padding-top: 0px ;
+		padding-bottom: 0px ;
+		color: #767676 ;
+		display: inline ;
+	}
+
+.passwordForget{
+	color: #3c3131;
+	margin-top: 1rem;
+	display: block;
+	font: 1rem "robotoitalic";
+	text-decoration: underline;
 }

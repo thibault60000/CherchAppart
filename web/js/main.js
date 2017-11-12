@@ -33,4 +33,12 @@ $(function() {
             $("header > img").removeClass("active");
         }
     });
+
+        var dialogElConnect = document.getElementById('my-accessible-dialog-connect');
+        var mainEl = document.getElementById('main');
+        var dialogConnect = new window.A11yDialog(dialogElConnect, mainEl);
+
+        var dialogElRegister = document.getElementById('my-accessible-dialog-register');
+        var dialogRegister = new window.A11yDialog(dialogElRegister, mainEl);
+
 });

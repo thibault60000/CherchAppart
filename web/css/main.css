@@ -836,14 +836,13 @@ footer .copyright{
 @media screen and (min-width: 600px) {
 	.dialog-content {
 		width: 90%;
-		height: 90%;
+		height: 47.4rem;
 	}
 }
 
 @media screen and (min-width: 700px) {
 	.dialog-content {
 		width: 35rem;
-		height: 80%;
 		padding: 0 2rem;
 	}
 }
@@ -917,7 +916,7 @@ footer .copyright{
 		border-radius: 3px;
 		border: none;
 		color: white;
-		background-color: #ED1B36;
+		background-color: #065A60;
 		font-size: 1.2rem;
 		cursor:pointer;
 	}
@@ -993,6 +992,18 @@ footer .copyright{
 	 }
 	.socianetwork ul i{
 		margin-right: 1rem;
+	}
+	.noAccount{
+		margin-top: 1.4rem;
+		font-size: 1.2rem;
+		display: inline-block;
+	}
+	.noAccountLink{
+		display: inline-block;
+		color: #4267b2;
+		text-decoration: underline;
+		font-size: 1.1rem;
+		margin-left: 0.8rem;
 	}
 
 	.ouTransition{

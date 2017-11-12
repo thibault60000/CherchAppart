@@ -6,88 +6,125 @@
         <li><b>{{ message }}</b></li>
     {% endfor %}
 
-    <div class="homepageHeader">
-        {% if app.user == null %}
-            <h1>CherchAppart</h1>
-            <p>Trouver un appartement à louer selon vos critères parmis des milliers d'annonces</p>
 
-            <button class="btnLogin"> Se connecter </button>
-            <button class="btnRegister">S'inscrire </button>
-        {% else %}
-            <h1>Bonjour {{ app.user.lastname }} !</h1>
-            <p>Tu peux maintenant proposer une annonce
-                ou en chercher une </p>
-        {% endif %}
+    <main>
+        <div class="homepageHeader">
+            {% if app.user == null %}
+                <h1>CherchAppart</h1>
+                <p>Trouver un appartement à louer selon vos critères parmis des milliers d'annonces</p>
+
+                <button class="btnLogin"> Se connecter </button>
+                <button class="btnRegister">S'inscrire </button>
+            {% else %}
+                <h1>Bonjour {{ app.user.lastname }} !</h1>
+                <p>Tu peux maintenant proposer une annonce
+                    ou en chercher une </p>
+            {% endif %}
 
 
-    </div>
+        </div>
 
 
-    <div class="topAnnounces">
-        <h2> Meilleures annonces </h2>
-        <ul>
-            <li>
-                <a>
-                    <div class="pictTop">
-                        <img src="{{ asset('images/appartement.jpeg') }}"/>
-                        <div class="overlay">
-                            <div class="text">Voir plus</div>
+        <div class="topAnnounces">
+            <h2> Meilleures annonces parmis</h2>
+            <ul>
+                <li>
+                    <a>
+                        <div class="pictTop">
+                            <img src="{{ asset('images/appartement.jpeg') }}"/>
+                            <div class="overlay">
+                                <div class="text">Voir plus</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="textTop"><p>Studio</p></div>
-                </a>
+                        <div class="textTop"><p>Studio</p></div>
+                    </a>
 
-            </li>
-            <li>
-                <a>
-                    <div class="pictTop">
-                        <img src="{{ asset('images/student.jpg') }}" alt="image d'étudiant"/>
-                        <div class="overlay">
-                            <div class="text">Voir plus</div>
+                </li>
+                <li>
+                    <a>
+                        <div class="pictTop">
+                            <img src="{{ asset('images/student.jpg') }}" alt="image d'étudiant"/>
+                            <div class="overlay">
+                                <div class="text">Voir plus</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="textTop"><p>Chambre étudiant</p></div>
-                </a>
+                        <div class="textTop"><p>Chambre étudiant</p></div>
+                    </a>
 
-            </li>
-            <li>
-                <a>
-                    <div class="pictTop">
-                        <img src="{{ asset('images/t1.jpeg') }}"/>
-                        <div class="overlay">
-                            <div class="text">Voir plus</div>
+                </li>
+                <li>
+                    <a>
+                        <div class="pictTop">
+                            <img src="{{ asset('images/t1.jpeg') }}"/>
+                            <div class="overlay">
+                                <div class="text">Voir plus</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="textTop"><p>Appart. T1</p></div>
-                </a>
+                        <div class="textTop"><p>Appart. T1</p></div>
+                    </a>
 
-            </li>
-            <li>
-                <a>
-                    <div class="pictTop">
-                        <img src="{{ asset('images/t2.jpeg') }}"/>
-                        <div class="overlay">
-                            <div class="text">Voir plus</div>
+                </li>
+                <li>
+                    <a>
+                        <div class="pictTop">
+                            <img src="{{ asset('images/t2.jpeg') }}"/>
+                            <div class="overlay">
+                                <div class="text">Voir plus</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="textTop"><p>Appart. T2</p></div>
-                </a>
+                        <div class="textTop"><p>Appart. T2</p></div>
+                    </a>
 
-            </li>
-            <li>
-                <a>
-                    <div class="pictTop">
-                        <img src="{{ asset('images/maison.jpeg') }}"/>
-                        <div class="overlay">
-                            <div class="text">Voir plus</div>
+                </li>
+                <li>
+                    <a>
+                        <div class="pictTop">
+                            <img src="{{ asset('images/maison.jpeg') }}"/>
+                            <div class="overlay">
+                                <div class="text">Voir plus</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="textTop"><p>Appart. T3</p></div>
-                </a>
+                        <div class="textTop"><p>Appart. T3</p></div>
+                    </a>
 
-            </li>
-        </ul>
-    </div>
+                </li>
+            </ul>
+        </div>
 
+
+        <div class="deuxSystemes">
+            <h2> Deux systèmes de recherche </h2>
+            <ul>
+                <li>
+                    <a>
+                        <div class="sysTop">
+                            <img src="{{ asset('images/input.jpeg') }}"/>
+                            <div class="overlay">
+                                <div class="text">Essayer</div>
+                            </div>
+                        </div>
+                        <div class="sysText">
+                            Formulaire simple
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="sysTop">
+                            <img src="{{ asset('images/maps.jpeg') }}"/>
+                            <div class="overlay">
+                                <div class="text">Essayer</div>
+                            </div>
+                        </div>
+                        <div class="sysText">
+                            Carte intéractive
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+    </main>
 
 {% endblock %}

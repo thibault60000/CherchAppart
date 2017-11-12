@@ -157,7 +157,6 @@ $(document).ready(function(){
             $('.jvectormap-marker').css('display','none').css('opacity','0');
             count = 0;
         }
-
     });
 
 

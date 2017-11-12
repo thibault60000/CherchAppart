@@ -2,19 +2,18 @@
 <footer id="footer">
     <!-- ICONS SOCIAL NETWORKS -->
     <ul class="icons">
-        <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-        <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-        <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+        <li><a href="#" ><i class="fa fa-twitter" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+        <li><a href="#" ><i class="fa fa-facebook-official" aria-hidden="true"></i><span class="label">Facebook</span></a></li>
+        <li><a href="#" ><i class="fa fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+        <li><a href="#" ><i class="fa fa-github" aria-hidden="true"></i><span class="label">Github</span></a></li>
+
     </ul>
     <!-- COPYRIGHT -->
     <ul class="copyright">
         <li><a href="#"> Accessibilité</a></li>
         <li> <a href="#"> Mention légales</a> </li>
         <li> <a href="#"> Plan du site</a> </li>
-        <li> <a href="#"> Politique de confidentialité</a></li>
+        <li> <a href="#"> Confidentialité</a></li>
         {% if is_granted('ROLE_ADMIN') %}
             <li><a href="{{ path('admin') }}">Panneau administration</a></li>
         {% endif %}

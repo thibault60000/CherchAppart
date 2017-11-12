@@ -2,7 +2,7 @@
     <header id="header">
 
             <img src="{{ asset('images/logoOnly.svg') }}" alt="Logo CherchAppart"/>
-            <button class="openMenu" title="ouvrir le menu"></button>
+            <button aria-expanded="false" class="openMenu" title="ouvrir le menu"></button>
 
             <div class="logo">
                 <span><img src="{{ asset('images/textOnly.svg') }}" alt="Logo CherchAppart"/></span>
@@ -11,7 +11,7 @@
 
         <!-- NAVBAR -->
 
-        <nav id="nav">
+        <nav id="nav" aria-hidden="true">
             <ul>
                 <li><a href="{{ path('home') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Accueil</span></a></li>
                 <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Proposer</span></a></li>

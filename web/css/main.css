@@ -73,6 +73,10 @@ header{
 		display: inline-block;
 		width: 4rem;
 		padding: 0.5rem;
+		transition: transform 1s;
+	}
+	header > img.active {
+		transform: rotate(180deg);
 	}
 	header div{
 		display: inline-block;
@@ -91,7 +95,12 @@ header{
 					margin-top: 1.7rem;
 					width: 15.2rem;
 				}
-
+@media screen and (min-width: 1000px){
+	header .logo span > img {
+		margin-top: 1.4rem;
+		width: 17.5rem;
+	}
+}
 /* HOMEPAGE HEADER */
 
 .homepageHeader{
@@ -252,6 +261,9 @@ header nav {
 	}
 		header nav ul li a{
 			text-align: center;
+		}
+		header nav a:hover i::before{
+			color:lightblue;
 		}
 			header nav i{
 				margin-top: 1rem;
@@ -474,11 +486,321 @@ header nav {
 	}
 }
 
+/*  INFORMATIONS */
+
+.deuxSystemes{
+	padding: 3.2rem 1rem 1rem 1rem;
+}
+
+.deuxSystemes h2{
+	font-size: 1.7rem;
+	color: #383232;
+	text-align: center;
+}
+	.deuxSystemes ul{
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		padding: 2rem 0.5rem 0.5rem 0.5rem;
+		flex-wrap: wrap;
+	}
+		.deuxSystemes ul li{
+			background-color: transparent;
+			border: 1px solid rgba(0,0,0,0.1);
+			border-radius: 3px;
+			box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
+			width: 14rem;
+			height: 9.3rem;
+			margin-bottom: 1.9rem;
+		}
+			.deuxSystemes ul a{
+				height: 100%;
+				width: 100%;
+				display: block;
+				cursor: pointer;
+			}
+				.deuxSystemes .sysTop{
+					height: 7rem;
+					width: 100%;
+					position: relative;
+				}
+					.deuxSystemes .sysTop img{
+						border: 0;
+						height: 100%;
+						min-width: 100%;
+					}
+					 	.sysTop .overlay{
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							height: 100%;
+							width: 100%;
+							opacity: 0;
+							transition: .5s ease;
+							background-color: #ed1b36;
+						}
+						a:hover .sysTop  .overlay {
+							opacity: 1;
+						}
+						.sysTop .text{
+							color: white;
+							font-size: 20px;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							-ms-transform: translate(-50%, -50%);
+						}
+					.deuxSystemes .sysText{
+						color: #2b2828;
+						padding: 0.6rem 0.2rem 0.6rem 0.8rem;
+						font: 0.9rem "robotoblack";
+					}
+
+@media screen and (min-width:400px) {
+	.deuxSystemes h2 {
+		text-align: left;
+	}
+	.deuxSystemes ul {
+		justify-content: left;
+	}
+	.deuxSystemes ul li {
+		width: 16.6rem;
+		height: 12.4rem;
+	}
+	.deuxSystemes .sysTop {
+		height: 10.2rem;
+	}
+}
+@media screen and (min-width:500px) {
+	.deuxSystemes ul li {
+		width: 90%;
+		height: 10.2rem;
+	}
+	.deuxSystemes .sysTop{
+		display: inline-block;
+		width: 50%;
+		height:10.2rem;
+	}
+	.deuxSystemes .sysText{
+		display: inline-block;
+		width: 42%;
+		vertical-align: top;
+		margin-top: 4.3rem;
+		text-align: center;
+	}
+}
+@media screen and (min-width:700px) {
+	.deuxSystemes ul li:first-child{
+		margin-right: 1.4rem;
+	}
+	.deuxSystemes ul li{
+		width: 47.9%;
+		height: 8rem;
+	}
+	.deuxSystemes .sysTop{
+		width: 50%;
+		height: 8rem;
+	}
+	.deuxSystemes .sysText {
+		margin-top: 3rem;
+		width: 43.4%;
+	}
+}
+@media screen and (min-width:900px) {
+	.deuxSystemes ul li {
+		width: 48.4%;
+		height: 10rem;
+	}
+	.deuxSystemes .sysTop {
+		width: 58%;
+		height: 10rem;
+	}
+	.deuxSystemes .sysText {
+		margin-top: 3.9rem;
+		width: 33.7%;
+	}
+}
+@media screen and (min-width:1000px) {
+	.deuxSystemes ul li {
+		width: 48.5%;
+		height: 12rem;
+	}
+	.deuxSystemes .sysTop {
+		width: 59%;
+		height: 12rem;
+	}
+	.deuxSystemes .sysText {
+		margin-top: 4.7rem;
+		width: 34.1%;
+		font-size: 1.2rem;
+	}
+}
+@media screen and (min-width:1100px) {
+	.deuxSystemes ul li {
+		width: 30.3rem;
+		height: 12.6rem;
+	}
+	.deuxSystemes ul li:first-child {
+		margin-right: 4.4rem;
+	}
+	.deuxSystemes .sysTop {
+		height: 12.6rem;
+	}
+	.deuxSystemes .sysText {
+		width: 10.5rem;
+	}
+}
 
 
 
 
 
+/* **** FOOTER ***** */
+
+footer{
+	display: block;
+	width: 100%;
+	background-color: #eceaea6b;
+	box-shadow: 0px -3px 12px 0px rgba(130, 113, 113, 0.36);
+	margin-bottom: 4.6rem;
+	padding-bottom: 1.1rem;
+	margin-top: 2.5rem;
+}
+
+footer .icons{
+	display: block;
+	width: 70%;
+	margin:0 auto;
+	list-style: none;
+	padding-top: 0.8rem;
+}
+	footer .icons li{
+		display: inline-block;
+		width: 23.5%;
+		height: 3rem;
+		text-align: center;
+		margin-top: 0.4rem;
+
+	}
+	footer .icons i::before{
+		font-size: 2.3rem;
+		color: #4e4646;
+	}
+		footer .icons span {
+			display: none;
+		}
+
+footer .copyright{
+	margin-top:1rem;
+	display: block;
+	list-style: none;
+}
+  footer .copyright li{
+	  display: block;
+	  width: 100%;
+	  text-align: center;
+	  margin-bottom: 0.2rem;
+	  padding-left:1rem;
+  }
+	footer  .copyright a{
+		color: #4e4646;
+		font-size: 1.3rem;
+	}
+		footer  .copyright a:hover{
+			text-decoration: underline;
+		}
+		footer .copyright li:nth-child(4){
+			margin-bottom: 1.3rem;
+		}
+		  footer .copyright li:nth-child(5){
+			  font-size: 1.2rem;
+		  }
+			footer .copyright li:nth-child(6){
+				font-weight:bold;
+			}
+				footer .copyright li:nth-child(6) a{
+					font-weight:100;
+				}
+
+@media screen and (min-width:800px) {
+	footer .copyright {
+		margin-top: 2.5rem;
+	}
+		footer .copyright li {
+			display: inline-block;
+			width: 22%;
+			text-align: center;
+			margin-bottom: 0.2rem;
+			vertical-align: top;
+		}
+			footer .copyright li:nth-child(5) {
+				font-size: 1.2rem;
+				display: block;
+				width: 100%;
+				margin-top: 1.2rem;
+			}
+				footer .copyright li:nth-child(6){
+					font-size: 1.2rem;
+					display: block;
+					width: 100%;
+					margin-top: -0.2rem;
+				}
+}
+
+@media screen and (min-width:1000px) {
+
+	footer{
+		margin-bottom: 0;
+	}
+	footer .icons {
+		display: inline-block;
+		width: 50%;
+		margin: 0 auto;
+		padding-top: 0.8rem;
+	}
+		footer .icons li {
+			display: block;
+			width: auto;
+			height: 3rem;
+			text-align: left;
+			margin-top: 0.4rem;
+			margin-left: 54%;
+		}
+			footer .icons li a{
+				display: block;
+			}
+				footer .icons span:hover{
+					text-decoration:underline;
+				}
+					footer .icons i{
+						display: inline-block;
+					}
+						footer .icons span {
+							 display: inline-block;
+							 color: #4e4646;
+							 margin-left: 0.9rem;
+							 vertical-align: super;
+						 }
+		footer .copyright {
+			display: inline-block;
+			width: 49%;
+			vertical-align: top;
+			margin-top: 1.6rem;
+		}
+			footer .copyright li{
+				display: block;
+				width: 100%;
+				text-align: left;
+				margin-bottom: 0.2rem;
+				vertical-align: top;
+			}
+
+
+
+}
 /* *********************************************************
 				******************* FORM ***********************************
 				***********************************************************/

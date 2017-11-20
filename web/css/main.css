@@ -20,7 +20,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 html {
-	overflow-y: scroll;
+	overflow-y: auto;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -216,7 +216,7 @@ header{
 						width: 100%;
 						opacity: 0;
 						transition: .5s ease;
-						background-color: #88909299;
+						background-color: #67595bad;
 					}
 					.topAnnounces a:hover .overlay {
 						opacity: 1;
@@ -245,8 +245,7 @@ header nav {
 	bottom: 0;
 	width: 100%;
 	height: 4.5rem;
-	background-color: #065a60;
-	box-shadow: 1px -6.2px 24px -5px rgb(6, 90, 96);
+	background-color: #06595f;
 	z-index: 100;
 	text-align: center;
 }
@@ -664,138 +663,86 @@ footer{
 	display: block;
 	width: 100%;
 	background-color: #eceaea6b;
-	box-shadow: 0px -3px 12px 0px rgba(130, 113, 113, 0.36);
+	box-shadow: 0px 2px 17px 0px rgba(130, 113, 113, 0.36);
 	margin-bottom: 4.6rem;
 	padding-bottom: 1.1rem;
 	margin-top: 2.5rem;
+
 }
 
 footer .icons{
 	display: block;
-	width: 70%;
-	margin:0 auto;
+	width: 100%;
+	margin: 0 auto;
 	list-style: none;
 	padding-top: 0.8rem;
+	text-align: center;
 }
 	footer .icons li{
 		display: inline-block;
-		width: 23.5%;
+		width: 10.5%;
 		height: 3rem;
 		text-align: center;
 		margin-top: 0.4rem;
-
 	}
+		footer .icons li a{
+			display: block;
+		}
 	footer .icons i::before{
-		font-size: 2.3rem;
+		font-size: 1.8rem;
 		color: #4e4646;
 	}
-		footer .icons span {
-			display: none;
+		footer .icons a:hover i::before{
+			color:gray;
 		}
+			footer .icons span {
+				display: none;
+			}
 
 footer .copyright{
-	margin-top:1rem;
 	display: block;
 	list-style: none;
+	text-align:center;
 }
   footer .copyright li{
-	  display: block;
-	  width: 100%;
+	  display: inline-block;
+	  width: auto;
 	  text-align: center;
 	  margin-bottom: 0.2rem;
+	  border-right: 1px solid #463f3f7d;
+	  margin-right: 0.4rem;
+	  padding-right: 0.4rem;
   }
 	footer  .copyright a{
 		color: #4e4646;
-		font-size: 1.3rem;
+		font: 1.1rem "robotoitalic";
 	}
 		footer  .copyright a:hover{
 			text-decoration: underline;
 		}
-		footer .copyright li:nth-child(4){
-			margin-bottom: 1.3rem;
+		footer .copyright li:last-child{
+			border-right:0;
 		}
-		  footer .copyright li:nth-child(5){
-			  font-size: 1.2rem;
-		  }
-			footer .copyright li:nth-child(6){
-				font-weight:bold;
-			}
-				footer .copyright li:nth-child(6) a{
-					font-weight:100;
-				}
 
 @media screen and (min-width:800px) {
 	footer .copyright {
-		margin-top: 2.5rem;
+		width: 80%;
+		margin: 0 auto;
 	}
-		footer .copyright li {
-			display: inline-block;
-			width: 22%;
-			text-align: center;
-			margin-bottom: 0.2rem;
-			vertical-align: top;
+		footer .icons{
+			width: 80%;
 		}
-			footer .copyright li:nth-child(5) {
-				font-size: 1.2rem;
-				display: block;
-				width: 100%;
-				margin-top: 1.2rem;
-			}
-				footer .copyright li:nth-child(6){
-					font-size: 1.2rem;
-					display: block;
-					width: 100%;
-					margin-top: -0.2rem;
-				}
 }
 
 @media screen and (min-width:1000px) {
 
 	footer{
 		margin-bottom: 0;
+        margin-top: 2rem;
 	}
-	footer .icons {
-		display: inline-block;
-		width: 50%;
-		margin: 0 auto;
-		padding-top: 0.8rem;
-	}
-		footer .icons li {
-			display: block;
-			width: auto;
-			height: 3rem;
-			text-align: left;
-			margin-top: 0.4rem;
-			margin-left: 54%;
+		footer .icons {
+			width: 60%;
 		}
-			footer .icons li a{
-				display: block;
-			}
-				footer .icons span:hover{
-					text-decoration:underline;
-				}
-					footer .icons i{
-						display: inline-block;
-					}
-						footer .icons span {
-							 display: inline-block;
-							 color: #4e4646;
-							 margin-left: 0.9rem;
-							 vertical-align: super;
-						 }
-		footer .copyright {
-			display: inline-block;
-			width: 49%;
-			vertical-align: top;
-			margin-top: 1.6rem;
-		}
-			footer .copyright li{
-				display: block;
-				width: 100%;
-				text-align: left;
-				margin-bottom: 0.2rem;
-				vertical-align: top;
-			}
 }
 /*  MODAL CONNEXION */
 
@@ -808,6 +755,7 @@ footer .copyright{
 }
 .dialog div[role="document"]{
 	padding: 1rem;
+	overflow: auto;
 }
 .dialog-overlay {
 	position: fixed !important;
@@ -831,15 +779,19 @@ footer .copyright{
 	transform: translate(-50%, -50%);
 	width: 100.3%;
 	height: 100.3%;
+	overflow: auto;
 }
 
 @media screen and (min-width: 600px) {
 	.dialog-content {
 		width: 90%;
-		height: 47.4rem;
+		height: 50rem;
 	}
 }
 
+body{
+	overflow: hidden;
+}
 @media screen and (min-width: 700px) {
 	.dialog-content {
 		width: 35rem;
@@ -881,44 +833,60 @@ footer .copyright{
 }
 	#login-form label{
 		font-size: 1.1rem;
+		cursor: pointer;
+	}
+	.normalLogin{
+		position: relative;
 	}
 	#login-form input[type="text"],
 	#login-form input[type="password"]{
 		display: block;
-		width: calc( 100% - 3.2rem);
+		width: calc( 90% - 6.2rem);
 		margin-top: 0.3rem;
 		font-size: 1.1rem;
 		height: 2.2rem;
 		border-radius: 3px;
 		border: 1px solid #6f6565;
 		margin-bottom: 1.2rem;
-		padding: 0.2rem 0rem 0rem 2.6rem;
+		padding: 0.2rem 0rem 0rem 0.6rem;
+		margin-left: 2.8rem;
 	}
 	#login-form input[type="checkbox"]{
 		position: absolute;
 		left: -9999px;
 	}
-	.normalLogin input[type="text"]{
+	.normalLogin::before{
 		background: url(../images/email-outline.svg) no-repeat left;
-		background-size: 1.6rem;
-		background-position-x: 0.6rem;
+		content: "";
+		width: 2rem;
+		display: block;
+		height: 2rem;
+		top: 1.9rem;
+		position: absolute;
+		margin-left: 0.1rem;
 	}
-	.normalLogin input[type="password"]{
-		background : url(../images/lock-open-outline.svg) no-repeat left;
-		background-size: 1.6rem;
-		background-position-x: 0.6rem;
+
+	.normalLogin::after{
+		background: url(../images/lock-open-outline.svg) no-repeat left;
+		content: "";
+		width: 2rem;
+		display: block;
+		height: 2rem;
+		top: 7.35rem;
+		margin-left: 0.1rem;
+		position: absolute;
 	}
 	.normalLogin input[type="submit"]{
 		display: block;
 		margin-top: 1.8rem;
 		width: 100%;
-		height: 2.5rem;
+		height: 3rem;
 		border-radius: 3px;
 		border: none;
 		color: white;
 		background-color: #065A60;
 		font-size: 1.2rem;
-		cursor:pointer;
+		cursor: pointer;
 	}
 	.normalLogin input[type="submit"]:hover{
 		opacity:0.9;
@@ -965,6 +933,12 @@ footer .copyright{
 		height: 2.5rem;
 		margin-bottom: 0.6rem;
 	}
+		input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+			background-color: white !important;
+		}
+	.socianetwork li:hover{
+		opacity:0.8;
+	}
 	.socianetwork .facebook{
 		height: 100%;
 		width: 100%;
@@ -995,61 +969,75 @@ footer .copyright{
 	}
 	.noAccount{
 		margin-top: 1.4rem;
-		font-size: 1.2rem;
-		display: inline-block;
+		font-size: 1rem;
+		display: block;
+		color: #635656;
+		font-family: "robotoregular";
 	}
 	.noAccountLink{
-		display: inline-block;
-		color: #4267b2;
-		text-decoration: underline;
-		font-size: 1.1rem;
-		margin-left: 0.8rem;
+		margin-top: 0.5rem;
+		border-radius: 3px;
+		border: none;
+		color: white;
+		background-color: #bb1b51;
+		font-size: 1.2rem;
+		display: block;
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+		width: 8.1rem;
 	}
+		.noAccountLink:hover{
+			text-decoration:none;
+			opacity:0.8;
+		}
 
-	.ouTransition{
-		overflow: hidden;
-		text-align: center;
-		margin: 1.6rem 0;
-	}
-	.ouContainer{
-		position: relative ;
-		padding: 16px ;
-	}
-		.ouContainer::before{
-			content: '' ;
-			position: absolute ;
-			border-bottom: 1px solid #e4e4e4 ;
-			top: 50% ;
-			right: 100% ;
-			width: 5000px ;
-		}
-		.ouContainer::after{
-			content: '' ;
-			position: absolute ;
-			border-bottom: 1px solid #e4e4e4 ;
-			top: 50% ;
-			left: 100% ;
-			width: 5000px ;
-		}
-	.ouContent{
-		font-weight: normal ;
-		margin: 0px ;
-		word-wrap: break-word ;
-		font-size: 15px ;
-		line-height: 18px ;
-		letter-spacing: 0.2px ;
-		padding-top: 0px ;
-		padding-bottom: 0px ;
-		color: #767676 ;
-		display: inline ;
-	}
+.ouTransition{
+    overflow: hidden;
+    text-align: center;
+    margin: 1.6rem 0;
+}
+.ouContainer{
+    position: relative ;
+    padding: 16px ;
+}
+    .ouContainer::before{
+        content: '' ;
+        position: absolute ;
+        border-bottom: 1px solid #e4e4e4 ;
+        top: 50% ;
+        right: 100% ;
+        width: 5000px ;
+    }
+    .ouContainer::after{
+        content: '' ;
+        position: absolute ;
+        border-bottom: 1px solid #e4e4e4 ;
+        top: 50% ;
+        left: 100% ;
+        width: 5000px ;
+    }
+.ouContent{
+    font-weight: normal ;
+    margin: 0px ;
+    word-wrap: break-word ;
+    font-size: 15px ;
+    line-height: 18px ;
+    letter-spacing: 0.2px ;
+    padding-top: 0px ;
+    padding-bottom: 0px ;
+    color: #767676 ;
+    display: inline ;
+}
 
 .passwordForget{
 	color: #3c3131;
 	margin-top: 1rem;
 	display: block;
 	font: 1rem "robotoitalic";
-	text-decoration: underline;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 0.6rem;
+	text-align: center;
 }
 
 

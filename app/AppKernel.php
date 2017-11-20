@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new AppBundle\AppBundle(),
             new CherchAppartBundle\CherchAppartBundle(),
+            new Sideclick\BootstrapModalBundle\SideclickBootstrapModalBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

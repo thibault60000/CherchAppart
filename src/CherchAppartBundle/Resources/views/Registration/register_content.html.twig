@@ -3,74 +3,90 @@
 
                         {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
-                        <fieldset>
-                            <legend>Photo de profil</legend>
+
+                        <!-- image file -->
+                        <div class="imageFile">
+                            <div class="imageFileContainer">
+                                <div class="imageFileContent">
+                                    <img alt="photo de profil" id="blah" />
+                                </div>
+                            </div>
+
+                            <div class="imageFileRegister">
                                 {{ form_label(form.imageFile) }}
                                 {{ form_errors(form.imageFile) }}
                                 {{ form_widget(form.imageFile) }}
-                        </fieldset>
+                            </div>
+                        </div>
 
 
-                        <!-- IDENTIFIANTS -->
-                        <fieldset>
-                            <legend> Identifiants </legend>
-                            {{ form_label((form.email)) }}
-                            {{ form_errors(form.email) }}
-                            {{ form_widget(form.email) }}
+                     <div class="group email">
+                        {{ form_label((form.email)) }}
+                        {{ form_errors(form.email) }}
+                        {{ form_widget(form.email) }}
+                     </div>
 
-                            {{ form_label((form.username)) }}
-                            {{ form_errors(form.username) }}
-                            {{ form_widget(form.username) }}
+                    <div class="group username">
+                        {{ form_label((form.username)) }}
+                        {{ form_errors(form.username) }}
+                        {{ form_widget(form.username) }}
+                     </div>
 
-                        </fieldset>
+                    <div class="group password">
+                        {{ form_widget(form.plainPassword) }}
+                        {{ form_errors(form.plainPassword) }}
+                     </div>
 
-                        <!-- PASSWORD -->
-                        <fieldset>
-                            <legend> Mot de passe</legend>
-                            {{ form_widget(form.plainPassword) }}
-                            {{ form_errors(form.plainPassword) }}
-                        </fieldset>
 
-                        <!-- IDENTITY -->
-                        <fieldset>
-                            <legend> Identité </legend>
+                        <div class="group sexe">
                             {{ form_label((form.sexe)) }}
                             {{ form_errors(form.sexe) }}
                             {{ form_widget(form.sexe) }}
+                        </div>
 
+                        <!-- Lastname -->
+                        <div class="group lastname">
                             {{ form_label((form.lastname)) }}
                             {{ form_errors(form.lastname) }}
                             {{ form_widget(form.lastname) }}
+                        </div>
 
+                        <!-- Name -->
+                        <div class="group name">
                             {{ form_label((form.name)) }}
                             {{ form_errors(form.name) }}
                             {{ form_widget(form.name) }}
+                        </div>
 
+                        <div class="group birthday">
                             {{ form_label((form.birthday)) }}
                             {{ form_errors(form.birthday) }}
                             {{ form_widget(form.birthday) }}
+                        </div>
 
+                        <div class="group phone">
                             {{ form_label((form.phone_number)) }}
                             {{ form_errors(form.phone_number) }}
                             {{ form_widget(form.phone_number) }}
-                        </fieldset>
+                        </div>
 
-
-                        <!-- LOCALISATION -->
-                        <fieldset>
-                            <legend>Localisation</legend>
+                        <div class="group adress">
                             {{ form_label((form.adress)) }}
                             {{ form_errors(form.adress) }}
                             {{ form_widget(form.adress) }}
-
+                        </div>
+                        <div class="group postal">
                             {{ form_label((form.postal_code)) }}
                             {{ form_errors(form.postal_code) }}
                             {{ form_widget(form.postal_code) }}
-
+                        </div>
+                        <div class="group city">
                             {{ form_label((form.city)) }}
                             {{ form_errors(form.city) }}
-                            {{ form_widget(form.city) }}
-                        </fieldset>
+                            {{ form_widget(form.city)}}
+                            </div>
+
+
 
                         <input type="submit" value="{{ 'registration.submit'|trans }}" />
 

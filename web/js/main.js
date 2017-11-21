@@ -69,5 +69,29 @@ $(function() {
         }
     });
 
+
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#fos_user_profile_form_imageFile").change(function() {
+        readURL(this);
+    });
+
+    $("#fos_user_registration_form_imageFile").change(function() {
+        readURL(this);
+
+
+    });
+
 });
 

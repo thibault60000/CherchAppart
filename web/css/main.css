@@ -746,13 +746,27 @@ footer .copyright{
 }
 /*  MODAL CONNEXION */
 
-.dialog[aria-hidden="true"] {
-	display: none;
+.dialog{
+	opacity:1;
+
 }
+.dialog[aria-hidden="true"] {
+	opacity:0;
+	left:-9999px;
+	visibility:hidden;
+
+}
+		.dialog footer{
+			display:none;
+		}
+		.dialog header{
+			display:none;
+		}
 
 .dialog *{
 	outline: none;
 }
+
 .dialog div[role="document"]{
 	padding: 1rem;
 	overflow: auto;
@@ -764,6 +778,7 @@ footer .copyright{
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
+	z-index: 2;
 	overflow-y: auto;
 	transform :translate3d(0,0,0);
 	background-color: rgba(43, 46, 56, 0.9);
@@ -771,17 +786,25 @@ footer .copyright{
 
 
 .dialog-content {
+	opacity: 1;
+	transition: all 0.6s;
 	background-color: rgb(255, 255, 255);
-	z-index: 200;
 	position: fixed;
 	top: 50%;
 	left: 50%;
+	z-index: 3;
 	transform: translate(-50%, -50%);
-	width: 100.3%;
-	height: 100.3%;
 	overflow: auto;
+	width: 100vw;
+	height: 100vh;
 }
 
+.dialog[aria-hidden="true"] .dialog-content{
+	opacity:0;
+	transform: translate(-75%, -50%);
+	transition: none;
+	visibility:hidden;
+}
 @media screen and (min-width: 600px) {
 	.dialog-content {
 		width: 90%;
@@ -835,6 +858,7 @@ body{
 
 #login-form{
 	margin-top: 2.5rem;
+	margin-bottom: 5rem;
 }
 	#login-form label{
 		font-size: 1.1rem;
@@ -1060,43 +1084,261 @@ body{
 	background: url(../images/Preloader_3.gif) center no-repeat #fff;
 }
 
+.fos_user_registration_register .group{
+	margin: 1rem 0;
+	position: relative;
+}
+.fos_user_registration_register input[type="submit"]{
+	display: block;
+	margin-top: 1.8rem;
+	width: 100%;
+	height: 3rem;
+	border-radius: 3px;
+	border: none;
+	color: white;
+	background-color: #065A60;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
 
 
+.fos_user_registration_register label{
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+.fos_user_registration_register input[type="text"],
+.fos_user_registration_register input[type="number"],
+.fos_user_registration_register input[type="password"],
+.fos_user_registration_register input[type="email"]
+{
+	display: block;
+	width: calc( 90% - 6.2rem);
+	margin-top: 0.3rem;
+	font-size: 1.1rem;
+	height: 2.2rem;
+	border-radius: 3px;
+	border: 1px solid #6f6565;
+	margin-bottom: 1.2rem;
+	padding: 0.2rem 0rem 0rem 0.6rem;
+	margin-left: 2.8rem;
+}
 
+#fos_user_registration_form_sexe{
+	display: block;
+	width: calc( 90% - 5.6rem);
+	margin-top: 0.3rem;
+	font-size: 1.1rem;
+	height: 2.6rem;
+	border-radius: 3px;
+	border: 1px solid #6f6565;
+	margin-bottom: 1.2rem;
+	padding: 0.2rem 0rem 0rem 0.6rem;
+	margin-left: 2.8rem;
+}
 
+#fos_user_registration_form_birthday{
+	display: block;
+	width: calc( 90% - 5.6rem);
+	margin-top: 0.3rem;
+	font-size: 1.1rem;
+	height: 2.6rem;
+	border-radius: 3px;
+	margin-bottom: 1.2rem;
+	padding: 0.2rem 0rem 0rem 0.6rem;
+	margin-left: 2.8rem;
+}
+#fos_user_registration_form_birthday > select{
+	font-size: 1.1rem;
+	height: 2.2rem;
+	border-radius: 3px;
+	border: 1px solid #6f6565;
+	margin-bottom: 1.2rem;
+	padding: 0.2rem 0rem 0rem 0.6rem;
+	margin-right: 0.3rem;
+}
 
+.group.email::before {
+	background: url(../images/email-outline.svg) no-repeat left;
+	content: "";
+	width: 1.9rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+.group.username::before{
+	background: url(../images/account-box.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+	.group.username::after {
+		display: block;
+		content: "";
+		width: 80%;
+		height: 2.3px;
+		background-color: #ED1B36;
+		margin: 2rem 0 1.6rem 1rem;
+	}
+#fos_user_registration_form_plainPassword > div:nth-child(1):before{
+	background: url(../images/lock-open-outline.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+#fos_user_registration_form_plainPassword > div:nth-child(2):before {
+	background: url(../images/lock-reset.svg) no-repeat left;
+	content: "";
+	width: 3.3rem;
+	display: block;
+	height: 2.3rem;
+	top: 7.2rem;
+	position: absolute;
+	margin-left: 0.1rem;
+	background-size: 1.8rem;
+}
 
+	#fos_user_registration_form_plainPassword::after {
+		display: block;
+		content: "";
+		width: 80%;
+		height: 2.3px;
+		background-color: #065A60;
+		margin: 2rem 0 1.6rem 1rem;
+	}
+.group.sexe::before{
+	background: url(../images/gender-male-female.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+.group.lastname::before{
+	background: url(../images/account.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+.group.name::before{
+	background: url(../images/account-alert.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+.group.phone::before{
+	background: url(../images/phone.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
 
+.group.adress::before{
+	background: url(../images/home.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+.group.city::before{
+	background: url(../images/city.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+.group.postal::before{
+	background: url(../images/code-equal.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+.group.birthday::before{
+	background: url(../images/cake-variant.svg) no-repeat left;
+	content: "";
+	width: 2rem;
+	display: block;
+	height: 2rem;
+	top: 1.9rem;
+	position: absolute;
+	margin-left: 0.1rem;
+}
+#fos_user_registration_form_birthday_day{
+	display: inline;
+	width: 20%;
+}
+#fos_user_registration_form_birthday_month{
+	display: inline;
+	width: 40%;
+}
+#fos_user_registration_form_birthday_year{
+	display: inline;
+	width: 34.9%;
+}
 
 
 /* -------------- MODALE REGISTER ---------------*/
 
 
-.fos_user_registration_register{
-	margin-top:1rem;
-	width:80%;
-	margin:0 auto;
-	display:block;
+.imageFileContainer{
+	display: inline-block;
+	height: 11rem;
+	width: 40%;
 }
 
-.fos_user_registration_register fieldset{
-	border: 1px solid black;
-	padding:0.5rem;
-	margin-bottom:0.4rem;
+.imageFileContent img{
+	max-height: 100%;
+	opacity: 0.4;
 }
-.fos_user_registration_register input, .fos_user_registration_register select{
-	margin-bottom:1rem;
-	display:block;
-	width:70%;
+.imagefilecontent img.enable{
+	opacity:1;
 }
-.fos_user_registration_register label{
-	margin-bottom:0.2rem;
-	display:block;
-	width:70%;
+.imagefileContent{
+	border: 5.1px solid rgba(92, 129, 198, 0.82);
+	min-height: 11rem;
+	width: 11rem;
+	height: 11rem;
+	border-radius: 50%;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
 }
-.dialog footer{
-	display:none;
-}
-.dialog header{
-	display:none;
+.imageFileRegister{
+	display: inline-block;
+	width: 50%;
+	margin-top: 4.4rem;
+	vertical-align: top;
 }

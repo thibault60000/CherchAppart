@@ -1072,22 +1072,31 @@ body{
 /* -------------- MODALE REGISTER ---------------*/
 
 
-.registerFormModal{
+.fos_user_registration_register{
 	margin-top:1rem;
+	width:80%;
+	margin:0 auto;
+	display:block;
 }
 
-.registerFormModal fieldset{
+.fos_user_registration_register fieldset{
 	border: 1px solid black;
 	padding:0.5rem;
 	margin-bottom:0.4rem;
 }
-.registerFormModal input{
+.fos_user_registration_register input, .fos_user_registration_register select{
 	margin-bottom:1rem;
 	display:block;
 	width:70%;
 }
-.registerFormModal label{
+.fos_user_registration_register label{
 	margin-bottom:0.2rem;
 	display:block;
 	width:70%;
+}
+.dialog footer{
+	display:none;
+}
+.dialog header{
+	display:none;
 }

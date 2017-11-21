@@ -130,6 +130,7 @@
     </main>
 
 
+    <!-- MODALE DE CONNEXION -->
     <div class="dialog" aria-hidden="true" id="my-accessible-dialog-connect">
         <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
         <div class="dialog-content" aria-labelledby="dialogTitle" aria-describedby="dialogDescription" role="dialog">
@@ -162,20 +163,9 @@
 
                             <div class="normalLogin">
 
-                                <label for="username">{{ 'security.login.username'|trans }} ou adresse mail</label>
-                                <input type="text" id="username" name="_username" required="required" />
-
-                                <label for="password">{{ 'security.login.password'|trans }}</label>
-                                <input type="password" id="password" name="_password" required="required" />
-
-                                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                                <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-
-                                <input type="submit" id="_submit" name="_submit" value="Se connecter" />
-
-                                <a class="passwordForget">Mot de passe oublié</a>
-                                <p class="noAccount"> Pas de compte ? </p> <a href="#" class="noAccountLink"> Inscrivez-vous</a>
-
+                                {% if app.user == null %}
+                                    {{ render(controller('FOSUserBundle:Security:login')) }}
+                                {% endif %}
 
                             </div>
 
@@ -201,7 +191,10 @@
                 <p id="dialogDescription">Ceci est le texte de la modale !</p>
 
                 <div class="registerFormModal">
-                    {{ render(controller('FOSUserBundle:Registration:register')) }}
+
+                    {% if app.user == null %}
+                     {{ render(controller('FOSUserBundle:Registration:register')) }}
+                    {% endif %}
 
                     <button data-a11y-dialog-hide class="dialog-close" aria-label="Fermer la fenêtre de dialogue">&times;</button>
                 </div>

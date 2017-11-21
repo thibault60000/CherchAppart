@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa42a1184fdaecd574eb85f2e168dd9e",
+    "content-hash": "4053ee4de87b20ef3e03a90ed98bde05",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2187,43 +2187,6 @@
             ],
             "description": "A security checker for your composer.lock",
             "time": "2017-08-22T22:18:16+00:00"
-        },
-        {
-            "name": "sideclick/bootstrap-modal-bundle",
-            "version": "0.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Sideclick/BootstrapModalBundle.git",
-                "reference": "39846bc6b1517998adead2c99e6d9f5a4a1cca74"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Sideclick/BootstrapModalBundle/zipball/39846bc6b1517998adead2c99e6d9f5a4a1cca74",
-                "reference": "39846bc6b1517998adead2c99e6d9f5a4a1cca74",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5",
-                "symfony/symfony": ">=2.6 || ~3.0"
-            },
-            "type": "package",
-            "autoload": {
-                "psr-4": {
-                    "Sideclick\\BootstrapModalBundle\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rowan Reid",
-                    "email": "rowan@sideclick.co.za"
-                }
-            ],
-            "description": "Bundle for Symfony 2.6+ that makes it easy to load pages into a Bootstrap modal window.",
-            "time": "2017-10-17T09:08:02+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

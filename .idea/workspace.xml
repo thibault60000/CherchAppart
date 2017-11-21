@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a101fa57-2973-4876-9e08-45b3a768dc2b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/OurSecretProject.iml" afterPath="$PROJECT_DIR$/.idea/OurSecretProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CherchAppartBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/CherchAppartBundle/Resources/config/services.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Homepage/index.html.twig" afterPath="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Homepage/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/main.css" afterPath="$PROJECT_DIR$/web/css/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,31 +45,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Homepage/index.html.twig">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="191" column="79" lean-forward="false" selection-start-line="191" selection-start-column="50" selection-end-line="191" selection-end-column="79" />
+            <state relative-caret-position="-34">
+              <caret line="838" column="24" lean-forward="false" selection-start-line="838" selection-start-column="24" selection-end-line="838" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/layout.html.twig">
+      <file leaf-file-name="modernizr.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/modernizr.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="45" column="84" lean-forward="false" selection-start-line="45" selection-start-column="84" selection-end-line="45" selection-end-column="84" />
+            <state relative-caret-position="200">
+              <caret line="1362" column="0" lean-forward="false" selection-start-line="1362" selection-start-column="0" selection-end-line="1362" selection-end-column="0" />
               <folding>
-                <element signature="e#1364#1399#0#Twig" expanded="true" />
-                <element signature="e#1492#1529#0#Twig" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sideclick-bootstrap-modal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/Resources/public/js/sideclick-bootstrap-modal.js">
+      <file leaf-file-name="jquery.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/jquery.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -85,41 +89,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/Resources/config/services.yml">
+      <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="515">
+              <caret line="149" column="7" lean-forward="false" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/DependencyInjection/Configuration.php">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SideclickBootstrapModalExtension.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/DependencyInjection/SideclickBootstrapModalExtension.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Homepage/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="166" column="104" lean-forward="false" selection-start-line="166" selection-start-column="104" selection-end-line="166" selection-end-column="104" />
+              <folding>
+                <element signature="e#938#3410#0#HTML" expanded="false" />
+                <element signature="e#3420#4575#0#HTML" expanded="false" />
+                <element signature="e#7260#7267#1#HTML" expanded="true" />
+                <element signature="e#7894#7901#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Security/login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#42#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_content.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Security/login_content.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="57" column="19" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="57" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerTrait.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/Controller/ControllerTrait.php">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1130">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -160,12 +191,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/CherchAppartBundle/Entity/Comments_Like.php" />
+        <option value="$PROJECT_DIR$/src/CherchAppartBundle/Entity/Announce_Comments.php" />
+        <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/config/doctrine/Announce_Fire.orm.yml" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/config/doctrine/Announce.orm.yml" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Profile/show.html.twig" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Controller/SecurityController.php" />
@@ -182,7 +213,10 @@
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Resetting/reset.html.twig" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Security/login_content.html.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Layout/footer.html.twig" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/config/doctrine/User.orm.yml" />
@@ -209,14 +243,8 @@
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Form/ProfileType.php" />
         <option value="$PROJECT_DIR$/web/js/util.js" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Profile/edit_content.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/main.css" />
-        <option value="$PROJECT_DIR$/src/CherchAppartBundle/Handler/AuthenticationHandler.php" />
-        <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Homepage/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/main.css" />
       </list>
     </option>
   </component>
@@ -280,14 +308,12 @@
       <path value="$PROJECT_DIR$/vendor/javiereguiluz/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
       <path value="$PROJECT_DIR$/vendor/twig/extensions" />
-      <path value="$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="74" />
-    <option name="y" value="51" />
-    <option name="width" value="1754" />
-    <option name="height" value="936" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -304,6 +330,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -339,6 +366,35 @@
               <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Contents" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -347,7 +403,42 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routing" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Announce" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ChangePassword" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
@@ -361,26 +452,60 @@
             <path>
               <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Layout" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sideclick" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Profile" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sideclick" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bootstrap-modal-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Registration" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CherchAppartBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Security" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="OurSecretProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OurSecretProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -390,19 +515,19 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Form" />
-      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Resources\config\routing" />
-      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Controller\Contents" />
-      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Resources\views\Contact" />
-      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Resources\views" />
       <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Resources\views\Users_Security" />
       <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Controller" />
       <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Controller\Users_Security" />
       <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Controller\User &amp; Security" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Form" />
+      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Resources\config\routing" />
+      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Controller\Contents" />
+      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Resources\views\Contact" />
+      <recent name="C:\wamp64\www\OurSecretProject\src\CherchAppartBundle\Resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -453,7 +578,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91736000" />
+    <option name="totallyTimeSpent" value="87525000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,18 +590,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34135666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27243927" sideWeight="0.5072917" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46456692" sideWeight="0.5080527" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3657205" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23336853" sideWeight="0.49010417" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27243927" sideWeight="0.49270833" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27173913" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -486,8 +610,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46456692" sideWeight="0.5080527" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48179612" sideWeight="0.4919473" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3125" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -496,8 +620,8 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3657205" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -534,6 +658,59 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Doctrine/UserManager.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Command/RoleCommand.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Command/ActivateUserCommand.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/profile.xml" />
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/validator.xml" />
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/util.xml" />
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/validation.xml" />
+    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7259">
+          <caret line="429" column="29" lean-forward="false" selection-start-line="429" selection-start-column="29" selection-end-line="429" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/User.orm.xml" />
+    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/config/doctrine/User.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Layout/menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="29" column="68" lean-forward="true" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Entity/Comments_Like.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -575,6 +752,34 @@
         <state relative-caret-position="444">
           <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Controller/ChangePasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="79" column="16" lean-forward="false" selection-start-line="79" selection-start-column="16" selection-end-line="80" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Controller/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -688,9 +893,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Controller/Contents/AnnounceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="527">
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding>
+            <element signature="e#58#110#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -732,16 +939,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="147" column="4" lean-forward="false" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
+        <state relative-caret-position="515">
+          <caret line="149" column="7" lean-forward="false" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -757,347 +964,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="459" column="24" lean-forward="false" selection-start-line="459" selection-start-column="24" selection-end-line="459" selection-end-column="24" />
           <folding>
-            <marker date="1511179292670" expanded="true" signature="4490:4690" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="10835:10845" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="10878:10906" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="10926:11128" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11156:11264" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11302:11506" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11322:11346" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11365:11394" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11416:11457" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11481:11504" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11543:11823" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11566:11603" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11626:11687" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11711:11821" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11860:12103" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11894:11922" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="11943:11979" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12002:12036" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12061:12101" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12140:12328" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12163:12200" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12224:12259" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12284:12326" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12366:12575" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12389:12426" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12450:12485" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12510:12573" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12613:12835" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12636:12677" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12711:12739" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12763:12786" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12811:12833" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="12872:13064" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13079:13169" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13187:13293" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13318:13361" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13383:13406" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13425:13482" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13505:13594" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13616:13659" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13688:13724" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13760:13791" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13829:13860" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13897:13925" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="13965:13994" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14032:14486" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14053:14079" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14103:14222" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14260:14350" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14388:14484" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14525:15383" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14535:14559" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14575:14659" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14679:14801" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14823:14849" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14878:14917" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="14938:14975" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15001:15126" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15147:15240" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15264:15381" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15436:15455" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15466:15485" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15514:15533" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15550:15740" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15759:15925" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15964:16022" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="15983:16020" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16061:16121" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16080:16119" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16160:16214" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16174:16212" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16231:16464" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16483:16523" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16571:16595" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16614:16639" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16708:16934" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="16970:17013" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="17046:17173" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="17210:17342" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="17377:17576" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="17617:17636" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="17650:17715" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="17736:17857" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="17922:18140" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18158:18210" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18228:18290" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18311:18391" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18416:18518" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18541:18560" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18587:18716" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18740:18848" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18868:18894" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18906:18978" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="18994:19115" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="19131:19197" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="19211:19256" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="19279:19413" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="19435:19568" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="19580:19802" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="19819:19932" ph="{...}" />
-            <marker date="1511179292670" expanded="true" signature="20089:20245" ph="{...}" />
+            <element signature="e#12#42#0#Twig" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511174853908" expanded="true" signature="45690:67254" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="54578:55586" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="55570:55579" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="55614:56048" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="55764:56041" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="55962:56030" ph="{&quot;left&quot;: left...}" />
-            <marker date="1511174853908" expanded="true" signature="56119:57943" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="57976:59284" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="58160:58911" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="58366:58709" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="59318:59471" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="59508:59558" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="59595:59645" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="59685:59961" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="60002:60051" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="60092:60141" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="60177:60370" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="60409:60454" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="60569:60596" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="60632:60684" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="60716:61661" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="60902:61334" ph="{&quot;code&quot;: key...}" />
-            <marker date="1511174853908" expanded="true" signature="61571:61655" ph="{&quot;element&quot;: region...}" />
-            <marker date="1511174853908" expanded="true" signature="61700:63192" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="62150:62192" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="62294:62832" ph="{&quot;index&quot;: i...}" />
-            <marker date="1511174853908" expanded="true" signature="63112:63185" ph="{&quot;element&quot;: marker...}" />
-            <marker date="1511174853908" expanded="true" signature="63228:63456" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="63491:63680" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="63728:64026" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="64077:64399" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="64447:64631" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="64670:64812" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="64847:64968" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="65008:65685" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="65721:66451" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="66490:66731" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="66762:67064" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="66806:66866" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="67089:67252" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="67299:68967" ph="{&quot;map&quot;: &quot;fr_regions_2016_mill&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="67622:67982" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="67641:67801" ph="{&quot;fill&quot;: &quot;white&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="67818:67891" ph="{&quot;cursor&quot;: &quot;pointer&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="67911:67949" ph="{&quot;fill&quot;: &quot;yellow&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="68006:68261" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="68025:68197" ph="{&quot;font-family&quot;: &quot;Verdana&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="68214:68255" ph="{&quot;cursor&quot;: &quot;pointer&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="68280:68686" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="68299:68479" ph="{&quot;fill&quot;: &quot;grey&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="68496:68597" ph="{&quot;stroke&quot;: &quot;black&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="68617:68653" ph="{&quot;fill&quot;: &quot;blue&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="68710:68965" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="68729:68901" ph="{&quot;font-family&quot;: &quot;Verdana&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="68918:68959" ph="{&quot;cursor&quot;: &quot;pointer&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="68989:69379" ph="{&quot;onRegionTipShow&quot;: &quot;regionTipShow&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="69413:70210" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="70237:72863" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="70274:70957" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="70314:70379" ph="{&quot;width&quot;: &quot;100%&quot;...}" />
-            <marker date="1511174853908" expanded="true" signature="70627:70662" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="70682:70933" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="70991:71324" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="71266:71307" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="71362:72254" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="71500:71573" ph="{&quot;region&quot;: code...}" />
-            <marker date="1511174853908" expanded="true" signature="71667:71751" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="71788:71831" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="71939:72247" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="72279:72861" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="72440:72535" ph="{...}" />
-            <marker date="1511174853908" expanded="true" signature="72553:72854" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Security/login_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="19" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="57" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Controller/ChangePasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1173">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Handler/AuthenticationHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="65" lean-forward="false" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/Resources/public/js/sideclick-bootstrap-modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/Controller/ControllerTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1130">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/DependencyInjection/SideclickBootstrapModalExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sideclick/bootstrap-modal-bundle/src/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/Homepage/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="191" column="79" lean-forward="false" selection-start-line="191" selection-start-column="50" selection-end-line="191" selection-end-column="79" />
-          <folding />
+        <state relative-caret-position="430">
+          <caret line="166" column="104" lean-forward="false" selection-start-line="166" selection-start-column="104" selection-end-line="166" selection-end-column="104" />
+          <folding>
+            <element signature="e#938#3410#0#HTML" expanded="false" />
+            <element signature="e#3420#4575#0#HTML" expanded="false" />
+            <element signature="e#7260#7267#1#HTML" expanded="true" />
+            <element signature="e#7894#7901#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CherchAppartBundle/Resources/views/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="45" column="84" lean-forward="false" selection-start-line="45" selection-start-column="84" selection-end-line="45" selection-end-column="84" />
-          <folding>
-            <element signature="e#1364#1399#0#Twig" expanded="true" />
-            <element signature="e#1492#1529#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="-34">
+          <caret line="838" column="24" lean-forward="false" selection-start-line="838" selection-start-column="24" selection-end-line="838" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

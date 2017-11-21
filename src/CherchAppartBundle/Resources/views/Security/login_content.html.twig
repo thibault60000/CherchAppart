@@ -2,81 +2,28 @@
 
 
 
-
-<!-- BANNER  -->
-<section id="banner" class="signIn">
     {% if error %}
-        <div class="errorConnect">
-            <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Identifiants incorrects</div>
-        </div>
+            <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{ error }}</div>
     {% endif %}
-    <div class="content">
-        <header>
-            <h2>CONNEXION</h2>
-            <p>Descendez pour vous connecter</p>
-        </header>
-    </div>
-    <a href="#one" class="goto-next scrolly">Suivant</a>
-</section>
 
 
 
-<!-- SIGN IN FORM -->
-<section id="one" class="signIn">
-    <div class="content">
-        <div class="container">
+        <!-- START SIGN IN FORM -->
+        <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
 
-            <!-- START SIGN IN FORM -->
-            <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
+            {% if csrf_token %}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+            {% endif %}
 
-                {% if csrf_token %}
-                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-                {% endif %}
+                <label for="username">{{ 'security.login.username'|trans }} ou adresse mail</label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+                <label for="password">{{ 'security.login.password'|trans }}</label>
+                <input type="password" id="password" name="_password" required="required" />
+                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
 
-                <h3 class="heading">Formulaire de connexion</h3>
+                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
 
-                <!-- NORMAL SIGN IN FORM -->
-                <div class="left">
-                    <label for="username">{{ 'security.login.username'|trans }} ou adresse mail</label>
-                    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
-                    <label for="password">{{ 'security.login.password'|trans }}</label>
-                    <input type="password" id="password" name="_password" required="required" />
-                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                    <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-                    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-                    <a class="passwordForget" href="{{ path("fos_user_resetting_request") }}">Mot de passe oublié</a>
-                </div>
-                <!-- BUTTONS SIGN IN | SOCIAL NETWORKS -->
-                <div class="right">
-                    <div class="connect">Se connecter avec</div>
-                    <ul>
-                        <li><button class="facebook" type="button"><i class="fa fa-facebook" aria-hidden="true"></i></button></li>
-                        <li><button class="googleplus" type="button"><i class="fa fa-google-plus" aria-hidden="true"></i></button></li>
-                        <li><button class="twitter" type="button"><i class="fa fa-twitter" aria-hidden="true"></i></button></li>
-                    </ul>
-                </div>
-            </form>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- SECTION | CONNECT  -->
-<section id="two" class="spotlight style3 left">
-    <span class="image fit main bottom"><img src="{{ asset('images/thridPhoto.jpeg') }}" alt="Carte de la France" /></span>
-    <div class="content">
-        <header>
-            <h2>Connecte toi maintenant ! </h2>
-            <p>Pour faire ta première recherche ou poster ta première annonce !</p>
-        </header>
-        <p>Pour éviter tout spam sur les commentaires des annonces, il est nécessaire d'être
-            authentifier pour accéder à celles-ci. La création d'un compte est gratuit et
-            toute donnée personnelle restera confidentielle et sécurisée </p>
-        <ul class="actions">
-            <li><a href="#" class="button">S'inscrire</a></li>
-        </ul>
-    </div>
-    <a href="#four" class="goto-next scrolly">Suivant</a>
-</section>
+                <a class="passwordForget" href="{{ path("fos_user_resetting_request") }}">Mot de passe oublié</a>
+        </form>
 

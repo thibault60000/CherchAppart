@@ -1,20 +1,24 @@
 {% extends "@CherchAppart/layout.html.twig" %}
 
+
 {% block body %}
+
+
 
     {%  for message in app.session.flashbag.get('Message') %}
         <li><b>{{ message }}</b></li>
     {% endfor %}
 
 
+
     <main id="main" role="main" class="main" aria-label="content">
-    <div class="homepageHeader">
+        <div class="homepageHeader">
             {% if app.user == null %}
                 <h1>CherchAppart</h1>
                 <p>Trouver un appartement à louer selon vos critères parmis des milliers d'annonces</p>
 
-                <button data-a11y-dialog-show="my-accessible-dialog-connect" class="btnLogin"> Se connecter </button>
-                <button data-a11y-dialog-show="my-accessible-dialog-register" class="btnRegister">S'inscrire </button>
+                <button data-a11y-dialog-show="my-accessible-dialog-connect" class="btnLogin btnModal"> Se connecter </button>
+                <button data-a11y-dialog-show="my-accessible-dialog-register" class="btnRegister btnModal">S'inscrire </button>
             {% else %}
                 <h1>Bonjour {{ app.user.lastname }} !</h1>
                 <p>Tu peux maintenant proposer une annonce
@@ -125,6 +129,7 @@
         </div>
     </main>
 
+
     <div class="dialog" aria-hidden="true" id="my-accessible-dialog-connect">
         <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
         <div class="dialog-content" aria-labelledby="dialogTitle" aria-describedby="dialogDescription" role="dialog">
@@ -132,49 +137,60 @@
                 <h1 id="dialogTitle" tabindex="0">Connectez-vous</h1>
                 <p id="dialogDescription">Pour pouvoir accéder au contenu</p>
 
-                    <form id="login-form" action="{{ path("fos_user_security_check") }}" autocomplete="off" method="post">
+                {% block fos_user_content %}
+                    {% trans_default_domain 'FOSUserBundle' %}
 
-                        <div class="socianetwork">
-                            <h2 class="connect">Se connecter avec</h2>
-                            <ul>
-                                <li><button class="facebook" type="button"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</button></li>
-                                <li><button class="googleplus" type="button"><i class="fa fa-google-plus" aria-hidden="true"></i> Google </button></li>
-                                <li><button class="twitter" type="button"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</button></li>
-                            </ul>
-                        </div>
 
-                        <div class="ouTransition">
-                            <span class="ouContainer">
-                                <span class="ouContent">
-                                    <span>ou</span>
+                        <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
+
+                            <div class="socianetwork">
+                                <h2 class="connect">Se connecter avec</h2>
+                                <ul>
+                                    <li><button class="facebook" type="button"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</button></li>
+                                    <li><button class="googleplus" type="button"><i class="fa fa-google-plus" aria-hidden="true"></i> Google </button></li>
+                                    <li><button class="twitter" type="button"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="ouTransition">
+                                <span class="ouContainer">
+                                    <span class="ouContent">
+                                        <span>ou</span>
+                                    </span>
                                 </span>
-                            </span>
-                        </div>
+                            </div>
 
-                        <div class="normalLogin">
-                            <label for="username">Nom d'utilisation ou Adresse mail</label>
-                            <input type="text" id="username" name="_username" required="required" />
+                            <div class="normalLogin">
 
-                            <label for="password">Mot de passe</label>
-                            <input type="password" id="password" name="_password" required="required" />
+                                <label for="username">{{ 'security.login.username'|trans }} ou adresse mail</label>
+                                <input type="text" id="username" name="_username" required="required" />
 
-                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                            <label class="rememberMe" for="remember_me">Se souvenir de moi</label>
+                                <label for="password">{{ 'security.login.password'|trans }}</label>
+                                <input type="password" id="password" name="_password" required="required" />
 
-                            <input type="submit" id="_submit" name="_submit" value="Se connecter" />
+                                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
 
-                            <a class="passwordForget">Mot de passe oublié</a>
-                            <p class="noAccount"> Pas de compte ? </p> <a href="#" class="noAccountLink"> Inscrivez-vous</a>
-                        </div>
+                                <input type="submit" id="_submit" name="_submit" value="Se connecter" />
+
+                                <a class="passwordForget">Mot de passe oublié</a>
+                                <p class="noAccount"> Pas de compte ? </p> <a href="#" class="noAccountLink"> Inscrivez-vous</a>
 
 
+                            </div>
 
                     </form>
+
+                {% endblock fos_user_content %}
+
+
 
                 <button data-a11y-dialog-hide class="dialog-close" aria-label="Fermer la fenêtre de dialogue">&times;</button>
             </div>
         </div>
     </div>
+
+
 
     <div class="dialog" aria-hidden="true" id="my-accessible-dialog-register">
         <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
@@ -184,7 +200,12 @@
 
                 <p id="dialogDescription">Ceci est le texte de la modale !</p>
 
-                <button data-a11y-dialog-hide class="dialog-close" aria-label="Fermer la fenêtre de dialogue">&times;</button>
+                <div class="registerFormModal">
+                    {{ render(controller('FOSUserBundle:Registration:register')) }}
+
+                    <button data-a11y-dialog-hide class="dialog-close" aria-label="Fermer la fenêtre de dialogue">&times;</button>
+                </div>
+
             </div>
         </div>
     </div>

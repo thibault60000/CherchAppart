@@ -1,101 +1,13 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<!-- BANNER  -->
-<section id="banner" class="signUp">
-    <div class="content">
-        <header>
-            <h2>INSCRIPTION</h2>
-            <p>Descendez pour vous inscrire</p>
-        </header>
-    </div>
-    <a href="#one" class="goto-next scrolly">Suivant</a>
-</section>
-
-<section id="one" class="signUp">
-        <div class="container">
-            <div class="row 150%">
-                <div class="4u 12u$(medium)">
-
-                    <!-- SIDEBAR-->
-                    <section id="sidebar">
-
-                        <!-- EXISTING ACCOUNT ? -->
-                        <section>
-                            <h3>Vous possèdez deja un compte?</h3>
-                            <p>Si vous possèdez deja un compte, connectez vous avec celui-ci, il n'est pas possible de créer un compte avec un nom d'utilisateur ou un mot de passe deja utiliser</p>
-                            <footer>
-                                <ul class="actions">
-                                    <li><a href="#" class="button">Se connecter</a></li>
-                                </ul>
-                            </footer>
-                        </section>
-                        <hr />
-
-                        <!-- CONFIDENTIALITY -->
-                        <section>
-                            <a href="#" class="image fit"><img src="{{ asset('images/security.jpeg') }}" alt="" /></a>
-                            <h3>Politique de confidentialité</h3>
-                            <p>Les informations entrées dans le formulaire ci-dessous ne sont ni transmises ni divulguées. Les identifiants et mot de passes sont cryptées en base de données. Contactez les administrateurs pour supprimer vos données personnelles</p>
-                            <footer>
-                                <ul class="actions">
-                                    <li><a href="#" class="button">En savoir plus</a></li>
-                                </ul>
-                            </footer>
-                        </section>
-                        <hr />
-
-                        <!-- REGISTER PROBLEM? -->
-                        <section>
-                            <h3>Un problème lors de votre inscription ?</h3>
-                            <p>En cas de problème avec la saisie de vos informations personnelles ou en cas de question / doute lors de votre inscription, vous pouvez contacter nous contacter, nous vous répondrons dans les plus brefs délais</p>
-                            <footer>
-                                <ul class="actions">
-                                    <li><a href="#" class="button">Contacez-nous</a></li>
-                                </ul>
-                            </footer>
-                        </section>
-                        <hr />
-
-                        <!-- WHAT IS CHERCHAPPART? -->
-                        <section>
-                            <a href="#" class="image fit"><img src="{{ asset('images/firstPhoto.jpeg') }}" alt="" /></a>
-                            <h3>Qu'est ce que Cherch'Appart ?</h3>
-                            <p>Vous êtes venus sur cette page trop rapidement? Retournez à l'accueil pour en apprendre plus sur notre site, vous pourrez toujours créer un compte à partir de la page d'accueil</p>
-                            <footer>
-                                <ul class="actions">
-                                    <li><a href="#" class="button">Retour à l'accueil</a></li>
-                                </ul>
-                            </footer>
-                        </section>
-                    </section>
-                </div>
-
-                <!-- MAIN CONTENT SIGN UP -->
-                <div class="8u$ 12u$(medium) important(medium)">
-
-
-                    <!-- SECTION REGISTER FORM -->
-                    <section class="registerForm" id="content">
-                        <a href="#" class="image fit"><img src="{{ asset('images/register.jpeg') }}" alt="" /></a>
-                        <h3>Formulaire d'inscription</h3>
 
                         {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
                         <fieldset>
                             <legend>Photo de profil</legend>
-                            <div class="photoProfilRegisterContainer">
-                                    <div class="photoProfileRegisterContent">
-                                        <img alt="" id="blah"/>
-                                    </div>
-
-                            </div>
-                            <div class="imageFileRegister">
-
                                 {{ form_label(form.imageFile) }}
                                 {{ form_errors(form.imageFile) }}
                                 {{ form_widget(form.imageFile) }}
-                            </div>
-
                         </fieldset>
 
 
@@ -159,9 +71,3 @@
                         <input type="submit" value="{{ 'registration.submit'|trans }}" />
 
                         {{ form_end(form) }}
-
-                    </section>
-                </div>
-            </div>
-        </div>
-</section>

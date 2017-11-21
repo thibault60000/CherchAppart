@@ -785,7 +785,7 @@ footer .copyright{
 @media screen and (min-width: 600px) {
 	.dialog-content {
 		width: 90%;
-		height: 50rem;
+		height:37.4rem;
 	}
 }
 
@@ -803,9 +803,14 @@ body{
 		margin: 0;
 		font-size: 2.15em;
 	}
+
 }
 
-
+@media screen and (min-height: 800px) {
+	.dialog-content {
+		height:50rem;
+	}
+}
 .dialog-close {
 	position: absolute;
 	top: 0;
@@ -1053,4 +1058,36 @@ body{
 	height: 100%;
 	z-index: 9999;
 	background: url(../images/Preloader_3.gif) center no-repeat #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------- MODALE REGISTER ---------------*/
+
+
+.registerFormModal{
+	margin-top:1rem;
+}
+
+.registerFormModal fieldset{
+	border: 1px solid black;
+	padding:0.5rem;
+	margin-bottom:0.4rem;
+}
+.registerFormModal input{
+	margin-bottom:1rem;
+	display:block;
+	width:70%;
+}
+.registerFormModal label{
+	margin-bottom:0.2rem;
+	display:block;
+	width:70%;
 }

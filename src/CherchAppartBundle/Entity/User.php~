@@ -425,6 +425,11 @@ class User extends BaseUser
         return $this->image;
     }
 
+    public function getImageName()
+    {
+        return strval($this->image);
+    }
+
     /**
      * Set updateAt
      *

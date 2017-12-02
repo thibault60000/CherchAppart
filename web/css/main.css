@@ -35,6 +35,7 @@ article, aside, figure, figcaption, footer, header, main, nav, section {
 
 body {
 	font: 100%/1.3 robotoregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow: hidden;
 }
 
 a {
@@ -116,7 +117,7 @@ header{
 		}
 			.homepageHeader button{
 				margin-top: 3.1rem;
-				padding: 0.5rem 1rem;
+				padding: 0.7rem 1.1rem;
 				color: white;
 				border-radius: 2px;
 				display:inline-block;
@@ -245,7 +246,7 @@ header nav {
 	bottom: 0;
 	width: 100%;
 	height: 4.5rem;
-	background-color: #06595f;
+	background-color: #141b1be6;
 	z-index: 100;
 	text-align: center;
 }
@@ -447,7 +448,35 @@ header nav {
 		background-color: white;
 		outline: none;
 		transition: transform 1s;
+		-webkit-animation-name: hvr-pulse-shrink2;
+		animation-name: hvr-pulse-shrink-2;
+		-webkit-animation-duration: 0.5s;
+		animation-duration: 0.5s;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;
+		animation-direction: alternate;
 	}
+	/* Pulse Shrink Animation*/
+	@-webkit-keyframes hvr-pulse-shrink-2 {
+		to {
+			-webkit-width: 1.2rem;
+			-webkit-height: 1.2rem;
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+	}
+	@keyframes hvr-pulse-shrink-2 {
+		to {
+			-webkit-width: 1.2rem;
+			-webkit-height: 1.2rem;
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+	}
+
 	.openMenu.active{
 		transform: rotate(135deg);
 	}
@@ -744,6 +773,8 @@ footer .copyright{
 			width: 60%;
 		}
 }
+
+
 /*  MODAL CONNEXION */
 
 .dialog{
@@ -784,7 +815,6 @@ footer .copyright{
 	background-color: rgba(43, 46, 56, 0.9);
 }
 
-
 .dialog-content {
 	opacity: 1;
 	transition: all 0.6s;
@@ -805,16 +835,15 @@ footer .copyright{
 	transition: none;
 	visibility:hidden;
 }
+
 @media screen and (min-width: 600px) {
 	.dialog-content {
 		width: 90%;
-		height:37.4rem;
+		height:80%;
+		transform: translate(-50%, -57%);
 	}
 }
 
-body{
-	overflow: hidden;
-}
 @media screen and (min-width: 700px) {
 	.dialog-content {
 		width: 35rem;
@@ -826,14 +855,14 @@ body{
 		margin: 0;
 		font-size: 2.15em;
 	}
-
-}
-
-@media screen and (min-height: 800px) {
 	.dialog-content {
-		height:50rem;
+		height: 90%;
+		top:57%;
 	}
+
 }
+
+
 .dialog-close {
 	position: absolute;
 	top: 0;
@@ -858,7 +887,12 @@ body{
 
 #login-form{
 	margin-top: 2.5rem;
-	margin-bottom: 5rem;
+	padding-bottom: 4.6rem;
+}
+@media screen and (min-width: 600px) {
+	#login-form {
+		padding-bottom: 3rem;
+	}
 }
 	#login-form label{
 		font-size: 1.1rem;
@@ -925,15 +959,16 @@ body{
 		padding-left:2rem;
 		position: relative;
 		color: #4e4a4a;
+		display: inline-block;
 	}
 	.rememberMe::before{
-		content:"";
-		height:1.4rem;
-		width:1.4rem;
-		position:absolute;
-		display:block;
+		content: "";
+		height: 1.4rem;
+		width: 1.4rem;
+		position: absolute;
+		display: inline-block;
 		border: 1.3px solid #635c5c;
-
+		left: 0;
 	}
 	#login-form input[type="checkbox"]:checked + .rememberMe::after{
 		content: "";
@@ -974,6 +1009,9 @@ body{
 		border-radius: 3px;
 		background-color: #4267b2;
 		color: white;
+		display: block;
+		text-align: center;
+		font-size: 1.3rem;
 	}
 	.socianetwork .button{
 		opacity:0.9;
@@ -985,16 +1023,26 @@ body{
 		background-color: white;
 		color: white;
 		background-color: #e25454;
+		display: block;
+		text-align: center;
+		font-size: 1.3rem;
 	}
 	.socianetwork .twitter{
 		 height: 100%;
 		 width: 100%;
 		 border-radius: 3px;
 		 background-color: #00ACEE;
+		display: block;
+		text-align: center;
+		font-size: 1.3rem;
 		 color: white;
 	 }
 	.socianetwork ul i{
 		margin-right: 1rem;
+		margin-top: 0.7rem;
+	}
+	.socianetwork ul li:hover a{
+		text-decoration:none;
 	}
 	.noAccount{
 		margin-top: 1.4rem;
@@ -1084,6 +1132,12 @@ body{
 	background: url(../images/Preloader_3.gif) center no-repeat #fff;
 }
 
+
+/* *********** REGISTER MODALE ************** */
+
+.fos_user_registration_register{
+	padding-bottom:3.1rem;
+}
 .fos_user_registration_register .group{
 	margin: 1rem 0;
 	position: relative;
@@ -1100,7 +1154,9 @@ body{
 	font-size: 1.2rem;
 	cursor: pointer;
 }
-
+.fos_user_registration_register input[type="submit"]:hover{
+	opacity:0.8;
+}
 
 .fos_user_registration_register label{
 	font-size: 1.1rem;
@@ -1112,7 +1168,7 @@ body{
 .fos_user_registration_register input[type="email"]
 {
 	display: block;
-	width: calc( 90% - 6.2rem);
+	width: 90%;
 	margin-top: 0.3rem;
 	font-size: 1.1rem;
 	height: 2.2rem;
@@ -1125,7 +1181,7 @@ body{
 
 #fos_user_registration_form_sexe{
 	display: block;
-	width: calc( 90% - 5.6rem);
+	width: 90%;
 	margin-top: 0.3rem;
 	font-size: 1.1rem;
 	height: 2.6rem;
@@ -1134,27 +1190,6 @@ body{
 	margin-bottom: 1.2rem;
 	padding: 0.2rem 0rem 0rem 0.6rem;
 	margin-left: 2.8rem;
-}
-
-#fos_user_registration_form_birthday{
-	display: block;
-	width: calc( 90% - 5.6rem);
-	margin-top: 0.3rem;
-	font-size: 1.1rem;
-	height: 2.6rem;
-	border-radius: 3px;
-	margin-bottom: 1.2rem;
-	padding: 0.2rem 0rem 0rem 0.6rem;
-	margin-left: 2.8rem;
-}
-#fos_user_registration_form_birthday > select{
-	font-size: 1.1rem;
-	height: 2.2rem;
-	border-radius: 3px;
-	border: 1px solid #6f6565;
-	margin-bottom: 1.2rem;
-	padding: 0.2rem 0rem 0rem 0.6rem;
-	margin-right: 0.3rem;
 }
 
 .group.email::before {
@@ -1180,11 +1215,12 @@ body{
 	.group.username::after {
 		display: block;
 		content: "";
-		width: 80%;
-		height: 2.3px;
+		width: 100%;
+		height: 3px;
 		background-color: #ED1B36;
 		margin: 2rem 0 1.6rem 1rem;
 	}
+
 #fos_user_registration_form_plainPassword > div:nth-child(1):before{
 	background: url(../images/lock-open-outline.svg) no-repeat left;
 	content: "";
@@ -1210,8 +1246,8 @@ body{
 	#fos_user_registration_form_plainPassword::after {
 		display: block;
 		content: "";
-		width: 80%;
-		height: 2.3px;
+		width: 100%;
+		height: 3px;
 		background-color: #065A60;
 		margin: 2rem 0 1.6rem 1rem;
 	}
@@ -1245,88 +1281,87 @@ body{
 	position: absolute;
 	margin-left: 0.1rem;
 }
-.group.phone::before{
-	background: url(../images/phone.svg) no-repeat left;
-	content: "";
-	width: 2rem;
+.group.name::after {
 	display: block;
-	height: 2rem;
-	top: 1.9rem;
-	position: absolute;
-	margin-left: 0.1rem;
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: #ED1B36;
+	margin: 2rem 0 1.6rem 1rem;
 }
+			.group.phone::before{
+				background: url(../images/phone.svg) no-repeat left;
+				content: "";
+				width: 2rem;
+				display: block;
+				height: 2rem;
+				top: 1.9rem;
+				position: absolute;
+				margin-left: 0.1rem;
+			}
 
-.group.adress::before{
-	background: url(../images/home.svg) no-repeat left;
-	content: "";
-	width: 2rem;
-	display: block;
-	height: 2rem;
-	top: 1.9rem;
-	position: absolute;
-	margin-left: 0.1rem;
-}
-.group.city::before{
-	background: url(../images/city.svg) no-repeat left;
-	content: "";
-	width: 2rem;
-	display: block;
-	height: 2rem;
-	top: 1.9rem;
-	position: absolute;
-	margin-left: 0.1rem;
-}
-.group.postal::before{
-	background: url(../images/code-equal.svg) no-repeat left;
-	content: "";
-	width: 2rem;
-	display: block;
-	height: 2rem;
-	top: 1.9rem;
-	position: absolute;
-	margin-left: 0.1rem;
-}
-.group.birthday::before{
-	background: url(../images/cake-variant.svg) no-repeat left;
-	content: "";
-	width: 2rem;
-	display: block;
-	height: 2rem;
-	top: 1.9rem;
-	position: absolute;
-	margin-left: 0.1rem;
-}
-#fos_user_registration_form_birthday_day{
-	display: inline;
-	width: 20%;
-}
-#fos_user_registration_form_birthday_month{
-	display: inline;
-	width: 40%;
-}
-#fos_user_registration_form_birthday_year{
-	display: inline;
-	width: 34.9%;
-}
+				.group.adress::before{
+					background: url(../images/home.svg) no-repeat left;
+					content: "";
+					width: 2rem;
+					display: block;
+					height: 2rem;
+					top: 1.9rem;
+					position: absolute;
+					margin-left: 0.1rem;
+				}
+				.group.city::before{
+					background: url(../images/city.svg) no-repeat left;
+					content: "";
+					width: 2rem;
+					display: block;
+					height: 2rem;
+					top: 1.9rem;
+					position: absolute;
+					margin-left: 0.1rem;
+				}
+					.group.postal::before{
+						background: url(../images/code-equal.svg) no-repeat left;
+						content: "";
+						width: 2rem;
+						display: block;
+						height: 2rem;
+						top: 1.9rem;
+						position: absolute;
+						margin-left: 0.1rem;
+					}
 
 
 /* -------------- MODALE REGISTER ---------------*/
 
 
-.imageFileContainer{
-	display: inline-block;
-	height: 11rem;
-	width: 40%;
-}
 
-.imageFileContent img{
-	max-height: 100%;
-	opacity: 0.4;
+.fos_user_registration_register .imageFile{
+	margin-top: 2.1rem;
+	margin-bottom: 2rem;
 }
-.imagefilecontent img.enable{
+.fos_user_registration_register .imageFileContent{
+	border-radius: 50%;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	border: 2px solid #1285c6;
+}
+.fos_user_registration_register .imageFileContent img{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 7.3rem;
+}
+.fos_user_registration_register .imagefilecontent img.enable{
 	opacity:1;
 }
-.imagefileContent{
+.fos_user_registration_register .imagefileContent{
 	border: 5.1px solid rgba(92, 129, 198, 0.82);
 	min-height: 11rem;
 	width: 11rem;
@@ -1336,9 +1371,47 @@ body{
 	text-align: center;
 	overflow: hidden;
 }
-.imageFileRegister{
-	display: inline-block;
-	width: 50%;
-	margin-top: 4.4rem;
+
+.fos_user_registration_register .imageFileRegister {
+	display: block;
 	vertical-align: top;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 1.9rem;
+	text-align: center;
+}
+
+.fos_user_registration_register .imageFileContainer {
+	display: block;
+	height: 7rem;
+	width: 7rem;
+	text-align: center;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 800px){
+	.fos_user_registration_register .imageFileRegister{
+		display: inline-block;
+		padding-left: 2.9rem;
+		margin-top: 3rem;
+		width: 50%;
+		text-align:left;
+	}
+	.fos_user_registration_register .imageFileContainer{
+		display: inline-block;
+		text-align:left;
+	}
+}
+
+.fos_user_registration_register .imageFileRegister label{
+	background-color: #1285c6;
+	padding: 0.5rem 1rem;
+	border-radius: 3px;
+	color: white;
+}
+.fos_user_registration_register .imageFileContent img:before{
+	opacity:0;
+}
+#fos_user_registration_form_imageFile{
+	display:none;
 }

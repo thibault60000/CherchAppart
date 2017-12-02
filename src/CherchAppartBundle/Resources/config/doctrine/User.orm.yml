@@ -21,10 +21,6 @@ CherchAppartBundle\Entity\User:
              type: string
              length: '10'
              column: Sexe
-        birthday:
-            type: datetime
-            column: Birthday
-            columnDefinition: TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         adress:
              type: string
              length: '30'

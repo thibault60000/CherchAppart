@@ -3,12 +3,11 @@
 
                         {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
-
                         <!-- image file -->
                         <div class="imageFile">
                             <div class="imageFileContainer">
                                 <div class="imageFileContent">
-                                    <img alt="photo de profil" id="blah" />
+                                    <img alt="photo de profil" id="blah" style="background-image: url( {{ asset('images/avatar.png') }} );" />
                                 </div>
                             </div>
 
@@ -56,12 +55,6 @@
                             {{ form_label((form.name)) }}
                             {{ form_errors(form.name) }}
                             {{ form_widget(form.name) }}
-                        </div>
-
-                        <div class="group birthday">
-                            {{ form_label((form.birthday)) }}
-                            {{ form_errors(form.birthday) }}
-                            {{ form_widget(form.birthday) }}
                         </div>
 
                         <div class="group phone">

@@ -6,6 +6,13 @@ $(window).load(function() {
 
 
 $(function() {
+
+    // configure the bootstrap datepicker
+    $('.js-datepicker').datepicker({
+        format: 'yyyy-mm--dd'
+    });
+
+    
     $( ".openMenu" ).click(function() {
 
         if($(".openMenu").hasClass("active")){

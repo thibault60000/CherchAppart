@@ -453,4 +453,33 @@ class User extends BaseUser
     {
         return $this->updateAt;
     }
+    /**
+     * @var string
+     */
+    private $facebookID;
+
+
+    /**
+     * Set facebookID
+     *
+     * @param string $facebookID
+     *
+     * @return User
+     */
+    public function setFacebookID($facebookID)
+    {
+        $this->facebookID = $facebookID;
+
+        return $this;
+    }
+
+    /**
+     * Get facebookID
+     *
+     * @return string
+     */
+    public function getFacebookID()
+    {
+        return $this->facebookID;
+    }
 }

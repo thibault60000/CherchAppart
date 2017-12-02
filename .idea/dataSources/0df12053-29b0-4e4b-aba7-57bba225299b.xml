@@ -666,32 +666,47 @@ username</ColNames>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="149" parent="18" name="UNIQ_8D93D64992FC23A8">
+    <column id="149" parent="18" name="image">
+      <Position>20</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="150" parent="18" name="updateAt">
+      <Position>21</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="151" parent="18" name="Facebook_Id">
+      <Position>22</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="152" parent="18" name="UNIQ_8D93D64992FC23A8">
       <ColNames>username_canonical</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="150" parent="18" name="UNIQ_8D93D649A0D96FBF">
+    <index id="153" parent="18" name="UNIQ_8D93D649A0D96FBF">
       <ColNames>email_canonical</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="151" parent="18" name="UNIQ_8D93D649C05FB297">
+    <index id="154" parent="18" name="UNIQ_8D93D649C05FB297">
       <ColNames>confirmation_token</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="152" parent="18" name="PRIMARY">
+    <key id="155" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="153" parent="18" name="UNIQ_8D93D64992FC23A8">
+    <key id="156" parent="18" name="UNIQ_8D93D64992FC23A8">
       <ColNames>username_canonical</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D64992FC23A8</UnderlyingIndexName>
     </key>
-    <key id="154" parent="18" name="UNIQ_8D93D649A0D96FBF">
+    <key id="157" parent="18" name="UNIQ_8D93D649A0D96FBF">
       <ColNames>email_canonical</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649A0D96FBF</UnderlyingIndexName>
     </key>
-    <key id="155" parent="18" name="UNIQ_8D93D649C05FB297">
+    <key id="158" parent="18" name="UNIQ_8D93D649C05FB297">
       <ColNames>confirmation_token</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649C05FB297</UnderlyingIndexName>
     </key>

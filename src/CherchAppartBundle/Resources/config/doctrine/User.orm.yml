@@ -48,6 +48,7 @@ CherchAppartBundle\Entity\User:
         facebookID:
             type: string
             column: Facebook_Id
+            nullable: TRUE
 
 
     oneToMany:

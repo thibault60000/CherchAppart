@@ -453,33 +453,4 @@ class User extends BaseUser
     {
         return $this->updateAt;
     }
-    /**
-     * @var \DateTime
-     */
-    private $birthday;
-
-
-    /**
-     * Set birthday
-     *
-     * @param \DateTime $birthday
-     *
-     * @return User
-     */
-    public function setBirthday($birthday)
-    {
-        $this->birthday = $birthday;
-
-        return $this;
-    }
-
-    /**
-     * Get birthday
-     *
-     * @return \DateTime
-     */
-    public function getBirthday()
-    {
-        return $this->birthday;
-    }
 }

@@ -320,4 +320,9 @@ class Announce
     {
         return $this->announce_fire;
     }
+
+    public function __toString()
+    {
+        return $this->title;
+    }
 }

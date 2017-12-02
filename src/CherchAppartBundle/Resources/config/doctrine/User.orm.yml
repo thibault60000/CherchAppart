@@ -45,7 +45,9 @@ CherchAppartBundle\Entity\User:
              type: datetime
              column: updateAt
              columnDefinition: TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-
+        facebookID:
+            type: string
+            column: Facebook_Id
 
 
     oneToMany:

@@ -93,6 +93,22 @@ fos_user:
                 address:        cherchappartnoreply@gmail.com
                 sender_name:    cherchappartnoreply@gmail.com
 
+# Hwioa Configuration
+hwi_oauth:
+    connect:
+        confirmation: true
+        registration_form: fos_user.registration.form.factory
+    firewall_names: [main]
+    fosub:
+        username_iterations: 30
+        properties:
+            facebook: facebookID
+    resource_owners:
+        facebook:
+            type: facebook
+            client_id: 309194786265019
+            client_secret: 63daeb2c51a41ff69dcb4146674e5d31
+
 # EasyAdmin Configuration
 easy_admin:
    # title: 'Cherch''Appart Admin'
@@ -123,3 +139,4 @@ vich_uploader:
         profil_images:
             uri_prefix:         '%app.path.profil_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/profils'
+

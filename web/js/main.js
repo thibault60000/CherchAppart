@@ -88,7 +88,17 @@ $(function() {
         }
     });
 
+    /* click button close modale */
 
+    $('.dialog-close').click(function(){
+        var attrModal = $('main').attr('aria-hidden');
+        if (attrModal == 'false'){
+            $('html').css('overflow','hidden');
+        }
+        else{
+            $('html').css('overflow','auto');
+        }
+    });
     /* click sur le fond derriere la modale */
     $('.dialog-overlay').click(function(){
         var attrModal = $('main').attr('aria-hidden');

@@ -2,20 +2,7 @@
 
                 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
-                    <!-- IMAGE FILE -->
-                    <div class="imageFile">
-                        <div class="imageFileContainer">
-                            <div class="imageFileContent">
-                                <img src="{{ asset('images/avatar.png') }}" id="imageFileId" style="background-image: url( {{ asset('images/avatar.png') }} );" />
-                            </div>
-                        </div>
 
-                        <div class="imageFileRegister">
-                            {{ form_label(form.imageFile) }}
-                            {{ form_errors(form.imageFile) }}
-                            {{ form_widget(form.imageFile) }}
-                        </div>
-                    </div>
 
                     <!-- MAIL -->
                      <div class="group email">
@@ -44,6 +31,20 @@
                         {{ form_widget(form.sexe) }}
                     </div>
 
+                    <!-- IMAGE FILE -->
+                    <div class="imageFile">
+                        <div class="imageFileContainer">
+                            <div class="imageFileContent">
+                                <img src="{{ asset('images/avatar.png') }}" id="imageFileId" style="background-image: url( {{ asset('images/avatar.png') }} );" />
+                            </div>
+                        </div>
+
+                        <div class="imageFileRegister">
+                            {{ form_label(form.imageFile) }}
+                            {{ form_errors(form.imageFile) }}
+                            {{ form_widget(form.imageFile) }}
+                        </div>
+                    </div>
                     <!-- LAST NAME -->
                     <div class="group lastname">
                         {{ form_label((form.lastname)) }}

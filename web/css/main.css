@@ -1057,6 +1057,9 @@ footer{
 			.dialog select:-webkit-autofill {
 				background-color: white !important;
 			}
+			   .dialog .socianetwork{
+				   margin-top: 2.5rem;
+			   }
 				.dialog .socianetwork li:hover{
 						opacity:0.8;
 				}

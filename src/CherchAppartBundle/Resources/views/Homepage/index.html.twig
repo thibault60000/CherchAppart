@@ -4,14 +4,15 @@
 {% block body %}
 
 
-
     {%  for message in app.session.flashbag.get('Message') %}
         <li><b>{{ message }}</b></li>
     {% endfor %}
 
 
-
+    <!-- MAIN -->
     <main id="main" role="main" class="main" aria-label="content">
+
+        <!-- Homepage Header -->
         <div class="homepageHeader">
             {% if app.user == null %}
                 <h1>CherchAppart</h1>
@@ -28,6 +29,7 @@
 
         </div>
 
+        <!-- Top des annonces -->
         <div class="topAnnounces">
             <h2> Meilleures annonces parmis</h2>
             <ul>
@@ -94,6 +96,7 @@
             </ul>
         </div>
 
+        <!-- Deux systemes -->
         <div class="deuxSystemes">
             <h2> Deux systèmes de recherche </h2>
             <ul>
@@ -124,8 +127,6 @@
                     </a>
                 </li>
             </ul>
-
-
         </div>
     </main>
 
@@ -181,7 +182,7 @@
     </div>
 
 
-
+    <!-- MODALE D'INSCRIPTION -->
     <div class="dialog" aria-hidden="true" id="my-accessible-dialog-register">
         <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
         <div class="dialog-content" aria-labelledby="dialogTitle" aria-describedby="dialogDescription" role="dialog">

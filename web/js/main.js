@@ -30,7 +30,8 @@ $(function() {
         format: 'yyyy-mm--dd'
     });
 
-    
+
+    /* OUVRIR MENU MOBILE */
     $( ".openMenu" ).click(function() {
 
         if($(".openMenu").hasClass("active")){
@@ -50,6 +51,7 @@ $(function() {
         }
     });
 
+    /* CLICK SUR LE MAIN POUR FERMER LE MENU MOBILE */
     $( "main" ).click(function() {
 
         if($(".openMenu").hasClass("active")) {
@@ -61,18 +63,21 @@ $(function() {
         }
 
 
+
     });
 
+        /* modale connect */
         var dialogElConnect = document.getElementById('my-accessible-dialog-connect');
         var mainEl = document.getElementById('main');
         var dialogConnect = new window.A11yDialog(dialogElConnect, mainEl);
 
 
-
+        /* modale register */
         var dialogElRegister = document.getElementById('my-accessible-dialog-register');
         var dialogRegister = new window.A11yDialog(dialogElRegister, mainEl);
 
 
+    /* click button modale */
     $('.btnModal').click(function(){
         var attrModal = $('main').attr('aria-hidden');
         if (attrModal == 'true'){
@@ -84,9 +89,10 @@ $(function() {
     });
 
 
+    /* click sur le fond derriere la modale */
     $('.dialog-overlay').click(function(){
         var attrModal = $('main').attr('aria-hidden');
-        if (attrModal == 'true'){
+        if (attrModal == 'false'){
             $('html').css('overflow','hidden');
         }
         else{
@@ -95,23 +101,26 @@ $(function() {
     });
 
 
+    /* afficher aperçu image */
     function readURL(input) {
 
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function(e) {
-                $('#blah').attr('src', e.target.result);
+                $('#imageFileId').attr('src', e.target.result);
             }
 
             reader.readAsDataURL(input.files[0]);
         }
     }
 
+    /* changer image file profil */
     $("#fos_user_profile_form_imageFile").change(function() {
         readURL(this);
     });
 
+    /* changer image file register */
     $("#fos_user_registration_form_imageFile").change(function() {
         readURL(this);
 

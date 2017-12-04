@@ -7,35 +7,107 @@ $(window).load(function() {
 
 $(function() {
 
+    /* ****************************************
+    ************* EDIT ACCOUNT BTN ************
+    *******************************************/
 
     if($('.editUsername .editIdBtn')){
         $( ".editUsername .editIdBtn" ).click(function() {
-            $('#fos_user_profile_form_username').prop("disabled", false);
+            if( $( ".editUsername .editIdBtn" ).hasClass('active')){
+                $( ".editUsername .editIdBtn" ).removeClass('active');
+                $('#fos_user_profile_form_username').attr('disabled','disabled');
+                $( ".editUsername .editIdBtn i" ).removeClass('fa-close');
+                $( ".editUsername .editIdBtn i" ).addClass('fa-pencil-square');
+            }
+            else{
+                $( ".editUsername .editIdBtn" ).addClass('active');
+                $('#fos_user_profile_form_username').removeAttr('disabled');
+                $( ".editUsername .editIdBtn i" ).removeClass('fa-pencil-square');
+                $( ".editUsername .editIdBtn i" ).addClass('fa-close');
+            }
+
         });
     }
-    if($('.editEmail .editEmail')){
+    if($('.editEmail .editIdBtn')){
         $( ".editEmail .editIdBtn" ).click(function() {
-            $('#fos_user_profile_form_email').prop("disabled", false);
+            if( $( ".editEmail .editIdBtn" ).hasClass('active')){
+                $( ".editEmail .editIdBtn" ).removeClass('active');
+                $('#fos_user_profile_form_email').attr('disabled','disabled');
+                $( ".editEmail .editIdBtn i" ).removeClass('fa-close');
+                $( ".editEmail .editIdBtn i" ).addClass('fa-pencil-square');
+            }
+            else{
+                $( ".editEmail .editIdBtn" ).addClass('active');
+                $('#fos_user_profile_form_email').removeAttr('disabled');
+                $( ".editEmail .editIdBtn i" ).removeClass('fa-pencil-square');
+                $( ".editEmail .editIdBtn i" ).addClass('fa-close');
+            }
         });
     }
+
     if($('.editAdress .editIdBtn')){
         $( ".editAdress .editIdBtn" ).click(function() {
-            $('#fos_user_profile_form_adress').prop("disabled", false);
+            if( $( ".editAdress .editIdBtn" ).hasClass('active')){
+                $( ".editAdress .editIdBtn" ).removeClass('active');
+                $('#fos_user_profile_form_adress').attr('disabled','disabled');
+                $( ".editAdress .editIdBtn i" ).removeClass('fa-close');
+                $( ".editAdress .editIdBtn i" ).addClass('fa-pencil-square');
+            }
+            else{
+                $( ".editAdress .editIdBtn" ).addClass('active');
+                $('#fos_user_profile_form_adress').removeAttr('disabled');
+                $( ".editAdress .editIdBtn i" ).removeClass('fa-pencil-square');
+                $( ".editAdress .editIdBtn i" ).addClass('fa-close');
+            }
         });
     }
+
     if($('.editPhone .editIdBtn')){
         $( ".editPhone .editIdBtn" ).click(function() {
-            $('#fos_user_profile_form_phone_number').prop("disabled", false);
+            if( $( ".editPhone .editIdBtn" ).hasClass('active')){
+                $( ".editPhone .editIdBtn" ).removeClass('active');
+                $('#fos_user_profile_form_phone_number').attr('disabled','disabled');
+                $( ".editPhone .editIdBtn i" ).removeClass('fa-close');
+                $( ".editPhone .editIdBtn i" ).addClass('fa-pencil-square');
+            }
+            else{
+                $( ".editPhone .editIdBtn" ).addClass('active');
+                $('#fos_user_profile_form_phone_number').removeAttr('disabled');
+                $( ".editPhone .editIdBtn i" ).removeClass('fa-pencil-square');
+                $( ".editPhone .editIdBtn i" ).addClass('fa-close');
+            }
         });
     }
     if($('.editPostal .editIdBtn')){
         $( ".editPostal .editIdBtn" ).click(function() {
-            $('#fos_user_profile_form_postal_code').prop("disabled", false);
+            if( $( ".editPostal .editIdBtn" ).hasClass('active')){
+                $( ".editPostal .editIdBtn" ).removeClass('active');
+                $('#fos_user_profile_form_postal_code').attr('disabled','disabled');
+                $( ".editPostal .editIdBtn i" ).removeClass('fa-close');
+                $( ".editPostal .editIdBtn i" ).addClass('fa-pencil-square');
+            }
+            else{
+                $( ".editPostal .editIdBtn" ).addClass('active');
+                $('#fos_user_profile_form_postal_code').removeAttr('disabled');
+                $( ".editPostal .editIdBtn i" ).removeClass('fa-pencil-square');
+                $( ".editPostal .editIdBtn i" ).addClass('fa-close');
+            }
         });
     }
     if($('.editCity .editIdBtn')){
         $( ".editCity .editIdBtn" ).click(function() {
-            $('#fos_user_profile_form_city').prop("disabled", false);
+            if( $( ".editCity .editIdBtn" ).hasClass('active')){
+                $( ".editCity .editIdBtn" ).removeClass('active');
+                $('#fos_user_profile_form_city').attr('disabled','disabled');
+                $( ".editCity .editIdBtn i" ).removeClass('fa-close');
+                $( ".editCity .editIdBtn i" ).addClass('fa-pencil-square');
+            }
+            else{
+                $( ".editCity .editIdBtn" ).addClass('active');
+                $('#fos_user_profile_form_city').removeAttr('disabled');
+                $( ".editCity .editIdBtn i" ).removeClass('fa-pencil-square');
+                $( ".editCity .editIdBtn i" ).addClass('fa-close');
+            }
         });
     }
 

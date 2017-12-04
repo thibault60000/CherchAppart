@@ -1533,6 +1533,7 @@ footer{
 		font: 1.9rem "robotobold";
 		color: #585555;
 		margin-top: 2.1rem;
+		margin-bottom: 1.3rem;
 	}
 		.editAccount h1 strong{
 			color: #1285c6;
@@ -1594,6 +1595,8 @@ footer{
 				.fos_user_profile_edit input[disabled=disabled]{
 					border: none;
 					cursor: default;
+					width: calc(80% - 0.3rem + 2px);
+					height: calc(2rem + 2px);
 				}
 				  .fos_user_profile_edit fieldset > div{
 					  margin-bottom:1rem;

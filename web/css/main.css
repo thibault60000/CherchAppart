@@ -1730,7 +1730,7 @@ footer{
 		width: 42.9%;
 	}
 	.fos_user_profile_edit .coordEdit {
-		width: calc(50% - 1rem);
+		width: calc(49.6% - 1rem);
 	}
 }
 

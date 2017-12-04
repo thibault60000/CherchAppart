@@ -1,0 +1,44 @@
+<!-- MODALE DE CONNEXION -->
+<div class="dialog" aria-hidden="true" id="my-accessible-dialog-connect">
+    <div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide></div>
+    <div class="dialog-content" aria-labelledby="dialogTitle" aria-describedby="dialogDescription" role="dialog">
+        <div role="document">
+            <h1 id="dialogTitle" tabindex="0">Connectez-vous</h1>
+            <p id="dialogDescription">Pour pouvoir accéder au contenu</p>
+
+            {% block fos_user_content %}
+                {% trans_default_domain 'FOSUserBundle' %}
+
+
+                <div class="socianetwork">
+                    <h2 class="connect">Se connecter avec</h2>
+                    <ul>
+                        <li><a href="{{ hwi_oauth_login_url('facebook') }}" class="facebook" type="button"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+                        <li><a href="" class="googleplus" type="button"><i class="fa fa-google-plus" aria-hidden="true"></i> Google </a></li>
+                        <li><a href="" class="twitter" type="button"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                    </ul>
+                </div>
+
+                <div class="ouTransition">
+                                <span class="ouContainer">
+                                    <span class="ouContent">
+                                        <span>ou</span>
+                                    </span>
+                                </span>
+                </div>
+
+                <div class="normalLogin">
+
+                        {{ render(controller('FOSUserBundle:Security:login')) }}
+
+                </div>
+
+
+            {% endblock fos_user_content %}
+
+
+
+            <button data-a11y-dialog-hide class="dialog-close" aria-label="Fermer la fenêtre de dialogue">&times;</button>
+        </div>
+    </div>
+</div>

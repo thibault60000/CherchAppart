@@ -8,6 +8,8 @@
 
 
 
+        <!-- <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/homeSecurity.jpeg') }}></div> -->
+
         <!-- START SIGN IN FORM -->
         <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">
 
@@ -17,8 +19,10 @@
 
                 <label for="username">{{ 'security.login.username'|trans }}</label>
                 <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
                 <label for="password">{{ 'security.login.password'|trans }}</label>
                 <input type="password" id="password" name="_password" required="required" />
+
                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
                 <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
 
@@ -29,5 +33,7 @@
                 <p class="noAccount"> Pas de compte ? </p>
                 <a href="{{ path('fos_user_registration_register') }}" class="noAccountLink"> Inscrivez-vous</a>
         </form>
+
+
 
 

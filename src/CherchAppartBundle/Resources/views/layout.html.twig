@@ -19,7 +19,7 @@
             <link type="text/css" rel="stylesheet" href="{{ asset('fonts/fonts.css') }}"  media="screen,projection" />
             <link type="text/css" rel="stylesheet" href="{{ asset('css/map.css') }}"  media="screen,projection" />
             <link type="text/css" rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"  media="screen,projection" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.min.css') }}"  media="screen,projection" />
+            <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.min.css') }}" media="screen,projection" />
         {% endblock %}
     </head>
 
@@ -28,6 +28,7 @@
     <body class="landing">
 
      <div class="se-pre-con"></div>
+
         <!-- PAGE WRAPPER -->
         <div id="page-wrapper">
             {% block header %}{% include '@CherchAppart/Layout/menu.html.twig' %} {% endblock %}
@@ -43,7 +44,9 @@
                 <script type="text/javascript" src="{{ asset('js/modal.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('js/map-detail-FR.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('js/parallax.min.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
 
             {% endblock %}
         </div>

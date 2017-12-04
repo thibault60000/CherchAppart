@@ -1,129 +1,105 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 
-<!-- BANNER  -->
-<section id="banner" class="editAccountPage">
-    <div class="content">
-        <header>
-            <h2>Mon compte</h2>
-            <p>Descendez pour modifier vos informations personnelles</p>
-        </header>
-    </div>
-    <a href="#one" class="goto-next scrolly">Suivant</a>
-</section>
+<!-- PAGE EDIT ACCOUNT -->
+<main class="editAccount">
 
-<section id="one" class="editAccountForm">
-    <div class="container">
+    <!-- INTRO IMAGE PARALLAX -->
+    <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personnal.jpeg') }}></div>
+
+    <h1> Voici les informations de votre compte <strong> {{ app.user.lastname }} </strong>  </h1>
+    <p class="editInfo"> Vous pouvez les modifier en cliquant sur l'icone à droite de chaque champs. </p>
+    <p class="editInfo2"> N'oubliez pas de cliquer sur le bouton pour mettre à jour </p>
 
 
+    <!-- EDIT FORM ACCOUNT -->
+    {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
 
-
-{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-
-    {% set image =  app.user.image %}
-
-        <fieldset>
+        <fieldset class="identityEdit">
             <legend>Identité en ligne</legend>
-            <button type="button" class="editIdBtn">
-                <i class="fa fa-pencil-square" aria-hidden="true"></i>
-            </button>
-            <div class="identityEditAccount">
+
+            <div class="editUsername">
                 {{ form_label((form.username)) }}
                 {{ form_errors(form.username) }}
                 {{ form_widget(form.username) }}
+                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+            </div>
 
+            <div class="editEmail">
                 {{ form_label((form.email)) }}
                 {{ form_errors(form.email) }}
                 {{ form_widget(form.email) }}
+                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
             </div>
-
-
-            <div class="imageFile">
-                <div class="imageFileContainer">
-                    <div class="photoProfileEditContent">
-                        <img alt="photo de profil" id="blah" src="{{ asset('uploads/images/profils/'~image) }}" />
-                    </div>
-                </div>
-
-                <div class="imageFileRegister">
-                    {{ form_label(form.imageFile) }}
-                    {{ form_errors(form.imageFile) }}
-                    {{ form_widget(form.imageFile) }}
-                </div>
-            </div>
-
-
         </fieldset>
 
-
-        <fieldset>
+        <fieldset class="coordEdit">
             <legend>Coordonnées</legend>
-            <button type="button" class="editCoordsBtn">
-                <i class="fa fa-pencil-square" aria-hidden="true"></i>
-            </button>
-                <div class="coordsEditAccount">
-                    {{ form_label((form.adress)) }}
-                    {{ form_errors(form.adress) }}
-                    {{ form_widget(form.adress) }}
 
-                    {{ form_label((form.phone_number)) }}
-                    {{ form_errors(form.phone_number) }}
-                    {{ form_widget(form.phone_number) }}
-                </div>
+            <div class="editAdress">
+                {{ form_label((form.adress)) }}
+                {{ form_errors(form.adress) }}
+                {{ form_widget(form.adress) }}
+                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+            </div>
 
-                <div class="cityEditAccount">
-                    {{ form_label((form.postal_code)) }}
-                    {{ form_errors(form.postal_code) }}
-                    {{ form_widget(form.postal_code) }}
+            <div class="editPhone">
+                {{ form_label((form.phone_number)) }}
+                {{ form_errors(form.phone_number) }}
+                {{ form_widget(form.phone_number) }}
+                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+            </div>
 
-                    {{ form_label((form.city)) }}
-                    {{ form_errors(form.city) }}
-                    {{ form_widget(form.city) }}
-                </div>
+            <div class="editPostal">
+                {{ form_label((form.postal_code)) }}
+                {{ form_errors(form.postal_code) }}
+                {{ form_widget(form.postal_code) }}
+                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+            </div>
 
-
-
-         </fieldset>
-
-        <fieldset>
-            <legend>Mot de passe</legend>
-                <div class="passwordEditAccount">
-                    {{ form_label(form.current_password) }}
-                    {{ form_errors(form.current_password) }}
-                    {{ form_widget(form.current_password) }}
-                </div>
-
-                <div class="changePasswordEditAccount">
-                    <a href="{{ path('fos_user_change_password') }}">Changer de mot de passe</a>
-                </div>
+            <div class="editCity">
+                {{ form_label((form.city)) }}
+                {{ form_errors(form.city) }}
+                {{ form_widget(form.city) }}
+                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+            </div>
         </fieldset>
 
+        <fieldset class="mdpEdit">
+            <legend>Mot de passe</legend>
+            <div class="editPassword">
+                {{ form_label(form.current_password) }}
+                {{ form_errors(form.current_password) }}
+                {{ form_widget(form.current_password) }}
+            </div>
+
+            <div class="changeEditPassword">
+                <a href="{{ path('fos_user_change_password') }}">Changer de mot de passe</a>
+            </div>
+        </fieldset>
 
         <div class="submitEditAccount">
             <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
         </div>
-        {{ form_end(form) }}
 
+    {{ form_end(form) }}
 
-    </div>
-</section>
+    <blockquote>
+        <p>Toutes les informations enregistrées sont soumises à un certain nombre
+            de <strong>principes</strong> concernant leur protection.
+         <strong>Aucun détournement</strong> des données personnelles ne sera effectué.</p>
 
+        <p> Seules les <strong>informations pertinentes</strong> et nécessaires pour leur finalités sont enregistrées
+         Les données personnelles doivent être <strong>adéquats</strong>, <strong>pertinentes</strong> et <strong>non-execessives</strong>
+         Un <strong>droit à l'oubli</strong> peut être réclamer.</p>
 
-<!-- SECTION | TRUE IDENTITY  -->
-<section id="two" class="spotlight style3 left">
-    <span class="image fit main bottom"><img src="{{ asset('images/thridPhoto.jpeg') }}" alt="Carte de la France" /></span>
-    <div class="content">
-        <header>
-            <h2> Vérifiez vos informations ! </h2>
-            <p> Et pensez à les sécuriser !</p>
-        </header>
-        <p> Pour paraître crédible aux yeux des autres utilisateurs, il est nécessaire
-            d'avoir un profil avec de vraies informations d'identité.
-            Il est également nécessaire d'utiliser votre propre adresse mail et un mot de passe sécuriser
-            pour éviter toute faille de sécurité. Vous pouvez changer votre mot de passe ci-dessous</p>
-        <ul class="actions">
-            <li><a href="#" class="button">Changer password</a></li>
-        </ul>
-    </div>
-    <a href="#four" class="goto-next scrolly">Suivant</a>
-</section>
+        <p>  Une <strong>durée de conservation</strong> de ces données doit être établie en fonction de la finalité de chacune.
+          Nous nous tenons responsable de la <strong>confidentialité</strong> de ces données
+          Nous disposons d'une garantie aux personnnes de l'<strong>information nécessaire</strong>relative à leurs données</p>
+
+        <p>  De plus, nous garantissons le <strong>droit d'accès</strong>, de <strong>rectification</strong> et d'<strong>opposition</strong> de vos données personnslles</p>
+    </blockquote>
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personal2.jpeg') }}></div>
+
+</main>

@@ -243,6 +243,9 @@ header{
 								.topAnnounces a:hover .overlay {
 									opacity: 1;
 								}
+								.topAnnounces button:hover .overlay{
+									opacity: 1;
+								}
 									.topAnnounces .text {
 										color: white;
 										font-size: 20px;
@@ -286,9 +289,16 @@ header nav {
 			header nav ul li a{
 				text-align: center;
 			}
+			  header nav ul li button{
+				  text-align: center;
+				  background-color: transparent;
+			  }
 				header nav a:hover i::before{
-					color:lightblue;
+					color: #1b6d85;
 				}
+				   header nav button:hover i::before{
+					   color: #1b6d85;
+				   }
 					header nav i{
 						margin-top: 0.5rem;
 					}
@@ -299,6 +309,9 @@ header nav {
 							header nav a span{
 								display : none;
 							}
+							  header nav button span{
+								  display:none;
+							  }
 								.openMenu{
 									display:none;
 								}
@@ -389,7 +402,7 @@ header nav {
 				height: 18.7rem;
 				background-color: #ffffff;
 				box-shadow: 4px 5.8px 18px -6.2px rgb(196, 201, 202);
-				z-index: 100;
+				z-index: 3;
 				transition: left 1s;
 			}
 				header nav.active{
@@ -413,6 +426,15 @@ header nav {
 								text-align: left;
 								font-size: 1.2rem;
 							}
+							  header nav ul button{
+								  height: 100%;
+								  display: block;
+								  padding-left: 0;
+								  width: 100%;
+								  text-align: left;
+								  font-size: 1.2rem;
+								  background-color: white;
+							  }
 								header nav a span:hover{
 									-webkit-animation-name: hvr-wobble-top;
 									animation-name: hvr-wobble-top;
@@ -423,6 +445,16 @@ header nav {
 									-webkit-animation-iteration-count: 1;
 									animation-iteration-count: 1;
 								}
+								  header nav button span:hover{
+									  -webkit-animation-name: hvr-wobble-top;
+									  animation-name: hvr-wobble-top;
+									  -webkit-animation-duration: 1s;
+									  animation-duration: 1s;
+									  -webkit-animation-timing-function: ease-in-out;
+									  animation-timing-function: ease-in-out;
+									  -webkit-animation-iteration-count: 1;
+									  animation-iteration-count: 1;
+								  }
 
 								/* ----------------------------------------------------------------- */
 								/* ------------------ ANIMATION HVR WOBBLE TOP---------------------- */
@@ -471,6 +503,20 @@ header nav {
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
 		}
+		  header nav button span{
+			  display: block;
+			  color: #483d3d;
+			  font-family: "robotobold";
+			  text-align: left;
+			  -webkit-transform: perspective(1px) translateZ(0);
+			  transform: perspective(1px) translateZ(0);
+			  box-shadow: 0 0 1px transparent;
+			  -webkit-transform-origin: 0 100%;
+			  transform-origin: 0 100%;
+			  -webkit-tap-highlight-color: rgba(0,0,0,0);
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+		  }
 			.openMenu {
 				content: "";
 				width: 1rem;
@@ -743,7 +789,6 @@ footer{
 	box-shadow: 0px 2px 17px 0px rgba(130, 113, 113, 0.36);
 	margin-bottom: 2.9rem;
 	padding-bottom: 1.1rem;
-	margin-top: 2.5rem;
 
 }
 	footer .icons{
@@ -813,7 +858,6 @@ footer{
 @media screen and (min-width:1000px) {
 	footer{
 		margin-bottom: 0;
-        margin-top: 2rem;
 	}
 		footer .icons {
 			width: 60%;
@@ -851,7 +895,7 @@ footer{
 							right: 0px;
 							bottom: 0px;
 							left: 0px;
-							z-index: 2;
+							z-index: 4;
 							overflow-y: auto;
 							transform :translate3d(0,0,0);
 							background-color: rgba(43, 46, 56, 0.9);
@@ -863,7 +907,7 @@ footer{
 								position: fixed;
 								top: 0;
 								left: 50%;
-								z-index: 3;
+								z-index: 5;
 								transform: translate(-50%, 0);
 								overflow: auto;
 								width: 100vw;
@@ -1267,20 +1311,12 @@ footer{
 								background-color: #065A60;
 								margin: 2rem 0 1.6rem 1rem;
 							}
-								.dialog group.username::after {
-									display: block;
-									content: "";
-									width: 90%;
-									height: 3px;
-									background-color: #ED1B36;
-									margin: 2rem 0 1.6rem 1rem;
-								}
 									.dialog .group.name::after {
 										display: block;
 										content: "";
 										width: 90%;
 										height: 3px;
-										background-color: #ED1B36;
+										background-color: #065A60;
 										margin: 2rem 0 1.6rem 1rem;
 									}
 /* ************** IMAGE DES INPUT ************* */
@@ -1480,3 +1516,287 @@ footer{
 		.dialog #fos_user_registration_form_imageFile{
 			display:none;
 		}
+
+
+/* *********** EDIT ACCOUNT PAGE ************* */
+
+.editAccount .parallax-window{
+	min-height: 33.3rem;
+	background: transparent;
+}
+	.editAccount .parallax-window-2{
+		min-height: 33.3rem;
+		background: transparent;
+	}
+	.editAccount h1{
+		text-align: center;
+		font: 1.9rem "robotobold";
+		color: #585555;
+		margin-top: 2.1rem;
+	}
+		.editAccount h1 strong{
+			color: #1285c6;
+		}
+			.editAccount .editInfo{
+				display:block;
+				width:90%;
+				margin: 0 auto;
+				text-align: center;
+				font: 1.2rem "robotoregular";
+				color: #065a60;
+				margin-bottom: 0.2rem;
+			}
+			   .editAccount .editInfo2{
+				   display:block;
+				   width:90%;
+				   margin: 0 auto;
+				   margin-bottom: 0.8rem;
+				   text-align: center;
+				   font: 1.2rem "robotoregular";
+				   color: #065a60;
+			   }
+
+.fos_user_profile_edit{
+	padding:1rem;
+	margin-top:1rem;
+}
+	.fos_user_profile_edit fieldset{
+		border: 2px solid #065a60;
+		padding: 1rem;
+	}
+		.fos_user_profile_edit legend{
+			color: #065a60;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0 auto;
+			padding: 0 0.6rem;
+			font-size: 1.2rem;
+		}
+			.fos_user_profile_edit label{
+				display: block;
+				font: 1.3rem "robotoregular";
+				margin-bottom: 0.2rem;
+				color: #2b2727;
+			}
+			   .fos_user_profile_edit input[type="text"],
+			   .fos_user_profile_edit input[type="email"],
+			   .fos_user_profile_edit input[type="number"],
+			   .fos_user_profile_edit input[type="password"]{
+				   border : 1px solid dimgray;
+				   border-radius: 2px;
+				   width: calc(80% - 0.3rem);
+				   height: 2rem;
+				   font: 1.2rem "robotoregular";
+				   background-color: initial;
+				   padding-left: 0.3rem;
+				   display:inline-block;
+			   }
+				.fos_user_profile_edit input[disabled=disabled]{
+					border: none;
+					cursor: default;
+				}
+				  .fos_user_profile_edit fieldset > div{
+					  margin-bottom:1rem;
+				  }
+                   .fos_user_profile_edit fieldset{
+					   margin-bottom: 1.5rem;
+				   }
+					.fos_user_profile_edit button[type="button"]{
+						display: inline-block;
+						height: 2rem;
+						width: 2rem;
+						background-color: #065a60;
+						border-radius: 3px;
+						text-align: center;
+					}
+					  .fos_user_profile_edit .changeEditPassword a{
+						  color: white;
+						  background-color: #1285c6;
+						  border-radius: 3px;
+						  padding: 0.5rem 1rem;
+					  }
+					  	.fos_user_profile_edit .changeEditPassword a:hover{
+							text-decoration: none;
+							opacity:0.8;
+						}
+						.fos_user_profile_edit button[type="button"]:hover{
+							opacity: 0.8;
+						}
+							.fos_user_profile_edit i{
+								color: white;
+								font-size: 1.4rem;
+							}
+							 #fos_user_profile_form_current_password{
+								 margin-bottom:1rem;
+							 }
+								.fos_user_profile_edit input[type="submit"]{
+									color: white;
+									background-color: #065a60;
+									padding: 0.5rem 1rem;
+									font: 1.2rem "robotoregular";
+									border: none;
+									border-radius: 3px;
+									width: 50%;
+									display: block;
+									cursor:pointer;
+								}
+								.fos_user_profile_edit input[type="submit"]:hover{
+									opacity: 0.8;
+								}
+	/* EDIT ACCOUNT MIN 500px */
+	@media screen and (min-width:500px){
+		.fos_user_profile_edit{
+			margin: 0 auto;
+			width: 80%;
+		}
+		.editAccount h1{
+			margin: 1.5rem auto;
+			width: 80%;
+		}
+	}
+/* EDIT ACCOUNT MIN 800px */
+@media screen and (min-width:800px){
+	.fos_user_profile_edit{
+		position:relative;
+		margin: 0 auto;
+		width:90%;
+	}
+		.fos_user_profile_edit .identityEdit{
+			display: inline-block;
+			width: 40%;
+			margin-right: 1rem;
+		}
+			.fos_user_profile_edit .coordEdit{
+				display: inline-block;
+				vertical-align: top;
+				width: calc(49.2% - 1rem);
+				padding-bottom: 3.7rem;
+			}
+				.fos_user_profile_edit .mdpEdit{
+					display: block;
+					top: 15.1rem;
+					position: absolute;
+					width: 38.4%;
+				}
+					.fos_user_profile_edit .submitEditAccount{
+						position: absolute;
+						display: block;
+						width: 29.1rem;
+						top: 23.2rem;
+						left: 49.7%;
+					}
+
+}
+
+@media screen and (min-width: 1000px){
+	.fos_user_profile_edit .submitEditAccount {
+		left: 48.5%;
+	}
+	.fos_user_profile_edit {
+		position: relative;
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	.fos_user_profile_edit .submitEditAccount {
+		left: 47%;
+	}
+}
+
+@media screen and (min-width: 1350px){
+	.editAccount h1 {
+		margin-top: 3rem;
+		margin-bottom: 2rem;
+		font-size: 2.1rem;
+	}
+}
+
+@media screen and (min-width: 1400px){
+	.fos_user_profile_edit .submitEditAccount {
+		left: 46%;
+	}
+}
+
+@media screen and (min-width: 1600px){
+	.fos_user_profile_edit .submitEditAccount {
+		left: 49.25%;
+	}
+	.fos_user_profile_edit .identityEdit {
+		width: 44%;
+	}
+	.fos_user_profile_edit .mdpEdit {
+		width: 42.9%;
+	}
+	.fos_user_profile_edit .coordEdit {
+		width: calc(50% - 1rem);
+	}
+}
+
+@media screen and (min-width: 1800px) {
+	.fos_user_profile_edit .submitEditAccount {
+		left: 50.4%;
+	}
+	.fos_user_profile_edit .identityEdit {
+		width: 45.4%;
+	}
+	.fos_user_profile_edit .mdpEdit {
+		width: 44.4%;
+	}
+}
+
+
+blockquote {
+	border: 2px solid #1285c6;
+	border-left: 10px solid #1285c6;
+	width: 80%;
+	margin: 2rem auto;
+	display: block;
+	padding: 1.1rem 0.5rem;
+	font: 1.2rem "robotoregular";
+	color: #191717;
+	margin-bottom:3rem;
+}
+	blockquote:before {
+		color: #1285c6;
+		content: open-quote;
+		font-size: 4em;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	}
+	  blockquote p{
+		  display: block;
+		  text-align: justify;
+		  padding-left: 1.3rem;
+		  padding-right: 1.3rem;
+	  }
+	    blockquote p strong{
+			color: #065a60;
+		}
+
+@media screen and (min-width: 600px){
+	blockquote {
+		width: 75%;
+	}
+}
+
+@media screen and (min-width: 800px){
+	blockquote {
+		width: 87%;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	blockquote {
+		width: 75.4%;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	blockquote {
+		width: 78.7%;
+		margin-top: 2rem;
+	}
+}

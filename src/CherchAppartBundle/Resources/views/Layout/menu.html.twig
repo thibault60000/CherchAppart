@@ -1,24 +1,29 @@
     <!-- HEADER -->
     <header id="header">
 
-            <img src="{{ asset('images/logoOnly.svg') }}" alt="Logo CherchAppart"/>
-            <button aria-expanded="false" class="openMenu" title="ouvrir le menu"></button>
+        <img src="{{ asset('images/logoOnly.svg') }}" alt="Logo CherchAppart"/>
+        <button aria-expanded="false" class="openMenu" title="ouvrir le menu"></button>
 
-            <div class="logo">
-                <span><img src="{{ asset('images/textOnly.svg') }}" alt="Logo CherchAppart"/></span>
-            </div>
+        <div class="logo">
+            <span><img src="{{ asset('images/textOnly.svg') }}" alt="Logo CherchAppart"/></span>
+        </div>
 
 
         <!-- NAVBAR -->
-
         <nav id="nav" aria-hidden="true">
             <ul>
-                <li><a href="{{ path('home') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Accueil</span></a></li>
-                <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Proposer</span></a></li>
-                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i><span>Rechercher</span></a></li>
-                <li><a href="{{ path('fos_user_profile_edit') }}"><i class="fa fa-user" aria-hidden="true"></i><span>Mon Compte</span></a></li>
-                <li><a href="{{ path('logout') }}"><i class="fa fa-close" aria-hidden="true"></i><span>Se déconnecter</span></a></li>
-
+                {% if app.user != null %}
+                    <li><a href="{{ path('home') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Accueil</span></a></li>
+                    <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Proposer</span></a></li>
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i><span>Rechercher</span></a></li>
+                    <li><a href="{{ path('fos_user_profile_edit') }}"><i class="fa fa-user" aria-hidden="true"></i><span>Mon Compte</span></a></li>
+                    <li><a href="{{ path('logout') }}"><i class="fa fa-close" aria-hidden="true"></i><span>Se déconnecter</span></a></li>
+                {% else %}
+                    <li><button data-a11y-dialog-show="my-accessible-dialog-connect"><i class="fa fa-home" aria-hidden="true"></i><span>Accueil</span></button></li>
+                    <li><button data-a11y-dialog-show="my-accessible-dialog-connect"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Proposer</span></button></li>
+                    <li><button data-a11y-dialog-show="my-accessible-dialog-connect"><i class="fa fa-search" aria-hidden="true"></i><span>Rechercher</span></button></li>
+                    <li><button data-a11y-dialog-show="my-accessible-dialog-connect"><i class="fa fa-user" aria-hidden="true"></i><span>Mon Compte</span></button></li>
+                {% endif %}
             </ul>
         </nav>
     </header>

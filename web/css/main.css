@@ -146,11 +146,60 @@ header{
 					-webkit-animation-direction: alternate;
 					animation-direction: alternate;
 				}
-					.homepageHeader button::before{
+					.homepageHeader .btnRechercher{
+						background-color: #ed1b36;
+						padding: 0.5rem 1.4rem;
+						display: inline-block;
+						border-radius: 2px;
+						margin-top: 1.3rem;
+						font-size: 1.3rem;
+						margin-right: 1rem;
+						box-shadow: 2.5px 2.5px 10px 1px rgba(50, 50, 50, 0.65);
+						transform: perspective(1px) translateZ(0);
+						-webkit-tap-highlight-color: rgba(0,0,0,0);
+						-webkit-font-smoothing: antialiased;
 					}
-						.homepageHeader button:hover:before{
+					  .homepageHeader .btnRechercher:hover{
+						  -webkit-animation-name: hvr-pulse-shrink;
+						  animation-name: hvr-pulse-shrink;
+						  -webkit-animation-duration: 0.3s;
+						  animation-duration: 0.3s;
+						  -webkit-animation-timing-function: linear;
+						  animation-timing-function: linear;
+						  -webkit-animation-iteration-count: infinite;
+						  animation-iteration-count: infinite;
+						  -webkit-animation-direction: alternate;
+						  animation-direction: alternate;
+						  text-decoration: none;
+					  }
+					 .homepageHeader .btnProposer{
+						 background-color: #065a60;
+						 padding: 0.5rem 1.4rem;
+						 display: inline-block;
+						 border-radius: 2px;
+						 margin-top: 1.3rem;
+						 font-size: 1.3rem;
+						 margin-right: 1rem;
+						 box-shadow: 2.5px 2.5px 10px 1px rgba(50, 50, 50, 0.65);
+						 transform: perspective(1px) translateZ(0);
+						 -webkit-tap-highlight-color: rgba(0,0,0,0);
+						 -webkit-font-smoothing: antialiased;
+					 }
+					   .homepageHeader .btnProposer:hover{
+						   -webkit-animation-name: hvr-pulse-shrink;
+						   animation-name: hvr-pulse-shrink;
+						   -webkit-animation-duration: 0.3s;
+						   animation-duration: 0.3s;
+						   -webkit-animation-timing-function: linear;
+						   animation-timing-function: linear;
+						   -webkit-animation-iteration-count: infinite;
+						   animation-iteration-count: infinite;
+						   -webkit-animation-direction: alternate;
+						   animation-direction: alternate;
+						   text-decoration: none;
+					   }
 
-						}
+
 
 						/* ----------------------------------------------------------------- */
 						/* --------------------ANIMATION HVR PULSE SHRINK ------------------ */
@@ -283,7 +332,7 @@ header nav {
 			height: 100%;
 			width: 18.8%;
 		}
-		 header nav li:last-child i::before{
+		 header nav li.redBtnNav span{
 			 color: #963737;
 		 }
 			header nav ul li a{
@@ -293,6 +342,10 @@ header nav {
 				  text-align: center;
 				  background-color: transparent;
 			  }
+			   header nav li.blueBtnNav{
+				   color: #366aff;
+				   display:none;
+			   }
 				header nav a:hover i::before{
 					color: #1b6d85;
 				}
@@ -418,6 +471,12 @@ header nav {
 							padding-left: 2rem;
 							width: auto;
 						}
+							header nav li.blueBtnNav{
+								display:block;
+							}
+							header nav li.blueBtnNav span {
+								color :#4765bb;
+							}
 							header nav ul a{
 								height: 100%;
 								display: block;

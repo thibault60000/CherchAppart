@@ -5,8 +5,11 @@
     <!-- Homepage Header -->
     <div class="homepageHeader">
         <h1>Bonjour {{ app.user.lastname }} !</h1>
-        <p>Tu peux maintenant proposer une annonce
-            ou en chercher une </p>
+        <p>Tu peux maintenant proposer ou rechercher une annonce :)</p>
+
+        <a href="#" class="btnProposer"> Proposer  </a>
+        <a href="#" class="btnRechercher"> Rechercher  </a>
+
     </div>
 
     <!-- Top des annonces -->

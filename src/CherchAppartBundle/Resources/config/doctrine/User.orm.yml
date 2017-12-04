@@ -37,10 +37,6 @@ CherchAppartBundle\Entity\User:
              type: string
              length: '30'
              column: Phone_Number
-        image:
-             type: string
-             length: '255'
-             column: image
         updateAt:
              type: datetime
              column: updateAt

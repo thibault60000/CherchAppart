@@ -113,7 +113,7 @@ button {
         background: url(../images/fourPhoto.jpg) no-repeat center;
     }
     .loginPage h1, .registerPage h1{
-        background: url(../images/logoonly.svg) no-repeat left;
+        background: url(../images/logoOnly.svg) no-repeat left;
         padding-left: 2.9rem;
         font: 1.7rem "robotobold";
         color: #353333;

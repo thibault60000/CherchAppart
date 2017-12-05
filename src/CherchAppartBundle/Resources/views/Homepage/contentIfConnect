@@ -5,8 +5,11 @@
     <!-- Homepage Header -->
     <div class="homepageHeader">
         <h1>Bonjour {{ app.user.lastname }} !</h1>
-        <p>Tu peux maintenant proposer une annonce
-            ou en chercher une </p>
+        <p>Tu peux maintenant proposer ou rechercher une annonce :)</p>
+
+        <a href="#" class="btnProposer"> Proposer  </a>
+        <a href="#" class="btnRechercher"> Rechercher  </a>
+
     </div>
 
     <!-- Top des annonces -->
@@ -16,7 +19,7 @@
             <li>
                 <a>
                     <div class="pictTop">
-                        <img src="{{ asset('images/appartement.jpeg') }}"/>
+                        <img src="{{ asset('images/appartement.jpg') }}"/>
                         <div class="overlay">
                             <div class="text">Voir plus</div>
                         </div>
@@ -40,7 +43,7 @@
             <li>
                 <a>
                     <div class="pictTop">
-                        <img src="{{ asset('images/t1.jpeg') }}"/>
+                        <img src="{{ asset('images/t1.jpg') }}"/>
                         <div class="overlay">
                             <div class="text">Voir plus</div>
                         </div>
@@ -52,7 +55,7 @@
             <li>
                 <a>
                     <div class="pictTop">
-                        <img src="{{ asset('images/t2.jpeg') }}"/>
+                        <img src="{{ asset('images/t2.jpg') }}"/>
                         <div class="overlay">
                             <div class="text">Voir plus</div>
                         </div>
@@ -64,7 +67,7 @@
             <li>
                 <a>
                     <div class="pictTop">
-                        <img src="{{ asset('images/maison.jpeg') }}"/>
+                        <img src="{{ asset('images/maison.jpg') }}"/>
                         <div class="overlay">
                             <div class="text">Voir plus</div>
                         </div>
@@ -83,7 +86,7 @@
             <li>
                 <a>
                     <div class="sysTop">
-                        <img src="{{ asset('images/input.jpeg') }}"/>
+                        <img src="{{ asset('images/input.jpg') }}"/>
                         <div class="overlay">
                             <div class="text">Essayer</div>
                         </div>
@@ -96,7 +99,7 @@
             <li>
                 <a>
                     <div class="sysTop">
-                        <img src="{{ asset('images/maps.jpeg') }}"/>
+                        <img src="{{ asset('images/maps.jpg') }}"/>
                         <div class="overlay">
                             <div class="text">Essayer</div>
                         </div>

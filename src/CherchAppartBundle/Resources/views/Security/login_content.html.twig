@@ -1,14 +1,9 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 
-
     {% if error %}
             <div><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{ error }}</div>
     {% endif %}
-
-
-
-        <!-- <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/homeSecurity.jpeg') }}></div> -->
 
         <!-- START SIGN IN FORM -->
         <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post">

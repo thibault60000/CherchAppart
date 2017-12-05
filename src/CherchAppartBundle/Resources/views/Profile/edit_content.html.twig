@@ -5,15 +5,23 @@
 <main class="editAccount">
 
     <!-- INTRO IMAGE PARALLAX -->
-    <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personnal.jpeg') }}></div>
-
-    <h1> Voici les informations de votre compte <strong> {{ app.user.lastname }} </strong>  </h1>
-    <p class="editInfo"> Vous pouvez les modifier en cliquant sur l'icone à droite de chaque champs. </p>
-    <p class="editInfo2"> N'oubliez pas de cliquer sur le bouton pour mettre à jour </p>
+    <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personnal.jpg') }}></div>
 
 
-    <!-- EDIT FORM ACCOUNT -->
-    {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+    <ul class="tabsAccount" role="tablist">
+        <li role="tab" aria-controls="panneau-1">Informations</li>
+        <li role="tab" aria-controls="panneau-2">Mes annonces</li>
+        <li role="tab" aria-controls="panneau-3">Mes commentaires</li>
+    </ul>
+
+    <div role="tabpanel" id="panneau-1">
+        <h1> Voici les informations de votre compte <strong> {{ app.user.lastname }} </strong>  </h1>
+        <p class="editInfo"> Vous pouvez les modifier en cliquant sur l'icone à droite de chaque champs. </p>
+        <p class="editInfo2"> N'oubliez pas de cliquer sur le bouton pour mettre à jour </p>
+
+
+        <!-- EDIT FORM ACCOUNT -->
+        {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
 
         <fieldset class="identityEdit">
             <legend>Identité en ligne</legend>
@@ -22,14 +30,14 @@
                 {{ form_label((form.username)) }}
                 {{ form_errors(form.username) }}
                 {{ form_widget(form.username) }}
-                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
             </div>
 
             <div class="editEmail">
                 {{ form_label((form.email)) }}
                 {{ form_errors(form.email) }}
                 {{ form_widget(form.email) }}
-                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
             </div>
         </fieldset>
 
@@ -40,28 +48,28 @@
                 {{ form_label((form.adress)) }}
                 {{ form_errors(form.adress) }}
                 {{ form_widget(form.adress) }}
-                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
             </div>
 
             <div class="editPhone">
                 {{ form_label((form.phone_number)) }}
                 {{ form_errors(form.phone_number) }}
                 {{ form_widget(form.phone_number) }}
-                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
             </div>
 
             <div class="editPostal">
                 {{ form_label((form.postal_code)) }}
                 {{ form_errors(form.postal_code) }}
                 {{ form_widget(form.postal_code) }}
-                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
             </div>
 
             <div class="editCity">
                 {{ form_label((form.city)) }}
                 {{ form_errors(form.city) }}
                 {{ form_widget(form.city) }}
-                <button type="button" class="editIdBtn"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+
             </div>
         </fieldset>
 
@@ -82,24 +90,72 @@
             <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
         </div>
 
-    {{ form_end(form) }}
+        {{ form_end(form) }}
 
-    <blockquote>
-        <p>Toutes les informations enregistrées sont soumises à un certain nombre
-            de <strong>principes</strong> concernant leur protection.
-         <strong>Aucun détournement</strong> des données personnelles ne sera effectué.</p>
+        <blockquote>
+            <p>Toutes les informations enregistrées sont soumises à un certain nombre
+                de <strong>principes</strong> concernant leur protection.
+                <strong>Aucun détournement</strong> des données personnelles ne sera effectué.</p>
 
-        <p> Seules les <strong>informations pertinentes</strong> et nécessaires pour leur finalités sont enregistrées
-         Les données personnelles doivent être <strong>adéquats</strong>, <strong>pertinentes</strong> et <strong>non-execessives</strong>
-         Un <strong>droit à l'oubli</strong> peut être réclamer.</p>
+            <p> Seules les <strong>informations pertinentes</strong> et nécessaires pour leur finalités sont enregistrées
+                Les données personnelles doivent être <strong>adéquats</strong>, <strong>pertinentes</strong> et <strong>non-execessives</strong>
+                Un <strong>droit à l'oubli</strong> peut être réclamer.</p>
 
-        <p>  Une <strong>durée de conservation</strong> de ces données doit être établie en fonction de la finalité de chacune.
-          Nous nous tenons responsable de la <strong>confidentialité</strong> de ces données
-          Nous disposons d'une garantie aux personnnes de l'<strong>information nécessaire</strong>relative à leurs données</p>
+            <p>  Une <strong>durée de conservation</strong> de ces données doit être établie en fonction de la finalité de chacune.
+                Nous nous tenons responsable de la <strong>confidentialité</strong> de ces données
+                Nous disposons d'une garantie aux personnnes de l'<strong>information nécessaire</strong>relative à leurs données</p>
 
-        <p>  De plus, nous garantissons le <strong>droit d'accès</strong>, de <strong>rectification</strong> et d'<strong>opposition</strong> de vos données personnslles</p>
-    </blockquote>
+            <p>  De plus, nous garantissons le <strong>droit d'accès</strong>, de <strong>rectification</strong> et d'<strong>opposition</strong> de vos données personnslles</p>
+        </blockquote>
+    </div>
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personal2.jpeg') }}></div>
+
+    <!-- --------------------------------
+    -------------- ANNONCES -------------
+    ------------------------------------->
+
+    <div role="tabpanel" id="panneau-2">
+        <h1> Voici vos annonces <strong> {{ app.user.lastname }} </strong>  </h1>
+        <p class="editInfo"> Vous pouvez les consulter ou les modifier via cette interface </p>
+        <p class="editInfo2"> Mais également être redirigé directement vers elles </p>
+
+        <button class="js-expandmore-all">Fermer Tous</button>
+
+        <ul class="announcesEdit">
+            <li>
+                <h2 class="js-expandmore" data-hideshow-prefix-class="animated">Annonce Titre 1</h2>
+                <div class="js-to_expand">
+                    Contenu Annonce Titre 1
+                </div>
+            </li>
+            <li>
+                <h2 class="js-expandmore" data-hideshow-prefix-class="animated">Annonce Titre 2</h2>
+                <div class="js-to_expand">
+                    Contenu Annonce Titre 2
+                </div>
+            </li>
+            <li>
+                <h2 class="js-expandmore" data-hideshow-prefix-class="animated">Annonce Titre 3</h2>
+                <div class="js-to_expand">
+                    Contenu Annonce Titre 3
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- ------------------------------------
+    -------------- COMMENTAIRES -------------
+    ----------------------------------------->
+
+    <div role="tabpanel" id="panneau-3">
+        <h1> Voici vos commentaires <strong> {{ app.user.lastname }} </strong>  </h1>
+        <p class="editInfo"> Vous pouvez consulter les commentaires laissés sur vos annonces et y répondre </p>
+        <p class="editInfo2"> Mais également voir les réponses aux commentaires que vous avez posté </p>
+    </div>
+
+
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personal2.jpg') }}></div>
 
 </main>

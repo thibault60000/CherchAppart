@@ -1,9 +1,14 @@
-{% extends "@CherchAppart/layout.html.twig" %}
-
+{% extends "@CherchAppart/layoutWHF.html.twig" %}
 
 {% block body %}
-    {% block fos_user_content %}
-        {% include "@FOSUser/Security/login_content.html.twig" %}
-    {% endblock fos_user_content %}
+    <main class="loginPage">
+        <div class="loginPageContent">
+            <h1> CherchAppart </h1>
+            <p class="connectP">  Connexion </p>
+            {% block fos_user_content %}
+                {% include "@FOSUser/Security/login_content.html.twig" %}
+            {% endblock fos_user_content %}
+        </div>
+    </main>
 {% endblock %}
 

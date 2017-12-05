@@ -1,8 +1,14 @@
-register.html.twig{% extends "@CherchAppart/layout.html.twig" %}
-
+{% extends "@CherchAppart/layoutWHF.html.twig" %}
 
 {% block body %}
-    {% block fos_user_content %}
-    {% include "@FOSUser/Registration/register_content.html.twig" %}
-    {% endblock fos_user_content %}
+<main class="registerPage">
+    <div class="registerPageContent">
+        <h1> CherchAppart </h1>
+        <p class="registerP">  Inscription </p>
+
+        {% block fos_user_content %}
+            {% include "@FOSUser/Registration/register_content.html.twig" %}
+        {% endblock fos_user_content %}
+    </div>
+</main>
 {% endblock %}

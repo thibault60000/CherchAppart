@@ -1,0 +1,40 @@
+<!-- Cherch'Appart© 2017 || Thibault J. || Stanislas A. -->
+<html>
+
+<!-- HEAD -->
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>{% block title %} CherchAppart | Logement | Location {% endblock %}</title>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <!-- CSS -->
+    {%  block stylesheets %}
+    <link rel="icon" type="image/png" href="{{ asset('images/logoOnly.svg') }}" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/mainWHF.css') }}"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('fonts/fonts.css') }}"  media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"  media="screen,projection" />
+    {% endblock %}
+</head>
+
+
+<!-- BODY -->
+<body class="landing">
+
+    <div class="se-pre-con"></div>
+
+    <!-- PAGE WRAPPER -->
+    <div id="page-wrapper">
+
+        {% block body %}{% endblock %}
+
+        <!-- JAVASCRIPT -->
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+        {% endblock %}
+    </div>
+</body>
+</html>

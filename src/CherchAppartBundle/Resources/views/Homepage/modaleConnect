@@ -29,7 +29,7 @@
 
                 <div class="normalLogin">
 
-                        {{ render(controller('FOSUserBundle:Security:login')) }}
+                        {{ render(controller('FOSUserBundle:Security:login', {}, { 'fromModale': true } )) }}
 
                 </div>
 

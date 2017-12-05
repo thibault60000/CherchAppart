@@ -77,10 +77,16 @@ class RegistrationController extends BaseController
                 return $response;
             }
         }
-
-        return $this->render('@FOSUser/Registration/register.html.twig', array(
-            'form' => $form->createView(),
-        ));
+        if($request->query->get('fromModale')==true) {
+            return $this->render('@CherchAppart/Registration/registerModale.html.twig', array(
+                'form' => $form->createView(),
+            ));
+        }
+        else {
+            return $this->render('@FOSUser/Registration/register.html.twig', array(
+                'form' => $form->createView(),
+            ));
+        }
     }
 
     /**

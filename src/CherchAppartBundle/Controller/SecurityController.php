@@ -50,11 +50,20 @@ class SecurityController extends BaseController
             ? $this->get('security.csrf.token_manager')->getToken('authenticate')->getValue()
             : null;
 
-        return $this->renderLogin(array(
-            'last_username' => $lastUsername,
-            'error' => $error,
-            'csrf_token' => $csrfToken,
-        ));
+        if($request->query->get('fromModale')==true) {
+            return $this->render('@CherchAppart/Security/loginModale.html.twig', array(
+                'last_username' => $lastUsername,
+                'error' => $error,
+                'csrf_token' => $csrfToken
+            ));
+        }
+        else {
+            return $this->renderLogin(array(
+                'last_username' => $lastUsername,
+                'error' => $error,
+                'csrf_token' => $csrfToken
+            ));
+        }
     }
 
     /**
@@ -67,7 +76,7 @@ class SecurityController extends BaseController
      */
     protected function renderLogin(array $data)
     {
-        return $this->render('@FOSUser/Security/login.html.twig', $data);
+            return $this->render('@FOSUser/Security/login.html.twig', $data);
     }
 
 

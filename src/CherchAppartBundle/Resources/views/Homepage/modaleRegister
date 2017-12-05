@@ -26,7 +26,7 @@
 
             <div class="registerFormModal">
 
-                    {{ render(controller('FOSUserBundle:Registration:register')) }}
+                    {{ render(controller('FOSUserBundle:Registration:register', {}, { 'fromModale': true } )) }}
 
                 <button data-a11y-dialog-hide class="dialog-close" aria-label="Fermer la fenêtre de dialogue">&times;</button>
             </div>

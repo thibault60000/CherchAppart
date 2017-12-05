@@ -3,7 +3,7 @@
 {% block body %}
 
         {%  for message in app.session.flashbag.get('Message') %}
-            <li><b> Message d'erreur de la page d'index</b></li>
+            <li><b> {{ message }}</b></li>
         {% endfor %}
 
         {% if app.user == null %}

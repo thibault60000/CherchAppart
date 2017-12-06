@@ -38,5 +38,9 @@
 .idea/OurSecretProject.iml
 .idea/workspace.xml
 .idea/OurSecretProject.iml
+<<<<<<< HEAD
 .idea/OurSecretProject.iml
 .idea/OurSecretProject.iml
+=======
+.idea/workspace.xml
+>>>>>>> origin/dev-0.0.1

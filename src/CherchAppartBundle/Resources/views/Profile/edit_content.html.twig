@@ -7,13 +7,17 @@
     <!-- INTRO IMAGE PARALLAX -->
     <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personnal.jpg') }}></div>
 
-
-
+    <!-- TABS -->
     <ul class="tabsAccount" role="tablist">
         <li role="tab" aria-controls="panneau-1">Informations</li>
         <li role="tab" aria-controls="panneau-2">Mes annonces</li>
         <li role="tab" aria-controls="panneau-3">Mes commentaires</li>
     </ul>
+
+
+    <!-- --------------------------------
+    -------------- MES INFOS ------------
+    ------------------------------------->
 
     <div role="tabpanel" id="panneau-1">
         <h1> Voici les informations de votre compte <strong> {{ app.user.lastname }} </strong>  </h1>
@@ -124,7 +128,7 @@
             <div class="accordion-group__accordion">
                 <header class="accordion-group__accordion-head">
                     <h3 class="accordion-group__accordion-heading">
-                        <button type="button" class="accordion-group__accordion-btn"><a href="#">Voir</a><span>Annonce 1</span> </button>
+                        <button type="button" class="accordion-group__accordion-btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a><span>Annonce 1</span> </button>
                     </h3>
                 </header>
                 <div class="accordion-group__accordion-collapse">
@@ -141,7 +145,7 @@
             <div class="accordion-group__accordion">
                 <header class="accordion-group__accordion-head">
                     <h3 class="accordion-group__accordion-heading">
-                        <button type="button" class="accordion-group__accordion-btn"><a href="#">Voir</a><span> Annonce 2</span></button>
+                        <button type="button" class="accordion-group__accordion-btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a><span> Annonce 2</span></button>
                     </h3>
 
                 </header>
@@ -159,7 +163,7 @@
             <div class="accordion-group__accordion">
                 <header class="accordion-group__accordion-head">
                     <h3 class="accordion-group__accordion-heading">
-                        <button type="button" class="accordion-group__accordion-btn"><a href="#">Voir</a><span> Annonce 3</span></button>
+                        <button type="button" class="accordion-group__accordion-btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a><span> Annonce 3</span></button>
                     </h3>
                 </header>
                 <div class="accordion-group__accordion-collapse">
@@ -171,7 +175,6 @@
                     </div>
                 </div>
             </div>
-
 
         </section>
     </div>

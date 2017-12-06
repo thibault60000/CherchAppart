@@ -1944,18 +1944,6 @@ blockquote {
 	width: 85%;
 	margin: 1rem auto;
 }
-	#editAccountannounces h3 a {
-		background-color: white;
-		color: #06585e;
-		padding: 6.7px 10px;
-		border-radius: 3px;
-		margin-right: 0.6rem;
-		display: inline-block;
-	}
-		#editAccountannounces h3 a:hover{
-			text-decoration: none;
-			opacity:0.8;
-		}
 			#editAccountannounces .accordion-group__accordion-collapse{
 				padding: 0.7rem;
 				box-shadow: 0px 10px 10px -1px rgba(50, 50, 50, 0.25);
@@ -1970,8 +1958,8 @@ blockquote {
 			  }
 				#editAccountannounces .accordion-group__accordion {
 					margin-bottom: 1.2rem;
-					outline:none;
-					transition: transform 1s;
+					outline: none;
+					transition: transform 0.5s cubic-bezier(.55,0,.64,1);
 				}
 					#editAccountannounces .accordion-group__accordion_expanded .accordion-group__accordion-collapse{
 						display:block;
@@ -1995,19 +1983,78 @@ blockquote {
 						color: white;
 						display: block;
 					}
+					 #editAccountannounces .accordion-group__accordion-btn i{
+						 margin-right:0.3rem;
+					 }
+
+
+					 #editAccountannounces h3 a{
+						 background-color: white;
+						 color: #06585e;
+						 padding: 6.7px 10px;
+						 border-radius: 3px;
+						 margin-right: 0.6rem;
+						 display: inline-block;
+
+						 -webkit-transform: perspective(1px) translateZ(0);
+						 transform: perspective(1px) translateZ(0);
+						 box-shadow: 0 0 1px transparent;
+						 position: relative;
+						 overflow: hidden;
+
+						 -webkit-transition-property: color;
+						 transition-property: color;
+						 -webkit-transition-duration: 1s;
+						 transition-duration: 1s;
+						 -webkit-tap-highlight-color: rgba(0,0,0,0);
+						 -webkit-font-smoothing: antialiased;
+						 -moz-osx-font-smoothing: grayscale;
+					 }
+					   #editAccountannounces h3 a::before{
+						   content: "";
+						   position: absolute;
+						   z-index: -1;
+						   top: 0;
+						   left: 0;
+						   right: 0;
+						   bottom: 0;
+						   background: #fbb017;
+						   border-radius: 100%;
+						   -webkit-transform: scale(0);
+						   transform: scale(0);
+						   -webkit-transition-property: transform;
+						   transition-property: transform;
+						   -webkit-transition-duration: 0.3s;
+						   transition-duration: 0.3s;
+						   -webkit-transition-timing-function: ease-out;
+						   transition-timing-function: ease-out;
+					   }
+						#editAccountannounces h3 a:hover{
+							color: white;
+							text-decoration: none;
+						}
+						#editAccountannounces h3 a:hover:before{
+							-webkit-transform: scale(2);
+							transform: scale(2);
+						}
+						#editAccountannounces .accordion-group__accordion:not(.accordion-group__accordion_expanded) header .accordion-group__accordion-btn:hover{
+						   background-color: #0f7e86;
+					   }
 					  #editAccountannounces h3 span{
 						  display: inline-block;
 						  width: 65%;
-						  vertical-align: sub;
 						  white-space: nowrap;
 						  overflow: hidden;
 						  font-size: 1.2rem;
 						  text-overflow: ellipsis;
+						  vertical-align: top;
+						  margin-top: 0.45rem;
 					  }
-						#editAccountannounces header{
+						#editAccountannounces .accordion-group__accordion header{
 							box-shadow: 0px 6px 11px -3px rgba(50, 50, 50, 0.25);
 							height: auto;
 						}
+
 @media screen and (min-width: 600px){
 	#editAccountannounces h3 span{
 		font-size: 1.1rem;

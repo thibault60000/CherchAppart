@@ -18,9 +18,9 @@ security:
                 csrf_token_generator: security.csrf.token_manager
             oauth:
                 resource_owners:
-                    facebook:           "/connect/check-facebook"
-                login_path:        /connect
-                failure_path:      /connect
+                    facebook:           "/login/check-facebook"
+                login_path:        /login
+                failure_path:      /login
 
                 oauth_user_provider:
                     service: hwi_oauth.user.provider.fosub_bridge
@@ -33,5 +33,4 @@ security:
         - { path: ^/connect$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/connect/$, role: 'ROLE_ADMIN' }
         - { path: ^/admin, role: 'ROLE_ADMIN' }

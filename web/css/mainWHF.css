@@ -116,6 +116,10 @@ button {
         width: calc(90% - 2rem);
         max-height: 475.5px;
     }
+        .socianetwork{
+            margin-top: 6.3rem;
+            display: block;
+        }
 
     #page-wrapper{
         background: url(../images/fourPhoto.jpg) no-repeat center;
@@ -142,10 +146,10 @@ button {
         padding-left: 1rem;
     }
 
-    #login-form, #fos_user_registration_register {
+    #login-form, .fos_user_registration_register {
         position: relative;
-        margin-top: 6.2rem;
     }
+
     #login-form input[type="text"],
     #login-form input[type="password"]{
         margin-top: 0.5rem;
@@ -235,14 +239,15 @@ button {
 
         .fos_user_registration_register input[type="submit"]{
             display: block;
-            margin-top: 1rem;
+            margin-top: 1.7rem;
             padding: 0.5rem 3.1rem;
             font-size: 1.1rem;
             color: white;
             border: none;
             border-radius: 3px;
             background-color: #06595f;
-            cursor:pointer;
+            cursor: pointer;
+            width: 70%;
         }
 
         #login-form input[type="submit"]:hover {
@@ -271,22 +276,40 @@ button {
                 text-decoration: none;
             }
             @media screen and (min-width: 400px){
-                .loginPage h1 {
+                .loginPage h1,
+                .registerPage h1{
                     padding-left: 3.8rem;
                     font-size:2.4rem;
                 }
-                .connectP{
+                .connectP, .registerP{
                     font-size:1.9rem;
                     top: 6rem;
                 }
             }
 
+            @media screen and (min-width: 600px){
+                .groupSub{
+                    display: inline-block;
+                    width: 49%;
+                    vertical-align: top;
+                }
+                .fos_user_registration_register .group.username{
+                    margin: 0 0 !important;
+                }
+                .fos_user_registration_register input[type="submit"]{
+                    margin: 1rem auto;
+                }
+                .fos_user_registration_register .group.username input{
+                    margin-bottom: 0;
+                }
+            }
             @media screen and (min-width: 700px){
-                .loginPage h1 {
+                .loginPage h1,
+                .registerPage h1{
                     padding-left: 5.2rem;
                     font-size: 3rem;
                 }
-                .connectP {
+                .connectP, .registerP{
                     font-size: 2.2rem;
                     top: 7rem;
                 }
@@ -313,66 +336,337 @@ button {
                     font-size: 1.1rem;
                 }
                 .loginPageContent, .registerPageContent {
-                    max-height: 525.5px;
+                    max-height: 641.9px;
                 }
+
             }
 @media screen and (min-width: 1000px) {
-    .loginPageContent {
+    .loginPageContent, .registerPageContent {
         width: 80%;
         margin: 0 auto;
         background-color: white;
-        padding: 3.1rem 3rem;
+        padding: 2.1rem 3rem;
     }
-    #login-form, #fos_user_registration_register {
-        margin-top: 6.5rem;
-    }
-    .connectP {
-        top: 7.9rem;
-        width: calc(100% - 3.5rem);
-        padding-left: 3rem;
-    }
-    .loginPageContent, .registerPageContent {
-        max-height: 550px;
-    }
-    #login-form label {
-        font-size: 1.6rem;
-    }
-    #login-form input[type="text"], #login-form input[type="password"] {
-        height: 2.5rem;
-        font-size: 1.6rem;
-    }
-    #login-form::before {
-        top: 2.9rem;
-    }
-    #login-form::after {
-        top: 8.85rem;
-    }
-    #login-form input[type="text"], #login-form input[type="password"] {
-        max-width: 350px;
-    }
-    #login-form .rememberMe::before {
-        top: 0.35rem;
-    }
-    #login-form input[type="checkbox"]:checked + .rememberMe::after {
-        top: 0.35rem;
-    }
-    .loginPageContent, .registerPageContent{
-        max-height: 548.9px;
-    }
+        .connectP, .registerP {
+            top: 7.9rem;
+            width: calc(100% - 3.5rem);
+            padding-left: 3rem;
+        }
+            .loginPageContent, .registerPageContent {
+                max-height: 550px;
+            }
+                #login-form label {
+                    font-size: 1.6rem;
+                }
+                    #login-form input[type="text"], #login-form input[type="password"] {
+                        height: 2.5rem;
+                        font-size: 1.6rem;
+                    }
+                        #login-form::before {
+                            top: 2.9rem;
+                        }
+                            #login-form::after {
+                                top: 8.85rem;
+                            }
+                                #login-form input[type="text"], #login-form input[type="password"] {
+                                    max-width: 350px;
+                                }
+                                    #login-form .rememberMe::before {
+                                        top: 0.35rem;
+                                    }
+                                        #login-form input[type="checkbox"]:checked + .rememberMe::after {
+                                            top: 0.35rem;
+                                        }
+                                            .loginPageContent, .registerPageContent{
+                                                max-height: 645.9px;
+                                            }
+                                                .socianetwork{
+                                                    margin-top: 7.1rem;
+                                                }
+
 }
 
 .loginPage .errorMsg{
-    display: block;
     padding-bottom: 0.5rem;
     font-size: 1.2rem;
     font-family: "robotoblack";
     color: #f53131;
+    position: absolute;
+    top: 16.6rem;
+    left: 10.5rem;
+    width: 9.5rem;
+    overflow: hidden;
+    display: inline;
+    text-overflow: ellipsis;
 }
     .loginPage .errorMsg i{
         padding-right: 0.4rem;
     }
 
 
+/* SOCIAL NETWORK */
+.socianetwork ul{
+    padding-right: 0.4rem;
+    display: inline;
+}
+    .socianetwork ul li{
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.5rem;
+        text-align: center;
+        margin-right: 0.8rem;
+        margin-bottom: 1.1rem;
+    }
+        .socianetwork li:hover{
+            opacity:0.8;
+        }
+            .socianetwork li a{
+                height: 100%;
+                width: 100%;
+                border-radius: 3px;
+                color: white;
+                display: block;
+                text-align: center;
+                font-size: 1.3rem;
+                padding: 0.3rem 0.3rem;
+            }
+                .socianetwork li a.facebook{
+                    background-color: #4267b2;
+                }
+                .socianetwork a.googleplus{
+                    background-color: #e25454;
+                }
+                .socianetwork a.twitter{
+                    background-color: #00ACEE;
+                }
+                .socianetwork a.github{
+                    background-color: #9a429a;
+                }
+                .socianetwork a.linkedin{
+                    background-color: #167fd6;
+                }
+                .socianetwork a.pinterest{
+                    background-color: #de0c0c;
+                }
+                .socianetwork a.instagram{
+                    background-color: #de44d5;
+                }
+                    .socianetwork ul i{
+                        width: 100%;
+                        height: 100%;
+                        margin-top: 0.2rem;
+                    }
+                        .socianetwork ul li:hover a{
+                            text-decoration:none;
+                        }
+                            .ouTransition{
+                                overflow: hidden;
+                                text-align: center;
+                                margin-top: 0.6rem;
+                                margin-bottom: 1rem;
+                            }
+                                .ouContainer{
+                                    position: relative ;
+                                    padding: 16px ;
+                                }
+                                    .ouContainer::before{
+                                        content: '' ;
+                                        position: absolute ;
+                                        border-bottom: 1px solid #e4e4e4 ;
+                                        top: 50% ;
+                                        right: 100% ;
+                                        width: 5000px ;
+                                    }
+                                        .ouContainer::after{
+                                            content: '' ;
+                                            position: absolute ;
+                                            border-bottom: 1px solid #e4e4e4 ;
+                                            top: 50% ;
+                                            left: 100% ;
+                                            width: 5000px ;
+                                        }
+                                            .ouContent{
+                                                font-weight: normal ;
+                                                margin: 0px ;
+                                                word-wrap: break-word ;
+                                                font-size: 15px ;
+                                                line-height: 18px ;
+                                                letter-spacing: 0.2px ;
+                                                padding-top: 0px ;
+                                                padding-bottom: 0px ;
+                                                color: #767676 ;
+                                                display: inline ;
+                                            }
 /* ******************************************
 ************** REGISTER *********************
 ******************************************* */
+
+
+.fos_user_registration_register input[type="text"],
+.fos_user_registration_register input[type="password"],
+.fos_user_registration_register input[type="number"],
+.fos_user_registration_register input[type="email"]{
+    margin-top: 0.5rem;
+    height: 2rem;
+    border: 1px solid #9e9d9d;
+    border-radius: 2px;
+    padding-left: 0.4rem;
+    display: block;
+    width: calc(90% - 2.2rem);
+    margin-bottom: 1rem;
+    margin-left: 2.2rem;
+    font-size: 1.1rem;
+    max-width: 270px;
+}
+.fos_user_registration_register select{
+    margin-top: 0.5rem;
+    height: 2rem;
+    border: 1px solid #9e9d9d;
+    border-radius: 2px;
+    padding-left: 0.4rem;
+    display: block;
+    width: calc(80% - 2.2rem);
+    margin-bottom: 1rem;
+    margin-left: 2.2rem;
+    font-size: 1.1rem;
+    max-width: 270px;
+}
+
+.fos_user_registration_register label{
+    display: block;
+    font-size: 1.1rem;
+    color: #524e4e;
+    cursor:pointer;
+}
+
+.fos_user_registration_register .group{
+    margin: 1rem 0;
+    position: relative;
+}
+.group.email::before {
+    background: url(../images/email-outline.svg) no-repeat left;
+    content: "";
+    width: 1.9rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+.group.username::before{
+    background: url(../images/account-box.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+#fos_user_registration_form_plainPassword > div:nth-child(1):before{
+    background: url(../images/lock-open-outline.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+#fos_user_registration_form_plainPassword > div:nth-child(2):before {
+    background: url(../images/lock-reset.svg) no-repeat left;
+    content: "";
+    width: 3.3rem;
+    display: block;
+    height: 2.3rem;
+    top: 7.2rem;
+    position: absolute;
+    margin-left: 0.1rem;
+    background-size: 1.8rem;
+}
+.group.sexe::before{
+    background: url(../images/gender-male-female.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+.group.lastname::before{
+    background: url(../images/account.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+.group.name::before{
+    background: url(../images/account-alert.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+.group.phone::before{
+    background: url(../images/phone.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+.group.adress::before{
+    background: url(../images/home.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+.group.city::before{
+    background: url(../images/city.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+.group.postal::before{
+    background: url(../images/code-equal.svg) no-repeat left;
+    content: "";
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    top: 1.9rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+
+.registerPage .haveAccount{
+    margin-top: 1.1rem;
+}
+.registerPage .haveAccountLink{
+    background-color: #bb1b51;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    margin-top: 0.2rem;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+.registerPage .haveAccountLink:hover{
+    opacity:0.8;
+    text-decoration: none;
+}

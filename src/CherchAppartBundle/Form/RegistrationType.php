@@ -14,7 +14,6 @@ class RegistrationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('imageFile', FileType::class, array('label' => 'form.imageFileRegister', 'translation_domain' => 'FOSUserBundle'))
             ->add('name', TextType::class,  array('label' => 'form.name', 'translation_domain' => 'FOSUserBundle'))
             ->add('lastname', TextType::class, array('label' => 'form.lastname', 'translation_domain' => 'FOSUserBundle'))
             ->add('sexe', ChoiceType::class, array('label' => 'form.sexe', 'translation_domain' => 'FOSUserBundle',

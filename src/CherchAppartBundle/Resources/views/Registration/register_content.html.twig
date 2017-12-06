@@ -2,6 +2,14 @@
 
                 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
+
+                    <!-- USERNAME -->
+                    <div class="group username">
+                        {{ form_label((form.username)) }}
+                        {{ form_errors(form.username) }}
+                        {{ form_widget(form.username) }}
+                    </div>
+                    <div class="groupSub">
                     <!-- MAIL -->
                      <div class="group email">
                         {{ form_label((form.email)) }}
@@ -9,18 +17,13 @@
                         {{ form_widget(form.email) }}
                      </div>
 
-                    <!-- USERNAME -->
-                    <div class="group username">
-                        {{ form_label((form.username)) }}
-                        {{ form_errors(form.username) }}
-                        {{ form_widget(form.username) }}
-                     </div>
 
                     <!-- PASSWORD -->
                     <div class="group password">
                         {{ form_widget(form.plainPassword) }}
                         {{ form_errors(form.plainPassword) }}
                      </div>
+
 
                     <!-- SEXE -->
                     <div class="group sexe">
@@ -29,29 +32,14 @@
                         {{ form_widget(form.sexe) }}
                     </div>
 
-                    <!-- IMAGE FILE -->
-                    <!--
-                    <div class="imageFile">
-                        <div class="imageFileContainer">
-                            <div class="imageFileContent">
-                                <img src="{{ asset('images/avatar.png') }}" id="imageFileId" style="background-image: url( {{ asset('images/avatar.png') }} );" />
-                            </div>
-                        </div>
-
-                        <div class="imageFileRegister">
-                            {{ form_label(form.imageFile) }}
-                            {{ form_errors(form.imageFile) }}
-                            {{ form_widget(form.imageFile) }}
-                        </div>
-                    </div> -->
-
                     <!-- LAST NAME -->
                     <div class="group lastname">
                         {{ form_label((form.lastname)) }}
                         {{ form_errors(form.lastname) }}
                         {{ form_widget(form.lastname) }}
                     </div>
-
+                </div>
+                <div class="groupSub">
                     <!-- Name -->
                     <div class="group name">
                         {{ form_label((form.name)) }}
@@ -86,7 +74,7 @@
                         {{ form_errors(form.city) }}
                         {{ form_widget(form.city)}}
                     </div>
-
+                </div>
                     <!-- INPUT TYPE SUBMIT -->
                     <input type="submit" value="{{ 'registration.submit'|trans }}" />
 

@@ -1,7 +1,7 @@
 {% extends "@CherchAppart/layout.html.twig" %}
 
 {% block body %}
-
+    COUCOU
         {%  for message in app.session.flashbag.get('Message') %}
             <li><b> {{ message }}</b></li>
         {% endfor %}

@@ -7,14 +7,24 @@ $(window).load(function() {
 
 $(function() {
 
+
+    /* ***************************************************
+       ************* ANNOUNCES (EDIT ACCOUNT) ************
+       ***************************************************/
+    if(document.querySelector( '#editAccountannounces' )) {
+        $('#editAccountannounces').ariaAccordion({
+            expandOnlyOne: true
+        });
+    }
+
+
     /* ********************************************
        ************* TABS EDIT ACCOUNT ************
        *******************************************/
 
     if(document.querySelector( '.tabsAccount[role="tablist"]' )) {
-        // Instanciation des accordéons
-        var list = document.querySelector( '.tabsAccount[role="tablist"]');
-        var tablist = new window.Tablist( list );
+        var acTablist = document.querySelector( '.tabsAccount[role="tablist"]');
+        var editAccountTablist = new window.Tablist( acTablist );
     }
 
 

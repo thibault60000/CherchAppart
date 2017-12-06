@@ -11,7 +11,7 @@
 
 
                 <div class="socianetwork">
-                    <h2 class="connect">Se connecter avec</h2>
+                    <h2 class="connect">Via réseaux sociaux</h2>
                     <ul>
                         <li><a href="{{ hwi_oauth_login_url('facebook') }}" class="facebook" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="" class="googleplus"><i class="fa fa-google-plus" aria-label="Google Plus" aria-hidden="true"></i></a></li>
@@ -30,6 +30,8 @@
                                     </span>
                                 </span>
                 </div>
+
+                <h2 class="connect">Via formulaire</h2>
 
                 <div class="normalLogin">
 

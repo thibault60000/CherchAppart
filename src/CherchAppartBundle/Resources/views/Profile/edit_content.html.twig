@@ -8,6 +8,7 @@
     <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personnal.jpg') }}></div>
 
 
+
     <ul class="tabsAccount" role="tablist">
         <li role="tab" aria-controls="panneau-1">Informations</li>
         <li role="tab" aria-controls="panneau-2">Mes annonces</li>
@@ -109,7 +110,6 @@
         </blockquote>
     </div>
 
-
     <!-- --------------------------------
     -------------- ANNONCES -------------
     ------------------------------------->
@@ -119,28 +119,61 @@
         <p class="editInfo"> Vous pouvez les consulter ou les modifier via cette interface </p>
         <p class="editInfo2"> Mais également être redirigé directement vers elles </p>
 
-        <button class="js-expandmore-all">Fermer Tous</button>
+        <section class="accordion-group" id="editAccountannounces">
 
-        <ul class="announcesEdit">
-            <li>
-                <h2 class="js-expandmore" data-hideshow-prefix-class="animated">Annonce Titre 1</h2>
-                <div class="js-to_expand">
-                    Contenu Annonce Titre 1
+            <div class="accordion-group__accordion">
+                <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn"><a href="#">Voir</a><span>Annonce 1</span> </button>
+                    </h3>
+                </header>
+                <div class="accordion-group__accordion-collapse">
+                    <div class="accordion-group__accordion-content">
+                        <p class="datePublish">Publiée le : <strong> 06/12/17</strong></p>
+                        <p>Commentaires :  <strong> 3</strong></p>
+                        <p>Ville : <strong> Amiens</strong></p>
+                        <p>Superficie:  <strong> 32 m<sup>2</sup></strong></p>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <h2 class="js-expandmore" data-hideshow-prefix-class="animated">Annonce Titre 2</h2>
-                <div class="js-to_expand">
-                    Contenu Annonce Titre 2
+            </div>
+
+
+            <div class="accordion-group__accordion">
+                <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn"><a href="#">Voir</a><span> Annonce 2</span></button>
+                    </h3>
+
+                </header>
+                <div class="accordion-group__accordion-collapse">
+                    <div class="accordion-group__accordion-content">
+                        <p class="datePublish">Publiée le : <strong> 06/12/17</strong></p>
+                        <p>Commentaires :  <strong> 3</strong></p>
+                        <p>Ville : <strong> Amiens</strong></p>
+                        <p>Superficie:  <strong> 32 m<sup>2</sup></strong></p>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <h2 class="js-expandmore" data-hideshow-prefix-class="animated">Annonce Titre 3</h2>
-                <div class="js-to_expand">
-                    Contenu Annonce Titre 3
+            </div>
+
+
+            <div class="accordion-group__accordion">
+                <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn"><a href="#">Voir</a><span> Annonce 3</span></button>
+                    </h3>
+                </header>
+                <div class="accordion-group__accordion-collapse">
+                    <div class="accordion-group__accordion-content">
+                        <p class="datePublish">Publiée le : <strong> 06/12/17</strong></p>
+                        <p>Commentaires :  <strong> 3</strong></p>
+                        <p>Ville : <strong> Amiens</strong></p>
+                        <p>Superficie:  <strong> 32 m<sup>2</sup></strong></p>
+                    </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+
+
+        </section>
     </div>
 
 

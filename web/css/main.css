@@ -2284,6 +2284,7 @@ blockquote {
 }
 
 .topEditAccount{
+	opacity:0;
 	position: fixed;
 	background-color: #1184c8;
 	bottom: 3.4rem;
@@ -2292,11 +2293,14 @@ blockquote {
 	height: 2.2rem;
 	display: block;
 	border-radius: 5px;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
 }
+ .topEditAccount.visible{
+	 opacity: 1;
+ }
 	.topEditAccount i{
 		font-size: 1.3rem;
 		color: white;

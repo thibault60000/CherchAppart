@@ -7,13 +7,21 @@ $(window).load(function() {
 
 $(function() {
 
-    if($('.topEditAccount')){
-        $('.topEditAccount').click(function(){
-            $('html, body').animate({ scrollTop: 0 }, 'slow');
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 100) {
+            $('.topEditAccount').addClass('visible');
+        }
+        else {
+            $('.topEditAccount').removeClass('visible');
+        }
+    });
+
+    if ($('.topEditAccount')) {
+        $('.topEditAccount').click(function () {
+            $('html, body').animate({scrollTop: 0}, 'slow');
         });
 
     }
-
     /* ***************************************************
        ************* ANNOUNCES (EDIT ACCOUNT) ************
        ***************************************************/

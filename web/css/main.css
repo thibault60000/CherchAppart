@@ -1866,6 +1866,12 @@ blockquote {
 			color: #065a60;
 		}
 
+		@media screen and (min-width: 1200px){
+			#panneau-2 blockquote,
+			#panneau-3 blockquote{
+				width: 60%;
+			}
+		}
 @media screen and (min-width: 600px){
 	blockquote {
 		width: 75%;
@@ -2014,7 +2020,7 @@ blockquote {
 						border-radius: 0.3rem 0.3rem 0 0;
 						display: block;
 						font-size: 1.1rem;
-						padding: 0.7rem 1rem;
+						padding: 0.3rem 1rem;
 						text-align: left;
 						width: 100%;
 						background-color: #06595f;
@@ -2101,6 +2107,7 @@ blockquote {
 		#editAccountannounces{
 			width: 75%;
 			margin-top:2rem;
+			max-width: 950px
 		}
 }
 

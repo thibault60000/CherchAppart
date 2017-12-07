@@ -176,9 +176,40 @@
                 </div>
             </div>
 
+            <div class="accordion-group__accordion">
+                <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a><span> Annonce 4</span></button>
+                    </h3>
+                </header>
+                <div class="accordion-group__accordion-collapse">
+                    <div class="accordion-group__accordion-content">
+                        <p class="datePublish">Publiée le : <strong> 06/12/17</strong></p>
+                        <p>Commentaires :  <strong> 3</strong></p>
+                        <p>Ville : <strong> Amiens</strong></p>
+                        <p>Superficie:  <strong> 32 m<sup>2</sup></strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-group__accordion">
+                <header class="accordion-group__accordion-head">
+                    <h3 class="accordion-group__accordion-heading">
+                        <button type="button" class="accordion-group__accordion-btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a><span> Annonce 5</span></button>
+                    </h3>
+                </header>
+                <div class="accordion-group__accordion-collapse">
+                    <div class="accordion-group__accordion-content">
+                        <p class="datePublish">Publiée le : <strong> 06/12/17</strong></p>
+                        <p>Commentaires :  <strong> 3</strong></p>
+                        <p>Ville : <strong> Amiens</strong></p>
+                        <p>Superficie:  <strong> 32 m<sup>2</sup></strong></p>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </div>
-
 
     <!-- ------------------------------------
     -------------- COMMENTAIRES -------------
@@ -188,10 +219,62 @@
         <h1> Voici vos commentaires <strong> {{ app.user.lastname }} </strong>  </h1>
         <p class="editInfo"> Vous pouvez consulter les commentaires laissés sur vos annonces et y répondre </p>
         <p class="editInfo2"> Mais également voir les réponses aux commentaires que vous avez posté </p>
+
+        <!-- TABS -->
+        <ul class="tabsComments" role="tablist">
+            <li role="tab" aria-controls="com-1">Reçus</li>
+            <li role="tab" aria-controls="com-2">Postés</li>
+        </ul>
+
+        <!-- ON MY ANNOUNCES -->
+        <div role="tabpanel" id="com-1">
+                <ul class="com2Content">
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a>
+                        <strong> 15/02/2017 </strong>
+                        <span>Quand le logement sera-il diponible?</span>
+                    </li>
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a>
+                        <strong> 15/02/2017 </strong>
+                        <span>Quand le logement sera-il diponible?</span>
+                    </li>
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a>
+                        <strong> 15/02/2017 </strong>
+                        <span>Quand le logement sera-il diponible?</span>
+                    </li>
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a>
+                        <strong> 15/02/2017 </strong>
+                        <span>Quand le logement sera-il diponible?</span>
+                    </li>
+                </ul>
+        </div>
+
+        <!-- ON OTHERS ANNOUNCES -->
+        <div role="tabpanel" id="com-2">
+            <ul class="com2Content">
+                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a>
+                    <strong> 15/02/2017 </strong>
+                    <span> Vous accepter les animaux ?</span>
+                </li>
+                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a>
+                    <strong> 15/02/2017 </strong>
+                    <span> Vous accepter les animaux ?</span>
+                </li>
+                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a>
+                    <strong> 15/02/2017 </strong>
+                    <span> Vous accepter les animaux ?</span>
+                </li>
+                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i>Voir</a>
+                    <strong> 15/02/2017 </strong>
+                    <span> Vous accepter les animaux ?</span>
+                </li>
+            </ul>
+        </div>
+
+
     </div>
 
 
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personal2.jpg') }}></div>
+
 
 </main>

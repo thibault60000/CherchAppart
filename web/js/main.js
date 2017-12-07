@@ -17,6 +17,15 @@ $(function() {
         });
     }
 
+    /* ********************************************
+      ************* TABS MY COMMENTS  *************
+      *******************************************/
+
+    if(document.querySelector( '.tabsComments[role="tablist"]' )) {
+        var comTablist = document.querySelector( '.tabsComments[role="tablist"]');
+        var commentsTablist = new window.Tablist( comTablist );
+    }
+
 
     /* ********************************************
        ************* TABS EDIT ACCOUNT ************

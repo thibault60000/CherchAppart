@@ -1566,13 +1566,9 @@ footer{
 /* *********** EDIT ACCOUNT PAGE ************* */
 
 .editAccount .parallax-window{
-	min-height: 33.3rem;
+	min-height: 30rem;
 	background: transparent;
 }
-	.editAccount .parallax-window-2{
-		min-height: 33.3rem;
-		background: transparent;
-	}
 	.editAccount h1{
 		text-align: center;
 		font: 1.9rem "robotobold";
@@ -2042,7 +2038,7 @@ blockquote {
 					   }
 					  #editAccountannounces h3 span{
 						  display: inline-block;
-						  width: 65%;
+						  width: 56.2%;
 						  white-space: nowrap;
 						  overflow: hidden;
 						  font-size: 1.2rem;
@@ -2063,4 +2059,169 @@ blockquote {
 			width: 75%;
 			margin-top:2rem;
 		}
+}
+
+/* ********************************************
+   ************* TABS  COMMENTS  **************
+   *******************************************/
+
+.tabsComments{
+	width: 80%;
+	margin: 2.5rem auto;
+	list-style: none;
+	text-align: center;
+	display: block;
+}
+.tabsComments li{
+	padding: 0.4rem;
+	background-color: #0f4b52;
+	color: white;
+	font: 1.2rem "robotoregular";
+	margin-bottom: 0.2rem;
+	cursor:pointer;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	position: relative;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+	@media screen and (min-width: 300px){
+		.tabsComments li{
+			display: inline-block;
+			width: 43%;
+		}
+	}
+.tabsComments li[aria-expanded = "false"]::before{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #225e63;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.tabsComments li[aria-expanded = "false"]:hover:before,
+.tabsComments li[aria-expanded = "false"]:focus:before,
+.tabsComments li[aria-expanded = "false"]:active:before {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+.tabsComments li[aria-expanded = "true"]{
+	background-color: #065a60;
+}
+	.tabsComments ul{
+
+	}
+.com1Content li,
+.com2Content li {
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 0.9rem;
+	border-bottom: 1px dashed #ccc5c5;
+	padding-bottom: 0.7rem;
+
+}
+.com1Content a,
+.com2Content a{
+	background-color: #065a60;
+	padding: 0.1rem 0.5rem;
+	border-radius: 2px;
+	margin-right: 0.7rem;
+	display: inline-block;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	position: relative;
+	overflow: hidden;
+
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.com1Content a::before,
+.com2Content a::before{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #1184c7;
+	border-radius: 100%;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.com1Content a:hover,
+.com2ontent a:hover{
+	color: white;
+	text-decoration: none;
+}
+.com1Content a:hover:before,
+.com2Content a:hover:before{
+	-webkit-transform: scale(2);
+	transform: scale(2);
+}
+.com1Content strong,
+.com2Content strong{
+	color: #065a60;
+	font: 1rem "robotoblack";
+	display: inline-block;
+}
+.com1Content span,
+.com2Content span{
+	display: block;
+	margin-top: 0.3rem;
+	color: #3a3535;
+	font: 1rem "robotoitalic";
+}
+#com-1, #com-2{
+	width: 90%;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 400px){
+	.tabsComments li {
+		width: 40%;
+		max-width: 400px;
+	}
+	#com-1, #com-2 {
+		width: 80%;
+		max-width: 1034.4px;
+	}
+}
+@media screen and (min-width: 1000px){
+	.com1Content li a,
+	.com2Content li a,
+	.com1Content li strong ,
+	.com2Content li strong ,
+	.com1Content li span,
+	.com2Content li span{
+		font-size:1.1rem;
+	}
 }

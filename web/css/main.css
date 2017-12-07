@@ -335,6 +335,9 @@ header nav {
 		 header nav li.redBtnNav span{
 			 color: #963737;
 		 }
+		  header nav li.redBtnNav i::before{
+			  color: #b72727;
+		  }
 			header nav ul li a{
 				text-align: center;
 			}
@@ -1589,8 +1592,9 @@ footer{
 
 /* *********** EDIT ACCOUNT PAGE ************* */
 
+
 .editAccount .parallax-window{
-	min-height: 30rem;
+	min-height: 17rem;
 	background: transparent;
 }
 	.editAccount h1{
@@ -1722,6 +1726,12 @@ footer{
 			width: 80%;
 		}
 	}
+
+	@media screen and (min-width: 600px){
+		.tabsAccount {
+			width: 97%;
+		}
+	}
 /* EDIT ACCOUNT MIN 800px */
 @media screen and (min-width:800px){
 	.fos_user_profile_edit{
@@ -1753,6 +1763,11 @@ footer{
 						top: 23.2rem;
 						left: 49.7%;
 					}
+						.tabsAccount li {
+							display: inline-block;
+							width: 28%;
+							margin-right: 0.3rem;
+						}
 
 }
 
@@ -1764,6 +1779,10 @@ footer{
 		position: relative;
 		margin: 0 auto;
 		width: 80%;
+	}
+	.editAccount .parallax-window{
+		min-height: 30rem;
+		background: transparent;
 	}
 }
 
@@ -1807,10 +1826,10 @@ footer{
 		left: 50.4%;
 	}
 	.fos_user_profile_edit .identityEdit {
-		width: 45.4%;
+		width: 45%;
 	}
 	.fos_user_profile_edit .mdpEdit {
-		width: 44.4%;
+		width: 44%;
 	}
 }
 
@@ -1895,10 +1914,10 @@ blockquote {
 		}
 			.tabsAccount li{
 				padding: 0.7rem;
-				background-color: #1285c6;
+				background-color: #575454;
 				color: white;
 				font: 1.2rem "robotoregular";
-				margin-bottom: 0.2rem;
+				margin-bottom: 0.7rem;
 				cursor:pointer;
 				-webkit-transform: perspective(1px) translateZ(0);
 				transform: perspective(1px) translateZ(0);
@@ -1917,7 +1936,7 @@ blockquote {
 					bottom: 0;
 					left: 0;
 					right: 0;
-					background: #2098D1;
+					background: rgba(107, 110, 108, 0.99);
 					-webkit-transform: scaleX(0);
 					transform: scaleX(0);
 					-webkit-transform-origin: 50%;
@@ -1936,7 +1955,7 @@ blockquote {
 						transform: scaleX(1);
 					}
 					.tabsAccount li[aria-expanded = "true"]{
-						background-color: #e46767;
+						background-color: #575454;
 						border-bottom: 6px solid #1184c7;
 						padding-bottom: 0.3rem;
 					}
@@ -1948,16 +1967,14 @@ blockquote {
 }
 @media screen and (min-width: 1000px){
 	.tabsAccount li {
-		display: inline-block;
-		width: 30%;
+		width: 29%;
+		margin-right: 0.5rem;
+	}
+	.tabsAccount{
+		max-width: 1200px;
 	}
 }
 
-@media screen and (min-width: 1000px) {
-	.tabsAccount {
-		width: 80%;
-	}
-}
 /* *************************************************
    ************* ACCORDION EDIT ACCOUNT ************
    ************************************************/
@@ -2100,7 +2117,7 @@ blockquote {
 }
 .tabsComments li{
 	padding: 0.4rem;
-	background-color: #e46767;
+	background-color: #575454;
 	color: white;
 	font: 1.2rem "robotoregular";
 	margin-bottom: 0.2rem;
@@ -2128,7 +2145,7 @@ blockquote {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: #fd8181;
+	background: #747070;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 	-webkit-transform-origin: 50%;
@@ -2147,9 +2164,7 @@ blockquote {
 	transform: scaleX(1);
 }
 .tabsComments li[aria-expanded = "true"]{
-	background-color: #e46767;
-	border-bottom: 3.9px solid #1184c7;
-	padding-bottom: 0.2rem;
+	background-color: #1184c7;
 }
 	.tabsComments ul{
 
@@ -2166,7 +2181,7 @@ blockquote {
 }
 .com1Content a,
 .com2Content a{
-	background-color: #1184c7;
+	background-color: #565353;
 	padding: 0.1rem 0.5rem;
 	border-radius: 2px;
 	margin-right: 0.7rem;
@@ -2194,7 +2209,7 @@ blockquote {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #e46767;
+	background: #1184c7;
 	border-radius: 100%;
 	-webkit-transform: scale(0);
 	transform: scale(0);
@@ -2206,7 +2221,7 @@ blockquote {
 	transition-timing-function: ease-out;
 }
 .com1Content a:hover,
-.com2ontent a:hover{
+.com2Content a:hover{
 	color: white;
 	text-decoration: none;
 }
@@ -2222,6 +2237,12 @@ blockquote {
 	display: inline-block;
 	vertical-align: sub;
 }
+
+.com1Content a i,
+.com2Content a i{
+	margin-right:0.5rem;
+}
+
 .com1Content span,
 .com2Content span{
 	display: block;
@@ -2252,5 +2273,120 @@ blockquote {
 	.com1Content li span,
 	.com2Content li span{
 		font-size:1.1rem;
+	}
+}
+
+.topEditAccount{
+	position: fixed;
+	background-color: #1184c8;
+	bottom: 3.4rem;
+	right: 0.5rem;
+	width: 2.2rem;
+	height: 2.2rem;
+	display: block;
+	border-radius: 5px;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+}
+	.topEditAccount i{
+		font-size: 1.3rem;
+		color: white;
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		position:absolute;
+		top: 9.2px;
+		left: 9.4px;
+	}
+		.topEditAccount:hover i{
+			-webkit-animation-name: hvr-icon-wobble-vertical;
+			animation-name: hvr-icon-wobble-vertical;
+			-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+			-webkit-animation-timing-function: ease-in-out;
+			animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: 1;
+			animation-iteration-count: 1;
+		}
+		/* Icon Wobble Vertical */
+		@-webkit-keyframes hvr-icon-wobble-vertical {
+			16.65% {
+				-webkit-transform: translateY(6px);
+				transform: translateY(6px);
+			}
+			33.3% {
+				-webkit-transform: translateY(-5px);
+				transform: translateY(-5px);
+			}
+			49.95% {
+				-webkit-transform: translateY(4px);
+				transform: translateY(4px);
+			}
+			66.6% {
+				-webkit-transform: translateY(-2px);
+				transform: translateY(-2px);
+			}
+			83.25% {
+				-webkit-transform: translateY(1px);
+				transform: translateY(1px);
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+		}
+		@keyframes hvr-icon-wobble-vertical {
+			16.65% {
+				-webkit-transform: translateY(6px);
+				transform: translateY(6px);
+			}
+			33.3% {
+				-webkit-transform: translateY(-5px);
+				transform: translateY(-5px);
+			}
+			49.95% {
+				-webkit-transform: translateY(4px);
+				transform: translateY(4px);
+			}
+			66.6% {
+				-webkit-transform: translateY(-2px);
+				transform: translateY(-2px);
+			}
+			83.25% {
+				-webkit-transform: translateY(1px);
+				transform: translateY(1px);
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+		}
+		.hvr-icon-wobble-vertical {
+			display: inline-block;
+			vertical-align: middle;
+			-webkit-transform: perspective(1px) translateZ(0);
+			transform: perspective(1px) translateZ(0);
+			box-shadow: 0 0 1px transparent;
+			position: relative;
+			padding-right: 2.2em;
+			-webkit-transition-duration: 0.3s;
+			transition-duration: 0.3s;
+		}
+@media screen and (min-width: 600px){
+	.topEditAccount{
+		width: 3.2rem;
+		height: 3.2rem;
+	}
+	.topEditAccount i {
+		font-size: 1.6rem;
+		top: 12.6px;
+		left: 13.5px;
+	}
+}
+@media screen and (min-width: 600px) {
+	.topEditAccount {
+		bottom: 0.9rem;
+		right: 0.9rem;
 	}
 }

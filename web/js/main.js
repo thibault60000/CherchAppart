@@ -7,6 +7,12 @@ $(window).load(function() {
 
 $(function() {
 
+    if($('.topEditAccount')){
+        $('.topEditAccount').click(function(){
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+
+    }
 
     /* ***************************************************
        ************* ANNOUNCES (EDIT ACCOUNT) ************

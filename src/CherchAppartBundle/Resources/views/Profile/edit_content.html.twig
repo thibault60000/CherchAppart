@@ -2,18 +2,17 @@
 
 
 <!-- PAGE EDIT ACCOUNT -->
-<main class="editAccount">
+<main class="editAccount" id="topEditAccount">
 
     <!-- INTRO IMAGE PARALLAX -->
     <div class="parallax-window" data-parallax="scroll" data-image-src={{ asset('images/personnal.jpg') }}></div>
 
     <!-- TABS -->
     <ul class="tabsAccount" role="tablist">
-        <li role="tab" aria-controls="panneau-1">Informations</li>
+        <li role="tab" aria-controls="panneau-1">Mes informations</li>
         <li role="tab" aria-controls="panneau-2">Mes annonces</li>
         <li role="tab" aria-controls="panneau-3">Mes commentaires</li>
     </ul>
-
 
     <!-- --------------------------------
     -------------- MES INFOS ------------
@@ -209,6 +208,20 @@
             </div>
 
         </section>
+
+        <blockquote>
+            <p> Les annonces ci-dessous ne sont que brièvement décrites. Pour pouvoir
+                <strong>voir</strong> l'intégralité des informations de l'annonce, il faut <strong>cliquer</strong> sur
+                le bouton <strong>voir</strong></p>
+
+            <p> Il est possible pour n'importe quel propriétaire de générer un <strong>bail de location</strong> sur la base d'un modèle
+                prédéfinit qu'il sera possible d'éditer directement sur le site dans <strong>un futur proche</strong></p>
+
+            <p> Vous pouvez supprimer une annonce sur la page de celle-ci en cliquant sur le bouton <strong>voir</strong>. Attention
+            cette action est <strong>irréversible</strong></p>
+
+        </blockquote>
+
     </div>
 
     <!-- ------------------------------------
@@ -270,11 +283,25 @@
             </ul>
         </div>
 
+        <blockquote>
+            <p> Vos commentaires sont répartis en deux catégories : les commentaires <strong>que vous avez laisser</strong> sur une annonce
+                et les commentaires <strong>que quelqu'un a mit sur votre annonce </strong></p>
+
+            <p> Un commentaire posté sur une annonce ne peut avoir <strong>qu'une seule réponse</strong>.</p>
+
+            <p> Dans cette interface, vous n'avez qu'un <strong>aperçu</strong> des commentaires. Pour pouvoir <strong>répondre</strong> à un commentaire
+                ou consulter les réponses que les autres utilisateurs ont mit il faut aller voir le commentaire en cliquant sur <strong>voir</strong></p>
+
+        </blockquote>
 
     </div>
 
 
 
+
+
+    <!-- BUTTON GO TOP PAGE -->
+    <button type="button" class="topEditAccount"> <i class="fa fa-arrow-up" aria-hidden="true"></i> </button>
 
 
 </main>

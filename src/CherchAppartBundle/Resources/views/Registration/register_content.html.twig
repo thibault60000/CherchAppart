@@ -9,43 +9,28 @@
                         {{ form_errors(form.username) }}
                         {{ form_widget(form.username) }}
                     </div>
-                    <div class="groupSub">
                     <!-- MAIL -->
                      <div class="group email">
                         {{ form_label((form.email)) }}
                         {{ form_errors(form.email) }}
                         {{ form_widget(form.email) }}
                      </div>
+<!-- Name -->
+<div class="group name">
+    {{ form_label((form.name)) }}
+    {{ form_errors(form.name) }}
+    {{ form_widget(form.name) }}
+</div>
 
+<!-- LAST NAME -->
+<div class="group lastname">
+    {{ form_label((form.lastname)) }}
+    {{ form_errors(form.lastname) }}
+    {{ form_widget(form.lastname) }}
+</div>
 
-                    <!-- PASSWORD -->
-                    <div class="group password">
-                        {{ form_widget(form.plainPassword) }}
-                        {{ form_errors(form.plainPassword) }}
-                     </div>
+<!-- PASSWORD -->
 
-
-                    <!-- SEXE -->
-                    <div class="group sexe">
-                        {{ form_label((form.sexe)) }}
-                        {{ form_errors(form.sexe) }}
-                        {{ form_widget(form.sexe) }}
-                    </div>
-
-                    <!-- LAST NAME -->
-                    <div class="group lastname">
-                        {{ form_label((form.lastname)) }}
-                        {{ form_errors(form.lastname) }}
-                        {{ form_widget(form.lastname) }}
-                    </div>
-                </div>
-                <div class="groupSub">
-                    <!-- Name -->
-                    <div class="group name">
-                        {{ form_label((form.name)) }}
-                        {{ form_errors(form.name) }}
-                        {{ form_widget(form.name) }}
-                    </div>
 
                     <!-- PHONE -->
                     <div class="group phone">
@@ -74,8 +59,14 @@
                         {{ form_errors(form.city) }}
                         {{ form_widget(form.city)}}
                     </div>
-                </div>
-                    <!-- INPUT TYPE SUBMIT -->
+
+<div class="group password">
+    {{ form_widget(form.plainPassword) }}
+    {{ form_errors(form.plainPassword) }}
+</div>
+
+
+<!-- INPUT TYPE SUBMIT -->
                     <input type="submit" value="{{ 'registration.submit'|trans }}" />
 
              {{ form_end(form) }}

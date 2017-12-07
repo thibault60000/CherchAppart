@@ -29,11 +29,6 @@ class User extends BaseUser
     /**
      * @var string
      */
-    private $sexe;
-
-    /**
-     * @var string
-     */
     private $image;
 
     /**
@@ -105,31 +100,9 @@ class User extends BaseUser
         return $this->lastname;
     }
 
-    /**
-     * Set sexe
-     *
-     * @param string $sexe
-     *
-     * @return User
-     */
-    public function setSexe($sexe)
-    {
-        $this->sexe = $sexe;
-
-        return $this;
-    }
 
     /**
-     * Get sexe
-     *
-     * @return string
-     */
-    public function getSexe()
-    {
-        return $this->sexe;
-    }
-    /**
-     * @var string
+     * @var strin
      */
     private $adress;
 

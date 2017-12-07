@@ -275,117 +275,6 @@ button {
                 opacity:0.8;
                 text-decoration: none;
             }
-            @media screen and (min-width: 400px){
-                .loginPage h1,
-                .registerPage h1{
-                    padding-left: 3.8rem;
-                    font-size:2.4rem;
-                }
-                .connectP, .registerP{
-                    font-size:1.9rem;
-                    top: 6rem;
-                }
-            }
-
-            @media screen and (min-width: 600px){
-                .groupSub{
-                    display: inline-block;
-                    width: 49%;
-                    vertical-align: top;
-                }
-                .fos_user_registration_register .group.username{
-                    margin: 0 0 !important;
-                }
-                .fos_user_registration_register input[type="submit"]{
-                    margin: 1rem auto;
-                }
-                .fos_user_registration_register .group.username input{
-                    margin-bottom: 0;
-                }
-            }
-            @media screen and (min-width: 700px){
-                .loginPage h1,
-                .registerPage h1{
-                    padding-left: 5.2rem;
-                    font-size: 3rem;
-                }
-                .connectP, .registerP{
-                    font-size: 2.2rem;
-                    top: 7rem;
-                }
-                #login-form label {
-                    font-size: 1.4rem;
-                }
-                #login-form input[type="text"], #login-form input[type="password"] {
-                    height: 2.3rem;
-                    font-size: 1.3rem;
-                }
-                #login-form::before {
-                    width: 2rem;
-                    top: 2.4rem;
-                    margin-left: -0.15rem;
-                }
-                #login-form::after {
-                    width: 2rem;
-                    top: 7.95rem;
-                }
-                #login-form input[type="submit"] {
-                    font-size: 1.3rem;
-                }
-                #login-form .noAccountLink {
-                    font-size: 1.1rem;
-                }
-                .loginPageContent, .registerPageContent {
-                    max-height: 641.9px;
-                }
-
-            }
-@media screen and (min-width: 1000px) {
-    .loginPageContent, .registerPageContent {
-        width: 80%;
-        margin: 0 auto;
-        background-color: white;
-        padding: 2.1rem 3rem;
-    }
-        .connectP, .registerP {
-            top: 7.9rem;
-            width: calc(100% - 3.5rem);
-            padding-left: 3rem;
-        }
-            .loginPageContent, .registerPageContent {
-                max-height: 550px;
-            }
-                #login-form label {
-                    font-size: 1.6rem;
-                }
-                    #login-form input[type="text"], #login-form input[type="password"] {
-                        height: 2.5rem;
-                        font-size: 1.4rem;
-                    }
-                        #login-form::before {
-                            top: 2.9rem;
-                        }
-                            #login-form::after {
-                                top: 8.85rem;
-                            }
-                                #login-form input[type="text"], #login-form input[type="password"] {
-                                    max-width: 350px;
-                                }
-                                    #login-form .rememberMe::before {
-                                        top: 0.35rem;
-                                    }
-                                        #login-form input[type="checkbox"]:checked + .rememberMe::after {
-                                            top: 0.35rem;
-                                        }
-                                            .loginPageContent, .registerPageContent{
-                                                max-height: 645.9px;
-                                            }
-                                                .socianetwork{
-                                                    margin-top: 7.1rem;
-                                                }
-
-}
-
 .loginPage .errorMsg{
     padding-bottom: 0.5rem;
     font-size: 1.2rem;
@@ -399,9 +288,9 @@ button {
     display: inline;
     text-overflow: ellipsis;
 }
-    .loginPage .errorMsg i{
-        padding-right: 0.4rem;
-    }
+.loginPage .errorMsg i{
+    padding-right: 0.4rem;
+}
 
 
 /* SOCIAL NETWORK */
@@ -409,129 +298,129 @@ button {
     padding-right: 0.4rem;
     display: inline;
 }
-    .socianetwork ul li{
-        display: inline-block;
-        width: 1.6rem;
-        height: 1.5rem;
-        text-align: center;
-        margin-right: 0.8rem;
-        margin-bottom: 1.1rem;
-        position:relative;
-    }
-        .socianetwork li:hover{
-            opacity:0.8;
-        }
-            .socianetwork li.soon::before{
-                content: "";
-                width: 2.7rem;
-                height: 2.3rem;
-                position: absolute;
-                display: block;
-                background: url(../images/comingSoon.png) no-repeat center;
-                background-size: 6rem;
-                background-position-x: -2.4rem;
-                background-position-y: -1.3rem;
-            }
+.socianetwork ul li{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.5rem;
+    text-align: center;
+    margin-right: 0.8rem;
+    margin-bottom: 1.1rem;
+    position:relative;
+}
+.socianetwork li:hover{
+    opacity:0.8;
+}
+.socianetwork li.soon::before{
+    content: "";
+    width: 2.2rem;
+    height: 2.3rem;
+    position: absolute;
+    display: block;
+    background: url(../images/comingSoon.png) no-repeat center;
+    background-size: 5.7rem;
+    background-position-x: -2.5rem;
+    background-position-y: -1.3rem;
+}
 
-            .socianetwork li a{
-                height: 100%;
-                width: 100%;
-                border-radius: 3px;
-                color: white;
-                display: block;
-                text-align: center;
-                font-size: 1.3rem;
-                padding: 0.3rem 0.3rem;
-            }
-                .socianetwork li a.facebook{
-                    background-color: #4267b2;
-                }
-                .socianetwork a.googleplus{
-                    background-color: #e25454;
-                }
-                .socianetwork a.twitter{
-                    background-color: #00ACEE;
-                }
-                .socianetwork a.github{
-                    background-color: #9a429a;
-                }
-                .socianetwork a.linkedin{
-                    background-color: #167fd6;
-                }
-                .socianetwork a.pinterest{
-                    background-color: #de0c0c;
-                }
-                .socianetwork a.instagram{
-                    background-color: #9c13af;
-                }
-                .socianetwork a.github{
-                    background-color: #622B7E;
-                    pointer-events: none;
-                    cursor: default;
-                }
-                .socianetwork a.linkedin{
-                    background-color: #0677B4;
-                    pointer-events: none;
-                    cursor: default;
-                }
-                .socianetwork a.pinterest{
-                    background-color: #BC091A;
-                    pointer-events: none;
-                    cursor: default;
-                }
-                .socianetwork a.instagram{
-                    background: url(../images/logoInsta.png) center;
-                    background-size: cover;
-                    background-position: left;
-                    pointer-events: none;
-                    cursor: default;
-                }
-                    .socianetwork ul i{
-                        width: 100%;
-                        height: 100%;
-                        margin-top: 0.2rem;
-                    }
-                        .socianetwork ul li:hover a{
-                            text-decoration:none;
-                        }
-                            .ouTransition{
-                                overflow: hidden;
-                                text-align: center;
-                                margin-top: 0.6rem;
-                                margin-bottom: 1rem;
-                            }
-                                .ouContainer{
-                                    position: relative ;
-                                    padding: 16px ;
-                                }
-                                    .ouContainer::before{
-                                        content: '' ;
-                                        position: absolute ;
-                                        border-bottom: 1px solid #e4e4e4 ;
-                                        top: 50% ;
-                                        right: 100% ;
-                                        width: 5000px ;
-                                    }
-                                        .ouContainer::after{
-                                            content: '' ;
-                                            position: absolute ;
-                                            border-bottom: 1px solid #e4e4e4 ;
-                                            top: 50% ;
-                                            left: 100% ;
-                                            width: 5000px ;
-                                        }
-                                            .ouContent{
-                                                font-weight: normal ;
-                                                margin: 0px ;
-                                                word-wrap: break-word ;
-                                                font-size: 15px ;
-                                                line-height: 18px ;
-                                                letter-spacing: 0.2px ;
-                                                padding-top: 0px ;
-                                                padding-bottom: 0px ;
-                                                color: #767676 ;
-                                                display: inline ;
-                                            }
+.socianetwork li a{
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0.3rem 0.3rem;
+}
+.socianetwork li a.facebook{
+    background-color: #4267b2;
+}
+.socianetwork a.googleplus{
+    background-color: #e25454;
+}
+.socianetwork a.twitter{
+    background-color: #00ACEE;
+}
+.socianetwork a.github{
+    background-color: #9a429a;
+}
+.socianetwork a.linkedin{
+    background-color: #167fd6;
+}
+.socianetwork a.pinterest{
+    background-color: #de0c0c;
+}
+.socianetwork a.instagram{
+    background-color: #9c13af;
+}
+.socianetwork a.github{
+    background-color: #622B7E;
+    pointer-events: none;
+    cursor: default;
+}
+.socianetwork a.linkedin{
+    background-color: #0677B4;
+    pointer-events: none;
+    cursor: default;
+}
+.socianetwork a.pinterest{
+    background-color: #BC091A;
+    pointer-events: none;
+    cursor: default;
+}
+.socianetwork a.instagram{
+    background: url(../images/logoInsta.png) center;
+    background-size: cover;
+    background-position: left;
+    pointer-events: none;
+    cursor: default;
+}
+.socianetwork ul i{
+    width: 100%;
+    height: 100%;
+    margin-top: 0.2rem;
+}
+.socianetwork ul li:hover a{
+    text-decoration:none;
+}
+.ouTransition{
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+}
+.ouContainer{
+    position: relative ;
+    padding: 16px ;
+}
+.ouContainer::before{
+    content: '' ;
+    position: absolute ;
+    border-bottom: 1px solid #e4e4e4 ;
+    top: 50% ;
+    right: 100% ;
+    width: 5000px ;
+}
+.ouContainer::after{
+    content: '' ;
+    position: absolute ;
+    border-bottom: 1px solid #e4e4e4 ;
+    top: 50% ;
+    left: 100% ;
+    width: 5000px ;
+}
+.ouContent{
+    font-weight: normal ;
+    margin: 0px ;
+    word-wrap: break-word ;
+    font-size: 15px ;
+    line-height: 18px ;
+    letter-spacing: 0.2px ;
+    padding-top: 0px ;
+    padding-bottom: 0px ;
+    color: #767676 ;
+    display: inline ;
+}
 /* ******************************************
 ************** REGISTER *********************
 ******************************************* */
@@ -574,10 +463,7 @@ button {
     cursor:pointer;
 }
 
-.fos_user_registration_register .group{
-    margin: 1rem 0;
-    position: relative;
-}
+
 .group.email::before {
     background: url(../images/email-outline.svg) no-repeat left;
     content: "";
@@ -614,7 +500,7 @@ button {
     width: 3.3rem;
     display: block;
     height: 2.3rem;
-    top: 7.2rem;
+    top: 6.55rem;
     position: absolute;
     margin-left: 0.1rem;
     background-size: 1.8rem;
@@ -704,5 +590,130 @@ button {
 .registerPage .haveAccountLink:hover{
     opacity:0.8;
     text-decoration: none;
+}
+.fos_user_registration_register .group{
+    position:relative;
+}
+
+            @media screen and (min-width: 400px){
+                .loginPage h1,
+                .registerPage h1{
+                    padding-left: 3.8rem;
+                    font-size:2.4rem;
+                }
+                .connectP, .registerP{
+                    font-size:1.9rem;
+                    top: 6rem;
+                }
+            }
+
+            @media screen and (min-width: 600px){
+                .registerPage .group{
+                    display: inline-block;
+                    width: 49%;
+                    vertical-align: top;
+                }
+                .fos_user_registration_register input[type="submit"]{
+                    margin: 1rem auto;
+                }
+                .fos_user_registration_register .group{
+                    margin: 0;
+                }
+            }
+            @media screen and (min-width: 700px){
+                .loginPage h1,
+                .registerPage h1{
+                    padding-left: 5.2rem;
+                    font-size: 3rem;
+                }
+                .connectP, .registerP{
+                    font-size: 2.2rem;
+                    top: 7rem;
+                }
+                #login-form label {
+                    font-size: 1.4rem;
+                }
+                #login-form input[type="text"], #login-form input[type="password"] {
+                    height: 2.3rem;
+                    font-size: 1.3rem;
+                }
+                #login-form::before {
+                    width: 2rem;
+                    top: 2.4rem;
+                    margin-left: -0.15rem;
+                }
+                #login-form::after {
+                    width: 2rem;
+                    top: 7.95rem;
+                }
+                #login-form input[type="submit"] {
+                    font-size: 1.3rem;
+                }
+                #login-form .noAccountLink {
+                    font-size: 1.1rem;
+                }
+                .loginPageContent, .registerPageContent {
+                    max-height: 641.9px;
+                }
+
+                .fos_user_registration_register .group.password{
+                    display:block;
+                    width:100%;
+                }
+                .fos_user_registration_register #fos_user_registration_form_plainPassword > div{
+                    display:inline-block;
+                    width:49%;
+                }
+
+                #fos_user_registration_form_plainPassword > div:nth-child(2):before {
+                    top: 1.8rem;
+                }
+
+
+            }
+@media screen and (min-width: 1000px) {
+    .loginPageContent, .registerPageContent {
+        width: 80%;
+        margin: 0 auto;
+        background-color: white;
+        padding: 2.1rem 3rem;
+    }
+        .connectP, .registerP {
+            top: 7.9rem;
+            width: calc(100% - 3.5rem);
+            padding-left: 3rem;
+        }
+            .loginPageContent, .registerPageContent {
+                max-height: 550px;
+            }
+                #login-form label {
+                    font-size: 1.6rem;
+                }
+                    #login-form input[type="text"], #login-form input[type="password"] {
+                        height: 2.5rem;
+                        font-size: 1.4rem;
+                    }
+                        #login-form::before {
+                            top: 2.9rem;
+                        }
+                            #login-form::after {
+                                top: 8.85rem;
+                            }
+                                #login-form input[type="text"], #login-form input[type="password"] {
+                                    max-width: 350px;
+                                }
+                                    #login-form .rememberMe::before {
+                                        top: 0.35rem;
+                                    }
+                                        #login-form input[type="checkbox"]:checked + .rememberMe::after {
+                                            top: 0.35rem;
+                                        }
+                                            .loginPageContent, .registerPageContent{
+                                                max-height: 645.9px;
+                                            }
+                                                .socianetwork{
+                                                    margin-top: 7.1rem;
+                                                }
+
 }
 

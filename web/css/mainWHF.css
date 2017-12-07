@@ -451,6 +451,28 @@ button {
                 .socianetwork a.instagram{
                     background-color: #9c13af;
                 }
+                .socianetwork a.github{
+                    background-color: #622B7E;
+                    pointer-events: none;
+                    cursor: default;
+                }
+                .socianetwork a.linkedin{
+                    background-color: #0677B4;
+                    pointer-events: none;
+                    cursor: default;
+                }
+                .socianetwork a.pinterest{
+                    background-color: #BC091A;
+                    pointer-events: none;
+                    cursor: default;
+                }
+                .socianetwork a.instagram{
+                    background: url(../images/logoInsta.png) center;
+                    background-size: cover;
+                    background-position: left;
+                    pointer-events: none;
+                    cursor: default;
+                }
                     .socianetwork ul i{
                         width: 100%;
                         height: 100%;

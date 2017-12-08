@@ -8,8 +8,7 @@
 
         {% if app.user == null %}
             {% include '@CherchAppart/Homepage/contentIfNoConnect' %}
-            {% include '@CherchAppart/Homepage/modaleConnect' %}
-            {% include '@CherchAppart/Homepage/modaleRegister' %}
+
         {% else %}
              {% include '@CherchAppart/Homepage/contentIfConnect' %}
         {% endif %}

@@ -240,14 +240,15 @@ button {
         .fos_user_registration_register input[type="submit"]{
             display: block;
             margin-top: 1.7rem;
-            padding: 0.5rem 3.1rem;
+            padding: 0.5rem 2.2rem;
             font-size: 1.1rem;
             color: white;
             border: none;
             border-radius: 3px;
             background-color: #06595f;
             cursor: pointer;
-            width: 70%;
+            min-width: 200px;
+            text-overflow: ellipsis;
         }
 
         #login-form input[type="submit"]:hover {

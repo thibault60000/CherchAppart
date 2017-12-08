@@ -1048,65 +1048,71 @@ footer{
 /* ------------------- FORM LOGIN ---------------------------------- */
 /* ----------------------------------------------------------------- */
 
-.dialog #login-form{
-	margin-top: 1.3rem;
+.connectPart #login-form{
+	margin-top: 0.6rem;
+	position:relative;
 }
+	.connectPart .first{
+		position:absolute;
+		top:0;
+		left:0;
+	}
+		.connectPart .second{
+			position: absolute;
+			top: 0;
+			left: calc(100% + 1rem);
+		}
 
 /* LOGIN FORM MIN 600 px */
 @media screen and (min-width: 1000px) {
-	.dialog  #login-form {
+	.connectPart  #login-form {
 		padding-bottom: 0;
 	}
 }
 
 /* ********************* FORM LOGIN FOR DIALOG ********************* */
 
-.dialog #login-form label{
-	font-size: 1.1rem;
+.connectPart .first label,
+.connectPart .second label{
+	font-size: 1.2rem;
 	cursor: pointer;
+	color: #2d2929;
+	display: block;
 }
-	.dialog .normalLogin{
+	.connectPart .normalLogin{
 		position: relative;
 	}
-		.dialog #login-form input[type="text"],
-		.dialog #login-form input[type="password"]{
-			display: block;
-			width: calc( 100% - 6.2rem);  /* calc( 90% - 6.2rem); */
+		.connectPart #login-form input[type="text"], .connectPart #login-form input[type="password"] {
+			display: inline-block;
+			width: 50%;
 			margin-top: 0.3rem;
 			font-size: 1.1rem;
 			height: 2.2rem;
 			border-radius: 3px;
 			border: 1px solid #6f6565;
-			margin-bottom: 1.2rem;
 			padding: 0.2rem 0rem 0rem 0.6rem;
-			margin-left: 2.8rem;
 		}
-		.dialog #login-form input[type="checkbox"]{
+			.connectPart .goPassword{
+				margin: 0;
+				display: inline-block;
+				color: white;
+				background-color: #065a60;
+				width: 30%;
+				padding: 0.7rem 0.5rem;
+				vertical-align: top;
+				margin-top: 0.35rem;
+				border-radius: 3px;
+				margin-left: 0.3rem;
+				box-shadow: 0.5px 0.5px 3px 1px rgba(50, 50, 50, 0.65);
+				transform: perspective(1px) translateZ(0);
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				-webkit-font-smoothing: antialiased;
+			}
+		.connectPart #login-form input[type="checkbox"]{
 				position: absolute;
 				left: -9999px;
 		}
-			.dialog .normalLogin::before{
-				background: url(../images/email-outline.svg) no-repeat left;
-				content: "";
-				width: 2rem;
-				display: block;
-				height: 2rem;
-				top: 1.9rem;
-				position: absolute;
-				margin-left: 0.1rem;
-			}
-
-			.dialog .normalLogin::after{
-				background: url(../images/lock-open-outline.svg) no-repeat left;
-				content: "";
-				width: 2rem;
-				display: block;
-				height: 2rem;
-				top: 7.35rem;
-				margin-left: 0.1rem;
-				position: absolute;
-			}
-				.dialog .normalLogin input[type="submit"]{
+				.connectPart .normalLogin input[type="submit"]{
 					display: block;
 					margin-top: 1.8rem;
 					width: 100%;
@@ -1118,16 +1124,19 @@ footer{
 					font-size: 1.2rem;
 					cursor: pointer;
 				}
-					.dialog .normalLogin input[type="submit"]:hover{
+					.connectPart .normalLogin input[type="submit"]:hover{
 						opacity:0.9;
 					}
-						.dialog .rememberMe{
+					.connectPart .rememberMe{
+						display:none;
+					}
+						/* .connectPart .rememberMe{
 							padding-left:2rem;
 							position: relative;
 							color: #4e4a4a;
 							display: inline-block;
 						}
-							.dialog .rememberMe::before{
+							.connectPart .rememberMe::before{
 								content: "";
 								height: 1.4rem;
 								width: 1.4rem;
@@ -1136,7 +1145,7 @@ footer{
 								border: 1.3px solid #635c5c;
 								left: 0;
 							}
-								.dialog #login-form input[type="checkbox"]:checked + .rememberMe::after{
+								.connectPart #login-form input[type="checkbox"]:checked + .rememberMe::after{
 									content: "";
 									display: block;
 									position: absolute;
@@ -1147,87 +1156,84 @@ footer{
 									transform: rotate(32deg);
 									top: 0rem;
 									left: 0.4rem;
-								}
-.dialog h2{
+								}*/
+.connectPart h2{
 	color: #463e3e;
-	font: 1.9rem "robotoblack";
+	font: 1.6rem "robotoblack";
+	margin-top: 1.2rem;
 }
-	.dialog .socianetwork ul{
+	.socialNetwork{
 		display: block;
 		list-style: none;
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 	}
-		.dialog .socianetwork ul li{
+		.socialNetwork li{
 			display: inline-block;
 			width: 1.9rem;
 			text-align: center;
 			margin-right: 0.8rem;
 			margin-bottom: 0.8rem;
 		}
-			.dialog input:-webkit-autofill,
-			.dialog textarea:-webkit-autofill,
-			.dialog select:-webkit-autofill {
+			.socialNetwork input:-webkit-autofill,
+			.socialNetwork textarea:-webkit-autofill,
+			.socialNetwork select:-webkit-autofill {
 				background-color: white !important;
 			}
-			   .dialog .socianetwork{
-				   margin-top: 1.1rem;
-			   }
-				.dialog .socianetwork li:hover{
+				.socialNetwork li:hover{
 					opacity:0.8;
 				}
-				 .dialog .socianetwork li.soon:hover{
+				 .socialNetwork li.soon:hover{
 					 opacity:1;
 				 }
-					.dialog .socianetwork li a{
+					.socialNetwork li a{
 						height: 100%;
 						width: 100%;
 						border-radius: 3px;
-
 						color: white;
 						display: block;
 						text-align: center;
 						font-size: 1.3rem;
 						padding: 0.3rem;
 					}
-						.dialog .socianetwork li a.facebook{
+						.socialNetwork li a.facebook{
 							background-color: #4267b2;
 						}
-								.dialog .socianetwork a.googleplus{
+								.socialNetwork a.googleplus{
 									background-color: #e25454;
 								}
-									.dialog .socianetwork a.twitter{
+									.socialNetwork a.twitter{
 										 background-color: #00ACEE;
 									 }
-										.dialog .socianetwork a.github{
+										.socialNetwork a.github{
 											background-color: #622B7E;
 											pointer-events: none;
 											cursor: default;
 										}
-										  .dialog .socianetwork a.linkedin{
+										  .socialNetwork a.linkedin{
 											  background-color: #0677B4;
 											  pointer-events: none;
 											  cursor: default;
 										  }
-										    .dialog .socianetwork a.pinterest{
+										    .socialNetwork a.pinterest{
 												background-color: #BC091A;
 												pointer-events: none;
 												cursor: default;
 											}
-											 .dialog .socianetwork a.instagram{
+											 .socialNetwork a.instagram{
 												 background: url(../images/logoInsta.png) center;
 												 background-size: cover;
 												 background-position: left;
 												 pointer-events: none;
 												 cursor: default;
 											 }
-												.dialog .socianetwork ul i{
+												.socialNetwork ul i{
 													width: 100%;
 													height: 100%;
 												}
-													.dialog .socianetwork ul li:hover a{
+													.socialNetwork ul li:hover a{
 														text-decoration:none;
 													}
-													.dialog .socianetwork li.soon::before{
+													.socialNetwork li.soon::before{
 														content: "";
 														width: 2.5rem;
 														height: 2.3rem;
@@ -1239,15 +1245,15 @@ footer{
 														background-position-y: -1.3rem;
 													}
 
-.dialog .noAccount{
-		margin-top: 1.4rem;
+.connectPart .noAccount{
+		margin-top: 0.9rem;
 		font-size: 1rem;
 		display: block;
-		color: #635656;
+		color: #343535;
 		font-family: "robotoregular";
-	}
-	.dialog .noAccountLink{
-		margin-top: 0.5rem;
+}
+	.connectPart .noAccountLink{
+		margin-top: 0.1rem;
 		border-radius: 3px;
 		border: none;
 		color: white;
@@ -1258,21 +1264,22 @@ footer{
 		cursor: pointer;
 		width: 8.1rem;
 	}
-		.dialog .noAccountLink:hover{
+		.connectPart .noAccountLink:hover{
 			text-decoration:none;
 			opacity:0.8;
 		}
 
-.dialog .ouTransition{
-    overflow: hidden;
-    text-align: center;
-	margin: 0.7rem 0;
+.connectPart .ouTransition{
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+	max-width: 250px;
 }
-	.dialog .ouContainer{
+	.connectPart .ouContainer{
 		position: relative ;
 		padding: 16px ;
 	}
-		.dialog .ouContainer::before{
+		.connectPart .ouContainer::before{
 			content: '' ;
 			position: absolute ;
 			border-bottom: 1px solid #e4e4e4 ;
@@ -1280,7 +1287,7 @@ footer{
 			right: 100% ;
 			width: 5000px ;
 		}
-			.dialog .ouContainer::after{
+			.connectPart .ouContainer::after{
 				content: '' ;
 				position: absolute ;
 				border-bottom: 1px solid #e4e4e4 ;
@@ -1288,7 +1295,7 @@ footer{
 				left: 100% ;
 				width: 5000px ;
 			}
-				.dialog .ouContent{
+				.connectPart .ouContent{
 					font-weight: normal ;
 					margin: 0px ;
 					word-wrap: break-word ;
@@ -1300,15 +1307,15 @@ footer{
 					color: #767676 ;
 					display: inline ;
 				}
-					.dialog .passwordForget{
-						color: #3c3131;
-						margin-top: 1rem;
-						display: block;
+					.connectPart .passwordForget{
+						display: inline-block;
 						font: 1rem "robotoitalic";
 						cursor: pointer;
 						width: 100%;
-						margin-top: 0.6rem;
-						text-align: center;
+						text-align: left;
+						padding-top: 5rem;
+						color: #615555;
+						text-decoration: underline;
 					}
 
 

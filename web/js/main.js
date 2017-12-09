@@ -7,6 +7,51 @@ $(window).load(function() {
 
 $(function() {
 
+    /* ************************************************
+    *****************  LOGIN SYSTEM *******************
+    * *************************************************/
+
+    // ENTER to First INPUT
+    $('.first > input').keydown(function(event){
+        if (event.which === 13 || event.keyCode === 13) {
+            $('.first > input').blur();
+            $('.goPassword').click()
+            $('.returnUsername').addClass("appear");
+        }
+    });
+
+    // ENTER to Password INPUT
+    $('.second > input').keydown(function(event){
+        if (event.which === 13 || event.keyCode === 13) {
+            $('.submitLoginSys').click()
+        }
+    });
+
+    // CLICK on GoPassword
+    $('.goPassword').click(function(event){
+            event.preventDefault();
+            $('.first').addClass("left");
+            $('.returnUsername').addClass("appear");
+            $('.second').addClass("left");
+            $('.second > #password').focus();
+
+    });
+
+    // CLICK back Button
+    $('.returnUsername').click(function(event){
+        event.preventDefault();
+        $('.first').removeClass("left");
+        $('.second').removeClass("left");
+        $('.returnUsername').removeClass("appear");
+        $('.first > input').focus()
+    });
+
+
+
+    /* ****************************************
+    ************* SCROLLING ARROW *************
+    * ***************************************** */
+
     $(window).scroll(function() {
         if ($(window).scrollTop() > 100) {
             $('.topEditAccount').addClass('visible');

@@ -98,6 +98,10 @@ button {
     max-height:100vh;
  }
 
+    .loginPage .goPassword,
+    .loginPage .returnUsername{
+        display:none;
+    }
     .loginPageContent, .registerPageContent{
         margin: 0 auto;
         background-color: white;
@@ -194,33 +198,10 @@ button {
             position: absolute;
         }
 
-        #login-form .rememberMe{
-            padding-left:2rem;
-            position: relative;
-            color: #4e4a4a;
-            display: inline-block;
+        #login-form .rememberMe {
+            display: none;
         }
-        #login-form .rememberMe::before{
-            content: "";
-            height: 1.2rem;
-            width: 1.2rem;
-            position: absolute;
-            display: inline-block;
-            border: 1.3px solid #635c5c;
-            left: 0;
-        }
-        #login-form input[type="checkbox"]:checked + .rememberMe::after{
-            content: "";
-            display: block;
-            position: absolute;
-            height: 1rem;
-            width: 0.5rem;
-            border-bottom: 2px solid black;
-            border-right: 2px solid black;
-            transform: rotate(32deg);
-            top: 0rem;
-            left: 0.4rem;
-        }
+
         #login-form input[type="checkbox"]{
             position: absolute;
             left: -9999px;

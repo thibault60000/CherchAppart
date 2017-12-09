@@ -2,7 +2,6 @@
 
                 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
-
                     <!-- USERNAME -->
                     <div class="group username">
                         {{ form_label((form.username)) }}
@@ -15,21 +14,20 @@
                         {{ form_errors(form.email) }}
                         {{ form_widget(form.email) }}
                      </div>
-<!-- Name -->
-<div class="group name">
-    {{ form_label((form.name)) }}
-    {{ form_errors(form.name) }}
-    {{ form_widget(form.name) }}
-</div>
 
-<!-- LAST NAME -->
-<div class="group lastname">
-    {{ form_label((form.lastname)) }}
-    {{ form_errors(form.lastname) }}
-    {{ form_widget(form.lastname) }}
-</div>
+                    <!-- Name -->
+                    <div class="group name">
+                        {{ form_label((form.name)) }}
+                        {{ form_errors(form.name) }}
+                        {{ form_widget(form.name) }}
+                    </div>
 
-<!-- PASSWORD -->
+                    <!-- LAST NAME -->
+                    <div class="group lastname">
+                        {{ form_label((form.lastname)) }}
+                        {{ form_errors(form.lastname) }}
+                        {{ form_widget(form.lastname) }}
+                    </div>
 
 
                     <!-- PHONE -->
@@ -60,13 +58,14 @@
                         {{ form_widget(form.city)}}
                     </div>
 
-<div class="group password">
-    {{ form_widget(form.plainPassword) }}
-    {{ form_errors(form.plainPassword) }}
-</div>
+                    <!-- PASSWORD -->
+                    <div class="group password">
+                        {{ form_widget(form.plainPassword) }}
+                        {{ form_errors(form.plainPassword) }}
+                    </div>
 
 
-<!-- INPUT TYPE SUBMIT -->
+                    <!-- INPUT TYPE SUBMIT -->
                     <input type="submit" value="{{ 'registration.submit'|trans }}" />
 
              {{ form_end(form) }}

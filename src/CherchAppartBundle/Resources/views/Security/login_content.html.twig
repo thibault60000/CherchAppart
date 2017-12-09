@@ -11,20 +11,20 @@
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
             {% endif %}
 
-            <div class="first">
-                <label for="username">{{ 'security.login.username'|trans }}</label>
-                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
 
-                <button type="button" class="goPassword">Suivant</button>
-            </div>
+            <label for="username">{{ 'security.login.username'|trans }}</label>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
 
-            <div class="second">
-                <label for="password">{{ 'security.login.password'|trans }}</label>
-                <input type="password" id="password" name="_password" required="required" />
+            <button type="button" class="goPassword">Suivant</button>
 
-                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-                <button type="submit" class="returnUsername"> r </button>
-            </div>
+
+            <label for="password">{{ 'security.login.password'|trans }}</label>
+            <input type="password" id="password" name="_password" required="required" />
+
+            <input type="submit" id="submit" class="submitLoginSys" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+
+
+            <button type="button" class="returnUsername"> < retour </button>
 
             <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
             <label class="rememberMe" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
